@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecurityTrend Top10 - 2026-04-05</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f1117; --surface: #1a1d27; --border: #2d3148;
+      --text: #e2e8f0; --muted: #8892a4; --accent: #6366f1;
+      --red: #f87171; --orange: #fb923c; --yellow: #fbbf24; --green: #34d399;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; }
+    .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .header { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+    .header-logo { font-size: 2rem; }
+    .header-title { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+    .header-date { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+    .badge { display: inline-block; background: rgba(99,102,241,0.15); border: 1px solid var(--accent); color: var(--accent); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 20px; margin-top: 0.5rem; }
+    #content h1 { display: none; }
+    #content h2 { font-size: 1.1rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    #content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.5rem 0 0.5rem; }
+    #content p { color: #c8d3e0; margin-bottom: 0.75rem; }
+    #content strong { color: var(--text); }
+    #content a { color: var(--accent); text-decoration: none; }
+    #content a:hover { text-decoration: underline; }
+    #content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+    #content blockquote { border-left: 3px solid var(--accent); padding: 0.75rem 1rem; background: rgba(99,102,241,0.08); border-radius: 0 8px 8px 0; margin: 1rem 0; color: var(--muted); font-size: 0.9rem; }
+    #content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    #content th { background: var(--surface); padding: 0.6rem 1rem; text-align: left; border: 1px solid var(--border); color: var(--muted); font-weight: 600; }
+    #content td { padding: 0.6rem 1rem; border: 1px solid var(--border); }
+    #content tr:hover td { background: rgba(99,102,241,0.05); }
+    #content ul, #content ol { padding-left: 1.5rem; margin-bottom: 0.75rem; }
+    #content li { margin-bottom: 0.3rem; color: #c8d3e0; }
+    #content code { background: var(--surface); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.85em; color: var(--green); }
+    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+    .back-link { display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-logo">🔐</div>
+      <div>
+        <div class="header-title">SecurityTrend Top10</div>
+        <div class="header-date">2026-04-05</div>
+        <div class="badge">AI Generated Report</div>
+      </div>
+    </div>
+    <div id="content"></div>
+    <div class="footer">
+      <p>このレポートはClaudeのAIが独自に収集・編集したものです</p>
+      <a class="back-link" href="../index.html">← 過去レポート一覧へ</a>
+    </div>
+  </div>
+  <script>
+    const md = `# セキュリティトレンド Top 10 ニュース
+**配信日：2026年4月5日（日）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今週のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **AIガバナンス崩壊** | 67%の企業がセキュリティ懸念を無視してAIを導入。組織的なAI統制の欠如が今週最大のテーマ |
+| 2 | **サプライチェーン攻撃** | TeamPCPによるTrivyツール汚染とClaude Codeリーク悪用の2件が同時発生。OSS経由の侵害が加速 |
+| 3 | **ゼロデイ悪用** | Chromeゼロデイ（CVE-2026-5281）がCISA KEVに追加。パッチ未適用環境への実攻撃を確認 |
+| 4 | **LLMポイズニング** | わずか250文書でLLMにバックドアを埋め込める手法が実証。AI基盤への新たな脅威として急浮上 |
+| 5 | **プライバシー規制執行強化** | 米国複数州の新法施行とEU規制締切（4/18）が重なり、コンプライアンス対応が待ったなしの状況 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. Drift Protocol \$2.85億ドル流出：ソラナDEXで新手の攻撃
+**2026年4月1日**
+ソラナ基盤のDEX「Drift Protocol」が攻撃を受け、約2億8,500万ドルが流出。攻撃者は "durable nonces" を悪用した新手法でSecurity Councilの管理権限を奪取。DeFiセキュリティにとって前例のない規模の事案となった。
+
+🔗 [SharkStriker - April 2026 Data Breaches](https://sharkstriker.com/blog/april-2026-data-breaches/)
+
+---
+
+### 2. EU欧州委員会クラウド侵害：Trivyサプライチェーン攻撃で30機関・92GBが流出
+**2026年3月27日公表 / 4月3日CERT-EU帰属特定**
+オープンソースのセキュリティスキャンツール「Trivy」に汚染コードを仕込んだサプライチェーン攻撃により、欧州委員会のAWS環境が侵害された。CERT-EUは脅威グループ「TeamPCP」の犯行と帰属特定。盗まれた92GBの圧縮データ（名前・メールアドレス・メール本文）はShinyHuntersがダークウェブに公開。Mandiantはキャンペーン全体の被害を1,000以上のSaaS環境と推計。
+
+🔗 [BleepingComputer - CERT-EU: European Commission hack exposes data of 30 EU entities](https://www.bleepingcomputer.com/news/security/cert-eu-european-commission-hack-exposes-data-of-30-eu-entities/)
+🔗 [TechCrunch - Europe's cyber agency blames hacking gangs for massive data breach](https://techcrunch.com/2026/04/03/europes-cyber-agency-blames-hacking-gangs-for-massive-data-breach-and-leak/)
+
+---
+
+### 3. Chrome ゼロデイ（CVE-2026-5281）：CISAがKEVカタログ追加
+**2026年4月1日**
+Google ChromeのWebGPU実装「Dawn」にUse-After-Free脆弱性が発見され、すでに実際の攻撃で悪用確認済み。CISAがKEV（既知の悪用された脆弱性）カタログへ追加し、即時パッチ適用を強く推奨。
+
+🔗 [CybersecurityNews - CISA Warns of Chrome 0-Day Vulnerability Actively Exploited](https://cybersecuritynews.com/chrome-0-day-flaw-exploited/)
+
+---
+
+### 4. Cisco IMC 認証バイパス（CVE-2026-20093）：CVSS 9.8の重大欠陥
+Cisco Integrated Management Controller（IMC）に認証なしでHTTPリクエストを送信することでパスワード変更が可能になる脆弱性（CVSS 9.8）が公表。未認証の遠隔攻撃者が完全な管理権限を取得できる。Ciscoはパッチを配布済みで早急なアップデートを推奨。
+
+🔗 [SecurityWeek - Cisco Patches Critical and High-Severity Vulnerabilities](https://www.securityweek.com/cisco-patches-critical-and-high-severity-vulnerabilities/)
+
+---
+
+### 5. Claude Codeソースコードリーク悪用：VidarとGhostSocksマルウェアを配布
+**2026年4月2日**
+Anthropicがnpmパッケージのミスにより59.8MBのTypeScriptソースマップ（51.3万行）を誤公開。脅威アクターは即座にこれを悪用し、「エンタープライズ機能解除版」と偽った悪意あるGitHubリポジトリを公開。\`ClaudeCode_x64.exe\`を実行すると、認証情報・クレジットカード・ブラウザ履歴を窃取するVidar v18.7と、感染端末をプロキシ化するGhostSocksが展開される。
+
+🔗 [BleepingComputer - Claude Code leak used to push infostealer malware on GitHub](https://www.bleepingcomputer.com/news/security/claude-code-leak-used-to-push-infostealer-malware-on-github/)
+🔗 [The Register - Fake Claude Code source downloads actually delivered malware](https://www.theregister.com/2026/04/02/trojanized_claude_code_leak_github/)
+
+---
+
+## 🟠 AI Risk
+
+### 6. 企業の67%がセキュリティ懸念を無視してAIを承認：ガバナンスの崩壊
+**2026年4月3日**
+3,700名のビジネス・IT意思決定者を対象にした調査で、67%が「セキュリティ上の懸念があるにもかかわらずAIを承認するよう圧力を受けた」と回答。57%が「AIの進化速度がセキュリティ対応を上回っている」と認識。CISOの71%がAIをサイバーリスクの主因として挙げており、AIガバナンスの構造的崩壊が浮き彫りに。
+
+🔗 [Security MEA - Organizations Overlook AI Risk as Governance Fails to Keep Up](https://securitymea.com/2026/04/03/organizations-overlook-ai-risk-as-governance-fails-to-keep-up/)
+
+---
+
+### 7. Reprompt攻撃：Microsoft 365 Copilotを1クリックでデータ流出チャネルに
+2026年初頭、研究者が3つの技術を連鎖させてCopilot Personalをデータ流出チャネルに変える「Reprompt攻撃」を公開。2025年中頃のEchoLeak（ゼロクリック型プロンプトインジェクション）に続く深刻なAIアプリ脆弱性シリーズで、企業データの無断流出リスクが現実化している。
+
+🔗 [Cybersecurity Insiders - AI Risk and Readiness Report 2026](https://www.cybersecurity-insiders.com/ai-risk-and-readiness-report-2026/)
+
+---
+
+### 8. LLMモデルポイズニング：250件の汚染文書でバックドア埋め込みが可能
+AnthropicとUK AI Safety Instituteの共同研究により、わずか250件の汚染文書で130億パラメータのLLMにバックドアを埋め込めることが実証された。バックドアはモデルの統計的重みに符号化されるため事後検出は困難。AI基盤のサプライチェーンセキュリティに根本的な問題を提起している。
+
+🔗 [War on the Rocks - China's AI Is Spreading Fast. Here's How to Stop the Security Risks](https://warontherocks.com/2026/04/chinas-ai-is-spreading-fast-heres-how-to-stop-the-security-risks/)
+
+---
+
+## 🟡 Data & Privacy
+
+### 9. 米国データプライバシー法の大波：複数州で2026年施行・Universal Opt-Out義務化
+2026年はインディアナ・ケンタッキー・ロードアイランドの包括的プライバシー法が1月施行。モンタナ州のright-to-cure期間が4月1日に終了し実質的な執行フェーズへ移行。コネチカット・オレゴンでもUniversal Opt-Out機構の義務化が開始。米国史上最大の執行強化期に突入。
+
+🔗 [Ketch - US Privacy Laws 2026](https://www.ketch.com/blog/posts/us-privacy-laws-2026)
+🔗 [Gunster - 2026 U.S. Data Privacy Developments](https://www.gunster.com/newsroom/publications/2026-data-privacy-laws-state-changes-universal-opt-out-compliance)
+
+---
+
+## 🟢 Security Governance
+
+### 10. EUサイバーセキュリティ規制：4月18日が重大な執行マイルストーン
+**⚠️ 締切：2026年4月18日**
+EU域内の対象組織は4月18日までにサイバーセキュリティ対策を実装し、規制当局の検査に備えた証拠書類の整備が必須。違反には最大1,700万ポンドまたはグローバル売上高の4%の罰金。SECも同時期にサイバーセキュリティとAIガバナンスを最優先検査項目に指定し、仮想通貨をトップの座から押しのけた。
+
+🔗 [VinciWorks - Cyber security in 2026: the legislative shifts your compliance team should prepare for](https://vinciworks.com/blog/cyber-security-in-2026-the-legislative-shifts-your-compliance-team-should-prepare-for/)
+🔗 [Morgan Lewis - Cybersecurity & Privacy 2026: Enforcement & Regulatory Trends](https://www.morganlewis.com/pubs/2026/03/cybersecurity-privacy-2026-enforcement-regulatory-trends)
+
+---
+
+## 📊 今週のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴🔴 | サプライチェーン、ゼロデイ、DeFi攻撃 |
+| AI Risk | 🔴🔴🔴🔴 | LLMポイズニング、AIガバナンス崩壊、Copilot脆弱性 |
+| Data & Privacy | 🟡🟡🟡 | 米国州法施行ラッシュ、執行強化 |
+| Security Governance | 🟢🟢🟢🟢 | EU規制締切（4/18）、SEC優先事項変更 |
+
+---
+
+*次回配信予定：2026年4月12日 | 収集ソース：BleepingComputer, The Register, TechCrunch, SecurityWeek, CybersecurityNews, Security MEA, Cybersecurity Insiders, Ketch, VinciWorks, Morgan Lewis*
+`;
+    document.getElementById('content').innerHTML = marked.parse(md);
+  </script>
+</body>
+</html>
