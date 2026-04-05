@@ -1,0 +1,38 @@
+name: Process Security Report
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'reports/SecurityTrend_Top10_*.md'
+  workflow_dispatch:
+
+jobs:
+  build-and-notify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build HTML and send LINE
+        env:
+          LINE_TOKEN: ${{ secrets.LINE_TOKEN }}
+          LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+          PAGES_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+        run: python scripts/build_and_notify.py
+
+      - name: Commit and push HTML files
+        run: |
+          git config user.name "SecurityTrend Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/*.html index.html
+          git diff --staged --quiet || git commit -m "Generate HTML [skip ci]: $(date +%Y-%m-%d)"
+          git push
