@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecurityTrend Top10 - 2026-04-06</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f1117; --surface: #1a1d27; --border: #2d3148;
+      --text: #e2e8f0; --muted: #8892a4; --accent: #6366f1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; }
+    .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .header { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+    .header-logo { font-size: 2rem; }
+    .header-title { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+    .header-date { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+    .badge { display: inline-block; background: rgba(99,102,241,0.15); border: 1px solid var(--accent); color: var(--accent); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 20px; margin-top: 0.5rem; }
+    #content h1 { display: none; }
+    #content h2 { font-size: 1.1rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    #content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.5rem 0 0.5rem; }
+    #content p { color: #c8d3e0; margin-bottom: 0.75rem; }
+    #content a { color: var(--accent); text-decoration: none; }
+    #content a:hover { text-decoration: underline; }
+    #content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+    #content blockquote { border-left: 3px solid var(--accent); padding: 0.75rem 1rem; background: rgba(99,102,241,0.08); border-radius: 0 8px 8px 0; margin: 1rem 0; color: var(--muted); font-size: 0.9rem; }
+    #content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    #content th { background: var(--surface); padding: 0.6rem 1rem; text-align: left; border: 1px solid var(--border); color: var(--muted); font-weight: 600; }
+    #content td { padding: 0.6rem 1rem; border: 1px solid var(--border); }
+    #content tr:hover td { background: rgba(99,102,241,0.05); }
+    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+    .back-link { display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-logo">🔐</div>
+      <div>
+        <div class="header-title">SecurityTrend Top10</div>
+        <div class="header-date">2026-04-06</div>
+        <div class="badge">AI Generated Report</div>
+      </div>
+    </div>
+    <div id="content"></div>
+    <div class="footer">
+      <p>このレポートはClaudeのAIが独自に収集・編集したものです</p>
+      <a class="back-link" href="../index.html">← 過去レポート一覧へ</a>
+    </div>
+  </div>
+  <script>
+    const md = `> この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+**配信日：2026年4月6日（月）**
+
+---
+
+## 🔥 今日のトレンドワード Top5
+
+| # | キーワード | 概要 |
+|---|-----------|------|
+| 1 | **Agentic AI Risk** | エージェント型AI経由の侵害が急増、企業の1/8が被害報告 |
+| 2 | **Zero-day Exploit** | Chrome・Cisco等で実被害を伴うゼロデイが相次いで公開 |
+| 3 | **NIS2 Compliance** | EU NIS2の4月18日期限が迫り、企業のコンプライアンス対応が急務 |
+| 4 | **Crypto Heist** | DeFiプラットフォームへの新型攻撃で2.85億ドルが流出 |
+| 5 | **Shadow AI** | 組織内の未承認AI利用が76%に拡大、ガバナンス空白が深刻化 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. Solana系DEX「Drift」から2.85億ドル流出
+攻撃者がDurable Nonces（耐久ナンス）を悪用した新型攻撃でDrift のSecurity Council管理権限を乗っ取り、約2.85億ドルをドレイン。DeFiプロトコルの管理権限設計の脆弱性が改めて露呈した。
+🔗 [SharkStriker - April 2026 Data Breaches](https://sharkstriker.com/blog/april-2026-data-breaches/)
+
+### 2. Chrome ゼロデイ CVE-2026-5281 が実際の攻撃で悪用
+Googleがゼロデイを含む21件の脆弱性に対応するChrome更新をリリース。Dawn（WebGPU実装）のuse-after-freeバグが野外で積極的に悪用されていることが確認された。直ちにブラウザ更新が推奨される。
+🔗 [The Hacker News](https://thehackernews.com/)
+
+### 3. Cisco IMC に CVSS 9.8 の認証バイパス脆弱性
+Cisco Integrated Management ControllerにCVSS 9.8の深刻な脆弱性が発覚。未認証のリモート攻撃者が認証をバイパスして管理者権限を取得できる。データセンター機器の緊急パッチ適用が必要。
+🔗 [CISA Known Exploited Vulnerabilities](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+
+### 4. Androidマルウェア「NoVoice」がGoogle Play経由で230万台に感染
+Google Play上で発見されたNoVoiceマルウェアが230万台以上のAndroid端末に感染。旧来のAndroid脆弱性を悪用してWhatsAppのデータを窃取する。正規アプリを装った配布手口が問題視されている。
+🔗 [Cybernews Security](https://cybernews.com/security/)
+
+---
+
+## 🟠 AI Risk
+
+### 5. AIが米国家情報機関の2026年脅威評価でトップに
+米情報機関の年次脅威評価レポートで、AIが国家安全保障上の最大脅威として初めてトップに。敵対国がAIを軍事力・サイバー能力・国際的影響力強化に活用しており、地政学的リスクが急速に高まっている。
+🔗 [The Defense Post](https://thedefensepost.com/2026/04/02/ai-national-security-threat/)
+
+### 6. エージェント型AI経由の侵害が急増、企業の8社に1社が被害
+Aon調査によると企業の12.5%がエージェント型AIを経由したセキュリティ侵害を報告。セキュリティフレームワークがAIの急速な進化に追いつけていない現状が明らかに。
+🔗 [Aon - AI Risk 2026](https://www.aon.com/en/insights/articles/ai-risk-2026-practical-agenda)
+
+### 7. AI生成フィッシングのクリック率が54%、従来型の4倍超
+AI生成のフィッシングメールのクリック率が約54%に達し、従来手法の約12%を大幅に上回ることが報告された。AI支援攻撃のコスト低下と精度向上が、組織の防御を大きく脅かしている。
+🔗 [IBM X-Force Threat Intelligence Index 2026](https://www.ibm.com/think/x-force/threat-intelligence-index-2026-securing-identities-ai-detection-risk-management)
+
+---
+
+## 🟡 Data & Privacy
+
+### 8. GDPR累計制裁金が71億ユーロ突破、アイルランドDPCがXを調査開始
+DLA Piper調査でGDPR累計制裁金が71億ユーロを超え、2025年だけで12億ユーロが科された。またアイルランドデータ保護委員会がX（旧Twitter）のデータ処理慣行に対し新たな調査を開始した。
+🔗 [Kiteworks - GDPR Fines 2026](https://www.kiteworks.com/gdpr-compliance/gdpr-fines-data-privacy-enforcement-2026/)
+
+### 9. EU AI Act 高リスクAIの8月2日コンプライアンス期限が迫る
+EU AI Actの高リスクAIシステムに対するコンプライアンス期限が2026年8月2日に設定されており、該当企業はGDPRとの二重義務への対応が急務。透明性・文書化・人間監督の要件整備が必要。
+🔗 [Secure Privacy - GDPR Compliance 2026](https://secureprivacy.ai/blog/gdpr-compliance-2026)
+
+---
+
+## 🟢 Security Governance
+
+### 10. EU NIS2、4月18日のコンプライアンス期限で各国が一斉点検
+EU NIS2指令の重要インフラ向けコンプライアンス期限（4月18日）が目前に迫り、インシデント報告・リスク管理・サプライチェーンセキュリティ・経営層研修の整備が急務。各国規制当局が一斉監査を実施予定。
+🔗 [VinciWorks - NIS2 2026](https://vinciworks.com/blog/cyber-security-in-2026-the-legislative-shifts-your-compliance-team-should-prepare-for/)
+
+---
+
+## 📊 カテゴリ別サマリー
+
+| カテゴリ | 主要トピック数 | 最重要キーワード |
+|---------|------------|----------------|
+| 🔴 Cyber Security | 4件 | Zero-day / Crypto Heist |
+| 🟠 AI Risk | 3件 | Agentic AI / Shadow AI |
+| 🟡 Data & Privacy | 2件 | GDPR / EU AI Act |
+| 🟢 Security Governance | 1件 | NIS2 Compliance |
+
+---
+
+*次回配信予定：2026年4月7日（火）*
+`;
+    document.getElementById('content').innerHTML = marked.parse(md);
+  </script>
+</body>
+</html>
