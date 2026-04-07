@@ -195,7 +195,7 @@ def md_to_line_summary(md: str, report_date_str: str, report_url: str, index_url
         parts += ["", "【📋 今日のTop10】"]
         for i, h in enumerate(headlines[:10], 1):
             parts.append(f"{i}. {h}")
-    parts += ["", "─" * 28]
+    parts += ["", "─" * 14]
     if next_date_jp:
         parts.append(f"次回配信：{next_date_jp}")
     if report_url:
