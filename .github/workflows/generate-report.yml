@@ -1,0 +1,67 @@
+name: Generate Security Report (Cloud Fallback)
+
+# 役割: Mac版 (send_line.py) が動いていない場合のクラウド代替
+# タイミング: 毎朝 9:00 AM JST (= 0:00 UTC)
+# ロジック: 今日のレポートが既にリポジトリに存在すれば何もしない（Mac版が先に実行済み）
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # 毎日 0:00 UTC = 9:00 AM JST
+  workflow_dispatch:        # 手動実行も可能
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ── Step 1: 今日のレポートが既に存在するか確認 ──────────────
+      - name: Check if today's report already exists
+        id: check
+        run: |
+          TODAY=$(TZ='Asia/Tokyo' date '+%Y-%m-%d')
+          echo "today=$TODAY" >> $GITHUB_OUTPUT
+
+          if [ -f "reports/SecurityTrend_Top10_${TODAY}.md" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "✅ 今日のレポートは既に存在します（Mac版が実行済み）"
+            echo "   ファイル: reports/SecurityTrend_Top10_${TODAY}.md"
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "⚠️  今日のレポートが見つかりません → クラウドで生成します"
+            echo "   対象日: ${TODAY}"
+          fi
+
+      # ── Step 2: レポートが存在しない場合のみ以下を実行 ───────────
+      - name: Set up Python
+        if: steps.check.outputs.exists == 'false'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        if: steps.check.outputs.exists == 'false'
+        run: pip install anthropic
+
+      - name: Generate report via Claude API
+        if: steps.check.outputs.exists == 'false'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          REPORT_DATE: ${{ steps.check.outputs.today }}
+        run: python scripts/generate_report.py
+
+      # ── Step 3: 生成したMDをコミット → process-report.yml が自動起動 ──
+      - name: Commit and push report
+        if: steps.check.outputs.exists == 'false'
+        run: |
+          git config user.name "SecurityTrend Bot [Cloud]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/SecurityTrend_Top10_${{ steps.check.outputs.today }}.md
+          git diff --staged --quiet && echo "変更なし（スキップ）" && exit 0
+          git commit -m "Add report: ${{ steps.check.outputs.today }} [cloud-generated]"
+          git push
+          echo "🚀 レポートをプッシュしました → process-report.yml が起動します"
