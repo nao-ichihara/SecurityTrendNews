@@ -1,0 +1,133 @@
+# セキュリティトレンド Top 10 ニュース
+**配信日：2026年4月11日（土）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **ゼロデイエクスプロイト（Zero-Day Exploit）** | 公開前または公開直後の脆弱性を悪用する攻撃。Storm-1175がパッチ適用前にMedusaランサムウェアを展開した事例など、2026年は「開示から悪用まで24時間以内」が常態化しつつある。 |
+| 2 | **エージェンティックAI（Agentic AI）** | 人間の監視なしに自律的に行動するAIシステム。企業の8社に1社でAI関連侵害が報告され、攻撃者がAIエージェントを悪用して偵察・マルウェア開発・ソーシャルエンジニアリングを加速させている。 |
+| 3 | **サプライチェーン攻撃（Supply Chain Attack）** | 信頼性の高いソフトウェアやプラグインを乗っ取り、悪意あるコードを配布する手口。WordPressプラグインの売買を通じたバックドア注入が4月に相次いで発生した。 |
+| 4 | **NIS2コンプライアンス** | EU全域で施行されるネットワーク・情報セキュリティ指令の改定版。2026年4月18日にベルギーで重要な遵守期限を迎え、違反企業には最大1,000万ユーロまたはグローバル売上高の2%の制裁金が科される。 |
+| 5 | **ディープフェイク詐欺（Deepfake Fraud）** | AI生成の音声・映像を使ったなりすまし攻撃。エグゼクティブを模倣したビデオ会議詐欺が急増しており、2026年はAI生成のCFOや財務担当者に扮した偽のビデオ会議で2,500万ドルを送金させる事件も発生。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. 中国系脅威アクター Storm-1175 がゼロデイを悪用し Medusa ランサムウェアを24時間以内に展開
+**2026年4月6〜7日**
+
+中国に関連する脅威アクター Storm-1175 が、SmarterMail（CVE-2026-23760）および GoAnywhere MFT（CVE-2025-10035）のゼロデイ脆弱性を公開1週間前から悪用し、医療・教育・金融機関を中心に Medusa ランサムウェアを高速展開していることが判明した。米国・英国・オーストラリアの複数組織が被害を受け、初期侵害からランサムウェア展開まで24時間以内という驚異的なオペレーションテンポが記録されている。
+
+🔗 [Storm-1175 Deploys Medusa Ransomware Within 24 Hours of Flaw Disclosure](https://hackread.com/storm-1175-hackers-24-hour-medusa-ransomware-flaw/)
+🔗 [Microsoft Security Blog: Storm-1175 High-Tempo Medusa Operations](https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/)
+
+---
+
+### 2. Google Chrome に4件目のゼロデイ — CVE-2026-5281 の緊急パッチ配布
+**2026年4月上旬**
+
+Google は Chrome 146 の帯域外緊急アップデートをリリースし、野外で悪用が確認されたゼロデイ脆弱性 CVE-2026-5281 を修正した。2026年に入り Chrome でのゼロデイ修正はこれで4件目となり、攻撃者のブラウザへの集中的な関心が浮き彫りになっている。ユーザーは速やかに最新版への更新を実施することが求められる。
+
+🔗 [2026 Cybersecurity Trends: Dominance of Vulnerability Exploits](https://www.gopher.security/news/2026-cybersecurity-trends-dominance-of-vulnerability-exploits)
+
+---
+
+### 3. WordPress プラグインのサプライチェーン攻撃 — バックドアが6時間以内に配布
+**2026年4月6〜7日**
+
+「Countdown Timer Ultimate」をはじめとする WordPress プラグインのオーナーシップ変更を悪用したサプライチェーン攻撃が確認された。新オーナーがプラグインアップデートに191行の PHP デシリアライゼーションバックドアを混入させ、約6時間44分の間に感染が拡大した。WordPress.org にはプラグイン所有権変更に対する審査・通知の仕組みが存在しないことが根本的な問題として浮上している。
+
+🔗 [Plugins on WordPress.org backdoored in supply chain attack](https://www.bleepingcomputer.com/news/security/plugins-on-wordpressorg-backdoored-in-supply-chain-attack/)
+
+---
+
+### 4. Adobe Reader ゼロデイ — パッチなしの悪意ある PDF による攻撃が継続
+**2026年4月（継続中）**
+
+Adobe Acrobat Reader の未知の脆弱性を悪用したゼロデイ攻撃が少なくとも2025年12月以降継続して観測されている。悪意を持って細工された PDF ドキュメントを通じてデータ窃取やシステム侵害が可能となるが、現時点では公式パッチは提供されていない。ユーザーは不審な PDF ファイルの開封を避けるとともに、保護ビュー機能の有効化が推奨される。
+
+🔗 [Zero-Days, Data Breaches, and AI Risks Define This Week's Cybersecurity Landscape in 2026](https://www.esecurityplanet.com/weekly-roundup/zero-days-data-breaches-and-ai-risks-define-this-weeks-cybersecurity-landscape-in-2026/)
+
+---
+
+### 5. Drift DEX が2億8,500万ドルの暗号資産被害 — DeFi プラットフォームへの攻撃
+**2026年4月1日**
+
+Solana ベースの分散型取引所 Drift が、セキュリティインシデントにより約2億8,500万ドルの資産流出被害を確認した。DeFi（分散型金融）プラットフォームへの大規模攻撃が2026年も継続しており、スマートコントラクトの脆弱性および鍵管理の問題が依然として重大なリスク要因であることが改めて示された。
+
+🔗 [April 2026 Data Breaches: 15+ Major Incidents & Latest Updates](https://sharkstriker.com/blog/april-2026-data-breaches/)
+
+---
+
+## 🟠 AI Risk
+
+### 6. Microsoft レポート: 脅威アクターによる AI 悪用が「ツール」から「攻撃面」へ加速
+**2026年4月2日**
+
+Microsoft Security Blog が、脅威アクターによる AI 悪用の質的変化を報告した。AI は偵察の高速化、フィッシングルアーの精度向上、マルウェアの「バイブコーディング（vibe coding）」、盗難データのトリアージなど攻撃ライフサイクル全体に組み込まれており、攻撃者のオペレーションテンポを大幅に向上させている。AI は単なるツールから独自の攻撃面（アタックサーフェス）へと変貌しつつある。
+
+🔗 [Threat actor abuse of AI accelerates from tool to cyberattack surface](https://www.microsoft.com/en-us/security/blog/2026/04/02/threat-actor-abuse-of-ai-accelerates-from-tool-to-cyberattack-surface/)
+
+---
+
+### 7. エージェンティック AI 侵害が急増 — 企業の8社に1社が被害報告
+**2026年4月（調査報告）**
+
+Cisco の「State of AI Security 2026」レポートおよび複数のセキュリティ調査によると、企業の8社に1社（12.5%）がエージェンティック AI システムに関連した侵害を経験していることが明らかになった。自律的に行動する AI エージェントへの過剰な権限付与や適切なガバナンス不在が主因とされ、AI エージェントのアイデンティティが人間の100倍に達すると予測されるなかで、企業のセキュリティフレームワークの早急な見直しが求められている。
+
+🔗 [Cisco State of AI Security 2026 Report](https://blogs.cisco.com/ai/cisco-state-of-ai-security-2026-report)
+🔗 [2026: The Year Agentic AI Becomes the Attack-Surface Poster Child](https://www.darkreading.com/threat-intelligence/2026-agentic-ai-attack-surface-poster-child)
+
+---
+
+### 8. Anthropic が Project Glasswing を発表 — 新フロンティアモデル「Claude Mythos」で脆弱性研究
+**2026年4月上旬**
+
+Anthropic は Project Glasswing を発表し、新フロンティアモデル「Claude Mythos」のプレビュー版を脆弱性の発見と対処に活用する取り組みを開始した。一方、Mythos は「公開すれば社会的混乱を引き起こす可能性がある」として一般リリースは限定的な試験段階に留まっており、強力な AI モデルの能力と安全性管理のトレードオフが改めて注目されている。
+
+🔗 [Powerful new AI models raise security risks](https://www.pbs.org/newshour/classroom/daily-news-lessons/2026/04/powerful-new-ai-models-raise-security-risks/)
+
+---
+
+## 🟡 Data & Privacy
+
+### 9. GDPR 累計制裁金が71億ユーロ超 — EU AI 法フル施行（8月）を前に規制圧力が増大
+**2026年4月（継続トレンド）**
+
+GDPR 施行以来の累計制裁金が71億ユーロを突破し、2025年単年だけで12億ユーロが課された。執行の重点は「侵害があったかどうか」から「暗号化・ベンダー管理・ログ記録などの構造的管理欠陥」へとシフトしている。さらに2026年8月2日に EU AI 法の高リスク AI システムへのフル施行が迫り、違反には最大3,500万ユーロまたはグローバル売上高の7%という GDPR を超える制裁が科される可能性がある。また米国では19州が包括的データプライバシー法を施行中で、インディアナ・ケンタッキー・ロードアイランドが2026年1月に加わった。
+
+🔗 [GDPR Fines Hit €7.1 Billion: Data Privacy Enforcement Trends in 2026](https://www.kiteworks.com/gdpr-compliance/gdpr-fines-data-privacy-enforcement-2026/)
+🔗 [The 5 trends shaping global privacy and enforcement in 2026](https://www.onetrust.com/blog/the-5-trends-shaping-global-privacy-and-enforcement-in-2026/)
+
+---
+
+## 🟢 Security Governance
+
+### 10. NIS2 執行フェーズ突入 — 4月18日ベルギー期限・CIRCIA 最終規則は5月に延期
+**2026年4月18日（期限）**
+
+EU の NIS2 指令（ネットワーク・情報セキュリティ指令 第2版）について、ベルギーでは2026年4月18日が重要な遵守証明期限とされており、組織は堅固なサイバーセキュリティ対策の実装と監査対応の証拠整備が求められる。従業員50名以上または売上高1,000万ユーロ超の18の重要セクター企業が対象で、違反時は最大1,000万ユーロまたはグローバル売上高の2%の制裁金に加え、役員個人責任も問われる。一方、米国の CIRCIA（重要インフラサイバーインシデント報告法）の最終規則は2026年5月に延期されており、72時間以内のインシデント報告義務化の施行が先送りされている。
+
+🔗 [NIS2 Enforcement Begins in 2026. What Organisations Must Prove](https://diamatix.com/nis2-enforcement-2026-eu-cybersecurity-readiness/)
+🔗 [Cyber security in 2026: the legislative shifts your compliance team should prepare for](https://vinciworks.com/blog/cyber-security-in-2026-the-legislative-shifts-your-compliance-team-should-prepare-for/)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| 🔴 Cyber Security | ●●●●● | ゼロデイ・ランサムウェア・サプライチェーン・DeFi攻撃 |
+| 🟠 AI Risk | ●●●●○ | エージェンティックAI・AI悪用加速・Anthropic Mythos |
+| 🟡 Data & Privacy | ●●●○○ | GDPR制裁金・EU AI法施行・米国プライバシー法 |
+| 🟢 Security Governance | ●●●●○ | NIS2期限・CIRCIA延期・コンプライアンス証明 |
+
+---
+
+*次回配信予定：2026年4月12日（日） | 収集ソース：The Hacker News、Microsoft Security Blog、Dark Reading、Bleeping Computer、CISA、PBS NewsHour、Cisco Security、OneTrust、Kiteworks*
