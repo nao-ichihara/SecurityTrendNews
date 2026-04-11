@@ -1,0 +1,129 @@
+# セキュリティトレンド Top 10 ニュース
+**配信日：2026年4月12日（日）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **Agentic AI** | 人間の介入なしに自律的に行動するAIエージェントの企業導入が急拡大。78%の企業がパイロット・導入済みとされるが、セキュリティ管理が追いついておらず新たな攻撃ベクターとして最大の懸念事項に浮上している。 |
+| 2 | **Zero-day Exploit** | 2026年に入りChromeだけで4件目のゼロデイ脆弱性が積極的悪用で発覚。Marimoのような開発者向けツールも公開10時間以内に悪用されるなど、脆弱性の悪用速度が著しく加速している。 |
+| 3 | **Shadow AI** | 部門単位で無断導入されるAIツール（Shadow AI）がデータ漏洩の最も一般的な侵入経路となった。企業のAI固有セキュリティコントロール導入率はわずか34%にとどまり、ガバナンスとのギャップが深刻化している。 |
+| 4 | **Supply Chain Attack** | 北朝鮮関連ハッカーがGo・Rust・PHPエコシステムを標的とした悪意のあるパッケージを拡散。WordPressプラグインへの悪意あるバージョン混入も確認され、ソフトウェアサプライチェーン全体が標的となっている。 |
+| 5 | **AI Governance** | EU AI Actの完全施行（2026年8月）や各国規制強化により、AI統治フレームワークの整備が急務に。SECもサイバーセキュリティとAIへの懸念を最優先検査項目に格上げし、企業の対応を迫っている。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. Chrome 146でゼロデイ脆弱性CVE-2026-5281が発覚 — 2026年4件目の積極的悪用
+**2026年4月上旬**
+
+GoogleはChrome 146の緊急帯域外アップデートをリリースし、CVE-2026-5281を修正した。これはChromiumのWebGPU実装であるDawnに存在するuse-after-free脆弱性で、2026年に入り積極的に悪用が確認されたChrome ゼロデイとしては4件目となる。ユーザーは直ちにブラウザをアップデートすることが推奨される。
+
+🔗 [The Hacker News - Cybersecurity News](https://thehackernews.com/)
+
+---
+
+### 2. WordPress「Smart Slider 3」プラグインに悪意あるバージョン混入 — 約6時間で配布
+**2026年4月7日**
+
+Smart Slider 3 WordPressプラグイン（バージョン3.5.1.35 Pro）の悪意あるバージョンが約6時間にわたり配布された。このバージョンには完全に武器化されたリモートアクセスツールキットが含まれており、プラグインを自動更新していたサイトが被害を受けた可能性がある。サプライチェーン攻撃の典型事例として注目されている。
+
+🔗 [MSP Cybersecurity News Digest, April 7, 2026 - Acronis](https://www.acronis.com/en/tru/posts/msp-cybersecurity-news-digest-april-7-2026/)
+
+---
+
+### 3. Solana系DEX「Drift」から約2.85億ドルが流出
+**2026年4月1日**
+
+Solanaベースの分散型取引所Driftは、4月1日に発生したセキュリティインシデントにより攻撃者が約2億8500万ドルをプラットフォームから引き出したことを確認した。DeFiプラットフォームへの攻撃が継続的に高額化しており、Web3セキュリティへの懸念が高まっている。
+
+🔗 [April 2026 Data Breaches - SharkStriker](https://sharkstriker.com/blog/april-2026-data-breaches/)
+
+---
+
+### 4. 北朝鮮連携ハッカーがGo・Rust・PHPエコシステムに悪意あるパッケージを拡散
+**2026年4月**
+
+北朝鮮と関連するとされるハッカーグループが、Go、Rust、PHPの各パッケージエコシステムを標的とした悪意のあるパッケージを拡散していることが確認された。開発者が気付かずに悪意あるコードを取り込む可能性があり、オープンソースのサプライチェーン全体に対する脅威が深刻化している。
+
+🔗 [Security Affairs](https://securityaffairs.com/)
+
+---
+
+### 5. ロシア系APT28がMikroTik・TP-LinkルーターでDNSハイジャックキャンペーン
+**2026年4月（継続中）**
+
+ロシアに関連するAPT28（Fancy Bear）が、セキュリティ設定の不十分なMikroTikおよびTP-Linkルーターを悪用した大規模なDNSハイジャックキャンペーンを少なくとも2025年5月から継続して実施している。多数の組織や個人ユーザーのインターネットトラフィックが傍受されるリスクがあり、ルーターのファームウェア更新と適切な設定が急務となっている。
+
+🔗 [Cybersecurity News - Bleeping Computer](https://www.bleepingcomputer.com/news/security/)
+
+---
+
+## 🟠 AI Risk
+
+### 6. Anthropic「Claude Mythos」プレビュー公開 — ゼロデイ脆弱性の発見・悪用が可能な強力なAI
+**2026年4月上旬**
+
+Anthropicは新フロンティアモデル「Claude Mythos」の非常に限定的なテストを発表した。同モデルはコードベース全体にわたる深刻なゼロデイ脆弱性を発見し、脆弱性を連鎖させて実際に動作するエクスプロイトを迅速に構築できるとされる。公開した場合の広範な影響を懸念し、Anthropicは一部企業に限定したセキュリティテストとして提供している。
+
+🔗 [Unpacking AI Security 2026 - The Register](https://www.theregister.com/2026/04/10/unpacking_ai_security_2026/)
+
+---
+
+### 7. AI リスク管理2026レポート：企業の「自信とコントロールのギャップ」が拡大
+**2026年4月**
+
+Purple Book CommunityによるAIリスク管理の状況調査では、企業のAI活用スピードに対してセキュリティガバナンスが大幅に遅れていることが明らかになった。企業の66%がソフトウェア開発にAIを広範に活用し、78%がエージェント型AIを導入・試験中であるにもかかわらず、AI固有のセキュリティ管理を実装している企業はわずか34%にとどまる。
+
+🔗 [The State of AI Risk Management 2026 - eSecurity Planet](https://www.esecurityplanet.com/artificial-intelligence/the-state-of-ai-risk-management-in-2026-reveals-a-growing-confidence-gap/)
+
+---
+
+### 8. エンタープライズにおけるShadow AIが最大のデータ漏洩経路に
+**2026年4月**
+
+The Hacker Newsの調査報告によると、部門ごとに無断で拡散するShadow AI（未承認のAIツール）が現在エンタープライズにおけるデータ漏洩の最も一般的な侵入経路となっている。テキスト生成だけでなく自律的にアクションを実行できるエージェント型AIのリスクは特に大きく、サイバーセキュリティ専門家の約半数が最大の新興攻撃ベクターとして挙げている。
+
+🔗 [The Hidden Security Risks of Shadow AI in Enterprises - The Hacker News](https://thehackernews.com/2026/04/the-hidden-security-risks-of-shadow-ai.html)
+
+---
+
+## 🟡 Data & Privacy
+
+### 9. FTC COPPA改正ルール施行迫る — 4月22日が主要コンプライアンス期限
+**2026年4月22日（期限）**
+
+FTCのCOPPA（子どものオンラインプライバシー保護法）改正ルールに関する重要な施行期限が2026年4月22日に迫っている。改正では、子ども向けウェブサイト運営者が第三者に子どものデータを提供する前に保護者の検証可能な同意を得ることが義務付けられる。未対応の事業者は速やかに対応が求められる。
+
+🔗 [Proposed State Privacy Law Update: April 6, 2026 - Troutman Privacy](https://www.troutmanprivacy.com/2026/04/proposed-state-privacy-law-update-april-6-2026/)
+
+---
+
+## 🟢 Security Governance
+
+### 10. EU NIS2規制の本格施行迫る — 4月18日が重要マイルストーン
+**2026年4月18日（期限）**
+
+EU全域で4月18日がサイバーセキュリティ規制（NIS2指令含む）の重要な施行マイルストーンとなっており、組織は堅牢なサイバーセキュリティ対策の実装と監査証跡の整備を求められる。あわせてCISA・FBI・NSAはイラン関連のアクターが米国重要インフラのPLC（産業用制御装置）を標的にしていると警告を発し、重要インフラ保護に向けたガバナンス強化が一層求められる状況となっている。
+
+🔗 [Cyber Security in 2026: Legislative Shifts - VinciWorks](https://vinciworks.com/blog/cyber-security-in-2026-the-legislative-shifts-your-compliance-team-should-prepare-for/)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴🔴 | Chrome Zero-day、Smart Slider、Drift DEX、APT28、Supply Chain |
+| AI Risk | 🟠🟠🟠🟠 | Claude Mythos、Agentic AI、Shadow AI、AI Governance Gap |
+| Data & Privacy | 🟡🟡🟡 | COPPA、FTC、Children's Privacy、State Laws |
+| Security Governance | 🟢🟢🟢 | NIS2、EU Compliance、Critical Infrastructure、ICS/PLC |
+
+---
+
+*次回配信予定：2026年4月13日（月） | 収集ソース：The Hacker News、Acronis、SharkStriker、The Register、eSecurity Planet、Troutman Privacy、VinciWorks、Security Affairs、Bleeping Computer*
