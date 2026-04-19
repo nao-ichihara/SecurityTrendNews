@@ -1,0 +1,128 @@
+# セキュリティトレンド Top 10 ニュース
+**配信日：2026年4月20日（月）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **KEV（既知悪用脆弱性）** | CISAが Fortinet・Microsoft・Adobe の6件を追加。連邦機関に4月28日までのパッチ適用を指示し、優先対応の波が民間にも広がっている。 |
+| 2 | **Agentic AI リスク** | OWASP LLM Top 10 2026で新たに "Agent Goal Hijack" が登場。自律動作するAIエージェントが攻撃者の指示で本来の目的を書き換えられる新カテゴリのリスク。 |
+| 3 | **Shadow AI** | 部門単位で無許可導入されるAIツールが最大のデータ漏えい経路に。セキュリティチームの可視性が追いつかない"見えないAI"が企業で急増。 |
+| 4 | **EU AI Act 本格施行** | 高リスクAIシステム向けの全面施行が2026年8月2日開始。最大制裁金は €35M または全世界売上7%でGDPR（4%）を上回る。 |
+| 5 | **CPG 2.0 / NIST AI プロファイル** | CISAのCross-Sector Cybersecurity Performance Goals v2.0とNISTの重要インフラ向けAIリスク管理プロファイル（4/10公開）が相次ぎ登場、ガバナンス基盤が刷新。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. CISA、Fortinet・Microsoft・Adobe 計6件の既知悪用脆弱性をKEVに追加
+**2026年4月中旬**
+CISAが Fortinet、Microsoft、Adobe 製品で実際に悪用が確認された6件の脆弱性をKnown Exploited Vulnerabilities（KEV）カタログに追加。連邦民間機関に4月28日までのパッチ適用を指示しており、民間企業も同水準の優先対応が求められる状況。
+
+🔗 [CISA Adds 6 Known Exploited Flaws in Fortinet, Microsoft, and Adobe Software](https://thehackernews.com/2026/04/cisa-adds-6-known-exploited-flaws-in.html)
+
+---
+
+### 2. Microsoft、SharePoint ゼロデイを含む 161件の脆弱性を一斉パッチ
+**2026年4月Patch Tuesday**
+Microsoftが悪用観測済みのSharePoint Serverゼロデイ（CVE-2026-32201、spoofing、CVSS 6.5）を含む計161件の脆弱性に対する修正を公開。CVE-2026-32201はKEVに追加され連邦機関は4月28日までに対処が必要。また Storm-1175 が CVE-2023-21529 を悪用し Medusa ランサムウェアを配布していることが判明。
+
+🔗 [Microsoft Patches Exploited SharePoint Zero-Day and 160 Other Vulnerabilities](https://www.securityweek.com/microsoft-patches-exploited-sharepoint-zero-day-and-160-other-vulnerabilities/)
+
+---
+
+### 3. Cisco、Identity Services / Webex に CVSS 9.8 の重大脆弱性
+**2026年4月**
+Cisco が Identity Services と Webex Services に影響する4件の重大脆弱性を公開。最も深刻な CVE-2026-20184（CVSS 9.8）は不適切な証明書検証により認証なしの攻撃者が任意ユーザーになりすますことが可能。即時パッチ適用が推奨されている。
+
+🔗 [The Hacker News – Top Cyber Security Stories](https://thehackernews.com/)
+
+---
+
+### 4. SonicWall・FortiGate 向けブルートフォース攻撃が爆発的に増加（中東起点88%）
+**2026年1〜3月集計（4月公表）**
+Barracuda Networks の SOC Threat Radar によると、2026年2〜3月に確認された攻撃インシデントの56%が SonicWall/FortiGate 機器へのブルートフォース認証試行。発信元の約88%が中東地域に集中しており、エッジデバイスの保護強化が急務。
+
+🔗 [SOC Threat Radar — April 2026 | Barracuda Networks Blog](https://blog.barracuda.com/2026/04/14/soc-threat-radar-april-2026)
+
+---
+
+### 5. Qilin ランサムウェアと ClickFix 型ソーシャルエンジニアリングが猛威
+**2026年4月**
+2026年第1四半期で最も活発なランサムウェアグループに Qilin が浮上。攻撃スピードも最速クラス。並行して、被害者にコマンドをコピペさせる "ClickFix" 型のソーシャルエンジニアリング攻撃が急増し、既存のEDRでは検知困難なケースが相次いでいる。
+
+🔗 [The State Of Ransomware 2026 | BlackFog](https://www.blackfog.com/the-state-of-ransomware-2026/)
+
+---
+
+## 🟠 AI Risk
+
+### 6. OWASP LLM Top 10 2026公開、"Agent Goal Hijack" など新カテゴリ追加
+**2026年4月**
+OWASP が生成AI向け Top 10 を更新。自律型AIエージェントの普及を踏まえ、攻撃者が隠し命令でエージェントの目的を乗っ取る「Agent Goal Hijack」を新たに追加。プロンプトインジェクションや RAG、Shadow AI に並ぶ主要リスクとして整理された。
+
+🔗 [OWASP LLM Top 10: AI Security Risks to Know in 2026](https://elevateconsult.com/insights/owasp-llm-top-10-security-vulnerabilities-every-ai-developer-must-know-in-2026/)
+
+---
+
+### 7. AI活用で脆弱性発見が加速、開示から実悪用まで「24時間未満」へ
+**2026年4月**
+AI駆動の脆弱性探索ツールが動く PoC を自動生成し、組織のパッチサイクルを上回る速度で攻撃が成立。脆弱性開示から確認悪用までの平均日数は2019年の2.3年から2026年には1日未満に短縮。Anthropic の「Claude Mythos Preview」は未知の脆弱性を数千件検出したと報告されている。
+
+🔗 [AI‑Found Zero‑Days Surge, Forcing Security Model Rethink – Security MEA](https://securitymea.com/2026/04/16/ai-found-zero-days-surge-forcing-security-model-rethink/)
+
+---
+
+### 8. Shadow AI が企業データ漏えいの最大経路に浮上
+**2026年4月**
+FireTail の調査ブログによると、多くの企業がセキュリティチームの可視性が追いつかないまま AI をスケールさせており、部門単位で無許可導入される「Shadow AI」が現在のデータ漏えい最多経路。LLMアプリ、エージェント、プラグインを横断した資産可視化とガバナンスが急務。
+
+🔗 [AI Security Risks: How Enterprises Manage LLM, Shadow AI and Agentic Threats (FireTail)](https://securityboulevard.com/2026/04/ai-security-risks-how-enterprises-manage-llm-shadow-ai-and-agentic-threats-firetail-blog/)
+
+---
+
+## 🟡 Data & Privacy
+
+### 9. GDPR累計制裁金が €7.1B 到達、規制当局は"プロアクティブ検査"へ転換
+**2026年4月**
+2025年12月時点で欧州のGDPR制裁件数は2,679件、累計額は€6.7Bを突破、2026年には€7.1Bに到達。規制当局は苦情待ちではなく自ら Web サイトを能動的にテストする運用にシフトしており、Cookie同意バナーや暗黙同意パターンへの摘発が拡大。また、8月2日には EU AI Act の高リスクAI向け全面施行が始まり、制裁金は最大 €35M または全世界売上7%に達する。
+
+🔗 [GDPR Fines Hit €7.1 Billion: Data Privacy Enforcement Trends in 2026 – Kiteworks](https://www.kiteworks.com/gdpr-compliance/gdpr-fines-data-privacy-enforcement-2026/)
+
+---
+
+### 10. 米国プライバシー法の州施行が19州に拡大、Montana は4月1日にcure期間終了
+**2026年4月**
+Indiana・Kentucky・Rhode Island が2026年1月に施行に加わり、包括的消費者プライバシー法を持つ州は合計19州に。Montana Consumer Data Privacy Act（MTCDPA）の是正猶予期間（right-to-cure）は4月1日で終了し、以後は直接制裁対象に。各社はGlobal Privacy Control 対応・ワンクリック拒否UI・粒度別同意の見直しが必須。
+
+🔗 [Privacy Laws 2026: Global Changes, Enforcement & Compliance Guide – Secure Privacy](https://secureprivacy.ai/blog/privacy-laws-2026)
+
+---
+
+## 🟢 Security Governance
+
+### （参考）NIST が AI向け重要インフラプロファイルを公開、CISA は CPG 2.0 を発表
+**2026年4月10日 / 4月公開**
+NIST は2026年4月10日、重要インフラ向けの AI リスク管理フレームワーク・プロファイルを公開。同時期に CISA は Cross-Sector Cybersecurity Performance Goals (CPG) 2.0 を発表し、NIST CSF 2.0 と整合する形で IT/OT 両領域のベースライン統制を刷新。CIRCIA によるインシデント報告の最終規則は2026年5月発出予定。
+
+🔗 [CISA Unveils Enhanced Cross-Sector Cybersecurity Performance Goals](https://www.cisa.gov/news-events/news/cisa-unveils-enhanced-cross-sector-cybersecurity-performance-goals)
+🔗 [2026 Operational Guide to Cybersecurity, AI Governance & Emerging Risks](https://www.corporatecomplianceinsights.com/2026-operational-guide-cybersecurity-ai-governance-emerging-risks/)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴🔴 | KEV、SharePoint ZeroDay、Cisco CVE-2026-20184、Qilin、ClickFix、SonicWall/FortiGate ブルートフォース |
+| AI Risk | 🟠🟠🟠 | OWASP LLM Top 10、Agent Goal Hijack、Shadow AI、AI-driven 0day、Claude Mythos |
+| Data & Privacy | 🟡🟡 | GDPR €7.1B、EU AI Act 8/2 施行、米国19州、Montana MTCDPA |
+| Security Governance | 🟢🟢 | CPG 2.0、NIST AI プロファイル、CIRCIA 最終規則、ポスト量子暗号 |
+
+---
+
+*次回配信予定：2026年4月21日（火） | 収集ソース：The Hacker News, SecurityWeek, Barracuda Networks, BlackFog, Security MEA, Security Boulevard (FireTail), Kiteworks, Secure Privacy, CISA, Corporate Compliance Insights*
