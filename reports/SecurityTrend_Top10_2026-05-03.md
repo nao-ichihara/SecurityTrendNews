@@ -9,151 +9,130 @@
 
 | # | トレンドワード | 解説 |
 |---|--------------|------|
-| 1 | **Linuxカーネル特権昇格（CVE-2026-31431）** | 2017年以降の全Linuxディストリビューションに影響する深刻な脆弱性。わずか732バイトのスクリプトでroot権限が奪取可能。 |
-| 2 | **AIエージェントセキュリティ** | 自律型AIエージェントが企業SaaS環境に急速に浸透し、非人間IDの管理・制御が2026年最大のリスク領域として浮上。 |
-| 3 | **SECURE Data Act** | 米国下院が提出した連邦統一プライバシー法案。州法パッチワーク状態を解消すべく、FTC執行・データブローカー規制などを一本化。 |
-| 4 | **Silk Typhoon（中国APT）** | 中国政府系ハッカーがアジア・NATOの政府・防衛セクターを標的にした新スパイキャンペーン「SHADOW-EARTH-053」が発覚。 |
-| 5 | **CIRCIA（サイバーインシデント報告義務）** | 重大インシデント72時間・ランサムウェア支払い24時間以内の報告を義務付ける規則が2026年コンプライアンスの焦点に。 |
+| 1 | **Copy Fail (CVE-2026-31431)** | 9年間潜伏していたLinuxカーネルの特権昇格脆弱性。CISAのKEVカタログに追加され、PoC公開済みのため即時パッチ適用が急務。クラウド環境のKubernetesクラスターにも広範な影響を与える。 |
+| 2 | **サプライチェーン攻撃** | PyTorch Lightning（PyPI）のmaliciousパッケージ配布を含む、オープンソースエコシステムを標的にした攻撃が急増。AIトレーニングライブラリの汚染により認証情報窃取が横行。 |
+| 3 | **ShinyHunters** | 医療機器大手Medtronicから900万件超の個人情報を窃取したと主張するハクティビストグループ。身代金要求型の恐喝戦術で標的企業に圧力をかけ続けている。 |
+| 4 | **AI Security / AIセキュリティ** | AI関連攻撃が前年比490%増。AI自体がツールとして攻撃者に利用される一方、Anthropicが脆弱性スキャンツール「Claude Security」を公開ベータリリースするなど防御側の動きも加速。 |
+| 5 | **CIRCIA / サイバーインシデント報告義務** | 重要インフラのサイバーインシデント72時間以内・ランサムウェア支払い24時間以内の報告義務化に向けた規制整備が進展。コンプライアンス体制の再構築が求められる。 |
 
 ---
 
 ## 🔴 Cyber Security
 
-### 1. セキュリティ企業Trellixがソースコードリポジトリへの不正アクセス被害を公表
-**2026年5月3日（12時間前）**
-
-
-サイバーセキュリティ企業Trellixは、ソースコードリポジトリへの不正アクセスを受け、ソースコードの「一部」が侵害されたと発表した。
-同社は「大手フォレンジック専門家」と連携して即座に対応を開始し、法執行機関にも通知したとしている。
-攻撃者がアクセスしたデータの詳細は開示されていないが、ソースコードが悪用された証拠はないとしている。
-
-
-🔗 [Trellix Confirms Source Code Breach With Unauthorized Repository Access](https://thehackernews.com/2026/05/trellix-confirms-source-code-breach.html)
-
----
-
-### 2. Linuxカーネルに9年間潜伏した特権昇格ゼロデイ「Copy Fail」（CVE-2026-31431）
-**2026年4月30日〜5月1日**
-
-
-セキュリティ研究者が、ローカルの非特権ユーザーがroot権限を取得できるLinuxのローカル特権昇格（LPE）脆弱性（CVE-2026-31431、CVSSスコア7.8）の詳細を公開した。
-この脆弱性はLinuxカーネルの暗号化サブシステム「algif_aead」モジュールのロジック欠陥に起因し、2017年8月のコミットで混入した。
-Amazon Linux、RHEL、SUSE、Ubuntuなど2017年以降にリリースされた事実上すべてのLinuxディストリビューションが影響を受ける。
-
-
-🔗 [Linux Local Privilege Escalation Flaw CVE-2026-31431](https://thehackernews.com/)
-
----
-
-### 3. 中国系APT「SHADOW-EARTH-053」がアジア・NATO政府を標的に大規模スパイ活動
+### 1. CVE-2026-31431「Copy Fail」：Linuxカーネルの特権昇格脆弱性、CISAがKEVに追加
 **2026年5月1日**
 
+9年前（2017年以降）のLinuxカーネルに存在する高深刻度の特権昇格脆弱性「Copy Fail」（CVSSスコア：7.8）が活発に悪用されCISAのKnown Exploited Vulnerabilities（KEV）カタログに追加された。`algif_aead`モジュールのロジック欠陥により、権限のないユーザーがroot権限を取得可能。Red Hat、Ubuntu、SUSE、AWS Linuxなど主要ディストリビューションすべてが影響を受け、クラウド環境の数百万のKubernetesクラスターにも波及する。Dirty CowやDirty Pipeと異なり、レースコンディションなしで安定してroot取得が可能なため、早急なパッチ適用が必要。
 
-セキュリティ研究者が、南・東・東南アジアの政府・防衛セクターとNATO加盟欧州政府1カ国を標的にした新たな中国系スパイキャンペーンを開示した。Trend Microは「SHADOW-EARTH-053」として追跡しており、少なくとも2024年12月から活動中とされる。
-このグループはMicrosoft ExchangeやIISサーバーのN-day脆弱性（ProxyLogonなど）を悪用し、Webシェル「Godzilla」とDLLサイドローディングでShadowPadインプラントを展開する。
-
-
-🔗 [China-Linked Hackers Target Asian Governments, NATO State](https://thehackernews.com/2026/05/china-linked-hackers-target-asian.html)
+🔗 [CISA Adds Actively Exploited Linux Root Access Bug CVE-2026-31431 to KEV - The Hacker News](https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html)
+🔗 [CVE-2026-31431: Copy Fail vulnerability enables Linux root privilege escalation - Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/05/01/cve-2026-31431-copy-fail-vulnerability-enables-linux-root-privilege-escalation/)
 
 ---
 
-### 4. 英国サイバーセキュリティ侵害調査：フィッシングが依然として侵害の主要経路
-**2026年5月1日**
+### 2. セキュリティベンダーTrellix、ソースコードリポジトリへの不正アクセスを確認
+**2026年5月初旬**
 
+サイバーセキュリティ大手のTrellixが、製品開発用ソースコードリポジトリへの不正アクセスを公式に認めた。同社は「ソースコードのリリース・配布プロセスへの影響やソースコードの悪用を示す証拠は確認されていない」と説明しており、顧客環境やデータへの影響もないとしている。ただし、セキュリティベンダーのソースコードへの不正アクセスは、検知回避技術の開発や脆弱性調査に悪用されるリスクがあり、攻撃者の特定や侵入期間の詳細は非公表のまま。
 
-英国の2025/2026年サイバーセキュリティ侵害調査では、企業の43%・慈善団体の28%が過去1年間にサイバーインシデントを報告した。
-フィッシングが最も一般的で破壊的なインシデントタイプであり、企業の38%・慈善団体の25%が過去12カ月にフィッシング攻撃を報告。被害組織に限れば、約85〜86%でフィッシングが関与していた。
-
-
-🔗 [1st May 2026 Cyber Update: UK Survey Shows Phishing Still Owns the Breach Economy](https://www.cybernewscentre.com/1st-may-2026-cyber-update-uk-survey-phishing-breach-economy/)
+🔗 [Trellix Confirms Source Code Breach With Unauthorized Repository Access - The Hacker News](https://thehackernews.com/2026/05/trellix-confirms-source-code-breach.html)
+🔗 [Trellix discloses the breach of a code repository - Security Affairs](https://securityaffairs.com/191584/data-breach/trellix-discloses-the-breach-of-a-code-repository.html)
 
 ---
 
-### 5. CordialSpider・SnarkySpiderがVishing・SSO悪用でSaaS環境に高速侵入
+### 3. Medtronic、ShinyHuntersによる900万件超のデータ窃取を確認
+**2026年4月24日**
+
+医療機器大手Medtronicが、ハッカーグループShinyHuntersによるサイバー攻撃を確認した。ShinyHuntersは個人情報を含む900万件以上のレコードと大量の内部企業データを窃取したと主張し、身代金未払いの場合は公開すると脅迫。Medtronicはネットワークの限定的な部分のみへのアクセスにとどまり、製品・患者安全・製造・流通への影響はないとしている。Medtronicのウェブサイトから当該グループのページが削除されており、身代金支払いの可能性が示唆される。医療機器・ヘルスケア分野へのランサムウェア攻撃の深刻化が改めて浮き彫りになった。
+
+🔗 [Medtronic confirms breach after hackers claim 9 million records theft - BleepingComputer](https://www.bleepingcomputer.com/news/security/medtronic-confirms-breach-after-hackers-claim-9-million-records-theft/)
+🔗 [Medtronic Hack Confirmed After ShinyHunters Threatens Data Leak - SecurityWeek](https://www.securityweek.com/medtronic-hack-confirmed-after-shinyhunters-threatens-data-leak/)
+
+---
+
+### 4. PyTorch Lightning（PyPI）、サプライチェーン攻撃で認証情報窃取マルウェアを配布
+**2026年4月30日**
+
+人気AIトレーニングライブラリ「PyTorch Lightning」のPyPI配布版（バージョン2.6.2および2.6.3）が、サプライチェーン攻撃によって侵害された。悪意あるコードはSSHキー、シェル履歴、クラウド認証情報、GitHub/npmトークン、暗号資産ウォレット情報を窃取し、攻撃者管理のGitHubリポジトリへ外部送信する。インポート時に自動実行される点が危険で、コミュニティが発見から42分でインシデント対応を完了したことも話題に。PyPIは当該パッケージを隔離済み。
+
+🔗 [PyTorch Lightning and Intercom-client Hit in Supply Chain Attacks to Steal Credentials - The Hacker News](https://thehackernews.com/2026/04/pytorch-lightning-compromised-in-pypi.html)
+🔗 [Lightning PyPI Package Compromised in Supply Chain Attack - Socket](https://socket.dev/blog/lightning-pypi-package-compromised)
+
+---
+
+### 5. 英国政府調査：フィッシングが依然として侵害の主要因、38%の企業が被害
 **2026年5月1日**
 
+英国政府が実施した最新のサイバーセキュリティ調査によると、過去12か月間で38%の企業と25%の慈善団体がフィッシング攻撃を受けたことが判明した。AIツールによる攻撃の巧妙化・自動化が進む中、フィッシングは依然として最も一般的かつ破壊的なインシデントタイプの座を維持している。攻撃コストが劇的に低下していることから、中小企業を含む幅広い組織がターゲットになりうる状況が続いている。
 
-セキュリティ研究者は、SaaS環境内でほとんど痕跡を残さずに「迅速かつ高インパクトな攻撃」を実行する2つのサイバー犯罪グループへの警戒を呼びかけている。
-Cordial Spider（別名BlackFile、UNC6671）とSnarky Spider（別名UNC6661）の2グループが、VishingとSSO悪用を組み合わせた高速データ窃取を行っていると属性付けされている。
-
-
-🔗 [Cybercrime Groups Using Vishing and SSO Abuse in Rapid SaaS Extortion Attacks](https://thehackernews.com/2026/05/cybercrime-groups-using-vishing-and-sso.html)
+🔗 [1st May 2026 Cyber Update: UK Survey Shows Phishing Still Owns the Breach Economy - CyberNewsCenter](https://www.cybernewscentre.com/1st-may-2026-cyber-update-uk-survey-phishing-breach-economy/)
 
 ---
 
 ## 🟠 AI Risk
 
-### 6. Proofpoint調査：グローバル企業の半数がAIセキュリティ管理を導入しても侵害を経験
-**2026年4月28日**
+### 6. AI関連攻撃が前年比490%増：AIが攻撃者のコスト削減ツールに
+**2026年5月**
 
+複数のセキュリティレポートが、AI関連のサイバー攻撃が前年比490%増加したことを報告した。AIは攻撃実行コストを劇的に低下させており、多くの中小企業がセキュリティ成熟度を高める速度より攻撃コスト低下の速度が上回っている状況。「AIリスク管理の現状2026」レポートによれば、AIの急速な普及に対してセキュリティ対策の整備が追いつかない「コンフィデンスギャップ（過信と実態の乖離）」が組織内で拡大しているとされる。
 
-Proofpointは「2026 AI and Human Risk Landscape」レポートを発表。12カ国1,400人以上のセキュリティ専門家を対象に、AIの急速な導入によって企業コラボレーションのセキュリティコントロールとインシデント対応に構造的な弱点が露呈していることを調査した。
-「AIは既存のリスクを機械的なスピードとスケールで増幅させている。信頼できないコードの実行、機密データの誤処理、認証情報の紛失は、人間が数十年にわたり引き起こしてきた課題であり、AIはそれを機械速度で実行する」と指摘している。
-
-
-🔗 [Proofpoint 2026 AI and Human Risk Landscape Report](https://www.proofpoint.com/us/newsroom/press-releases/proofpoint-research-reveals-half-global-organizations-experienced-ai)
+🔗 [The State of AI Risk Management in 2026 Reveals a Growing Confidence Gap - eSecurity Planet](https://www.esecurityplanet.com/artificial-intelligence/the-state-of-ai-risk-management-in-2026-reveals-a-growing-confidence-gap/)
+🔗 [Supply Chain Attacks, AI Security, and Major Breaches - eSecurity Planet](https://www.esecurityplanet.com/weekly-roundup/supply-chain-attacks-ai-security-and-major-breaches-define-this-week-in-cybersecurity-in-may-2026/)
 
 ---
 
-### 7. 米・英・豪政府が共同警告：Agentic AIの拡大する攻撃対象領域
-**2026年5月（直近）**
+### 7. Anthropic、脆弱性スキャンAI「Claude Security」をパブリックベータ公開
+**2026年5月**
 
+Anthropicは、リポジトリの脆弱性スキャン・再現手順の解説・パッチ生成ガイダンスを提供するAIセキュリティツール「Claude Security」をパブリックベータとして公開した。AI駆動の攻撃が加速する中、AI自身を防御側のツールとして活用する動きが本格化。一方で、ホワイトハウスはAI脆弱性発見ツール「Mythos」のアクセス拡大（約70組織への提供拡大）計画に対し、セキュリティ懸念と計算資源の可用性問題を理由に反対姿勢を示した。
 
-Forbes、CyberScoop、Bloomberg Lawの各メディアが、AIエージェントのセキュリティ脆弱性・ID脅威・AIガバナンス警告を相次いで報道。
-Bloomberg Lawは、米国・英国・オーストラリアの政府機関が連名でAIエージェントシステムの攻撃対象領域拡大について共同警告を発したと報じた。
-AI関連攻撃は前年比490%近く増加しているとする調査結果も示されており、業界全体の警戒水準が急上昇している。
-
-
-🔗 [AI Agents News May 2026 – Agentic AI Risk](https://blog.mean.ceo/ai-agents-news-may-2026/)
+🔗 [Top AI Security Risks in 2026 - Grip Security](https://www.grip.security/blog/top-ai-security-risks-in-2026)
+🔗 [AI Agents News May 2026 (STARTUP EDITION)](https://blog.mean.ceo/ai-agents-news-may-2026/)
 
 ---
 
-### 8. Trend Micro 2026年セキュリティ予測：「AIによるサイバー脅威の自動化」が主要リスクに
-**2026年（継続トレンド）**
+### 8. Mythos：AIが27年前の脆弱性を$50で発見、ホワイトハウスが懸念
+**2026年5月**
 
+AI駆動の脆弱性発見ツール「Mythos」が、広く使われているセキュリティソフトウェアに27年前から存在した脆弱性を1回あたり約50ドルのコストで発見するという驚異的な性能を示した。従来の攻撃的セキュリティ作業と比較してコストプロファイルが抜本的に低いとされ、ホワイトハウスはアクセス範囲の拡大に対して安全保障上の懸念を表明。AIが攻撃者・防御者双方にとって破壊的なコスト変革をもたらしている実態が浮かび上がった。
 
-サイバー脅威はかつてないほど高速・自動化・協調的になっており、AIがサイバー犯罪の規模・速度・高度化を牽引するエンジンとなっている。
-「Vibe coding」の開発プラットフォームへの統合で迅速なプロトタイプ作成が可能になった一方、AI生成コードは安全性が低く、本番システムへの攻撃経路を生む可能性があると警告している。
-
-
-🔗 [The AI-fication of Cyberthreats: Trend Micro Security Predictions 2026](https://www.trendmicro.com/vinfo/us/security/research-and-analysis/predictions/the-ai-fication-of-cyberthreats-trend-micro-security-predictions-for-2026)
+🔗 [Cybersecurity News May 2026 (STARTUP EDITION) - blog.mean.ceo](https://blog.mean.ceo/cybersecurity-news-may-2026/)
 
 ---
 
 ## 🟡 Data & Privacy
 
-### 9. 米国下院、連邦統一プライバシー法案「SECURE Data Act」を提出
-**2026年4月22日**
+### 9. 米国複数州でプライバシー新法施行、カリフォルニア州DROPプラットフォームも始動
+**2026年**
 
+2026年はインディアナ州・ケンタッキー州・ロードアイランド州の包括的プライバシー法が新たに施行され、カリフォルニア州・コネチカット州・オレゴン州・ユタ州でも重要改正が発効した。カリフォルニア州では「Delete Act」に基づくDROP（Delete Request and Opt-Out Platform）が2026年中に開設予定で、消費者が一元的な削除申請を行えるようになる（データブローカーは8月から処理義務）。また、未成年者のデータ・自動意思決定・データブローカー透明性への規制強化が米国全土で加速しており、エンフォースメント（執行）重視の新フェーズに突入した。
 
-2026年4月22日、下院エネルギー・商業委員会が「SECURE Data Act」（消費者権利の確保と統一施行を目的とした包括的連邦プライバシー法案）を提出。現在の州法パッチワーク状態を単一の国家的枠組みで置き換えることを意図している。
-同法案は連邦データブローカー基準を設け、FTCへの登録と公開開示を義務付ける。また最も議論を呼ぶ条項として、州法を連邦法で先取りする「プリエンプション条項」を含んでいる。
-
-
-🔗 [House Introduces SECURE Data Act to Establish a Federal Privacy Framework](https://www.clarkhill.com/news-events/news/comprehensive-federal-privacy-bill-secure-data-act-introduced-by-house-republicans/)
-
----
-
-### 10. EU AI法（EU AI Act）が2026年8月2日に完全施行へ
-**2026年（施行予定）**
-
-
-EU AI Actは2026年8月2日に完全施行となり、企業はAIによる消費者への意思決定を説明する義務を負う。また欧州委員会の「Digital Omnibus Regulation」提案による改正も想定されている。
-EU AI Actの完全適用により（一部高リスク製品は2027年まで延長）、日本企業を含むグローバル企業に対しても対応が急務となっている。
-
-
-🔗 [Global Data Privacy Laws: What to Look For in 2026](https://cdslegal.com/insights/global-data-privacy-laws-the-current-environment-and-what-to-look-for-in-2026/)
+🔗 [Data privacy laws: what to expect for 2026 - Ketch](https://www.ketch.com/blog/posts/us-privacy-laws-2026)
+🔗 [Privacy Laws Ring in the New Year - Baker Donelson](https://www.bakerdonelson.com/privacy-laws-ring-in-the-new-year-state-requirements-expand-across-the-us-in-2026)
 
 ---
 
 ## 🟢 Security Governance
 
-### 11. CIRCIA・NIST CSF 2.0がサイバーインシデント報告・ガバナンス体制を再定義
-**2026年（施行中）**
+### 10. CIRCIA：重要インフラへの72時間報告義務・ランサムウェア24時間報告が規制化へ
+**2026年5月**
 
+米国のCIRCIA（サイバーインシデント報告法）の規則整備が進み、重要インフラの対象事業者に対して重大なサイバーインシデントを72時間以内に、ランサムウェア支払いを24時間以内に報告することを義務付ける規制が具体化しつつある。Fortressが発行した「Compliance Report: May 2026」でも同動向が確認された。テクノロジープロバイダーがコンプライアンス体制の一部として組み込まれる「ベンダーリスク＝本体リスク」という考え方が定着しつつあり、AI採用・ベンダー管理・ガバナンスが一体となった戦略的コンプライアンスへの移行が業界全体で加速している。
 
-連邦インシデント報告に関する勢いが加速しており、CIRCIA（重要インフラ向けサイバーインシデント報告法）とCISAによる規則制定が進行中。重大インシデントを72時間以内・ランサムウェア支払いを24時間以内に報告することを対象事業者に義務付ける規則案が提示されている。
-NIST Cybersecurity Framework 2.0の公開により、法務・コンプライアンス・広報・経営幹部を統合したインシデント対応計画を求める、ガバナンス主導のサイバーセキュリティプログラムに関する連邦の期待値が明確化された。
+🔗 [Compliance Report: May 2026 - Fortress InfoSec](https://www.fortressinfosec.com/resources/reports/compliance-report-may-2026)
+🔗 [Cybersecurity & Privacy 2026: Enforcement & Regulatory Trends - Morgan Lewis](https://www.morganlewis.com/pubs/2026/03/cybersecurity-privacy-2026-enforcement-regulatory-trends)
+🔗 [2026 Operational Guide to Cybersecurity, AI Governance & Emerging Risks - Corporate Compliance Insights](https://www.corporatecomplianceinsights.com/2026-operational-guide-cybersecurity-ai-governance-emerging-risks/)
 
+---
 
-🔗 [Cybersecurity & Privacy 2026: Enforcement & Regulatory Trends](https://www.morganlewis.
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴🔴 | Copy Fail, Trellix, ShinyHunters, PyPI Supply Chain, Phishing |
+| AI Risk | 🟠🟠🟠🟠 | AI攻撃490%増, Claude Security, Mythos, AI脆弱性発見 |
+| Data & Privacy | 🟡🟡🟡 | 米州プライバシー法, California DROP, データブローカー規制 |
+| Security Governance | 🟢🟢🟢 | CIRCIA, 72時間報告義務, ベンダーリスク, AIガバナンス |
+
+---
+
+*次回配信予定：2026年5月4日（月） | 収集ソース：The Hacker News, BleepingComputer, SecurityWeek, Security Affairs, eSecurity Planet, Microsoft Security Blog, Infosecurity Magazine, Ketch, Baker Donelson, Fortress InfoSec*
