@@ -1,0 +1,131 @@
+# セキュリティトレンド Top 10 ニュース
+**配信日：2026年5月5日（火）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **AI-Assisted Attacks（AI支援攻撃）** | 攻撃者がAIを活用してマルウェア生成・脆弱性探索を自動化。2026年はこのトレンドが本格化し、エクスプロイト開発速度が劇的に向上している。 |
+| 2 | **Zero-Day Exploit（ゼロデイエクスプロイト）** | Mandiantの最新レポートによると、CVEの28.3%がパッチ公開から24時間以内に悪用されており、パッチより先にエクスプロイトが登場するケースも増加。 |
+| 3 | **Agentic AI Security（AIエージェントセキュリティ）** | 自律的なツール使用・意思決定を行うAIエージェントが普及する中、エージェントセッションの乗っ取りや不正制御を狙った新たな攻撃手法が確認されている。 |
+| 4 | **CIRCIA（重要インフラサイバーインシデント報告法）** | CISAが最終規則を2026年5月に公開予定。重要インフラ事業者にサイバーインシデントの72時間以内報告・ランサムウェア支払いの24時間以内報告を義務付ける。 |
+| 5 | **Supply Chain Attack（サプライチェーン攻撃）** | ソフトウェアサプライチェーンを標的とした攻撃が今週の主要トレンドとして浮上。Trellixのソースコード漏洩もこの文脈で注目されている。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. Linux権限昇格の脆弱性CVE-2026-31431、CISAがKEVに追加
+**2026年5月1日**
+
+CISAはLinux全般に影響する重大な脆弱性CVE-2026-31431（通称「Copy Fail」）を既知の悪用済み脆弱性（KEV）カタログに追加した。この脆弱性は非特権ローカルユーザーがroot権限を取得できるものであり、クラウド環境でも広く影響を受ける。MicrosoftのDefenderチームは脅威アクターによる積極的な悪用が近日中に激化する可能性があると警告している。
+
+🔗 [CISA Adds Actively Exploited Linux Root Access Bug CVE-2026-31431 to KEV](https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html)
+🔗 [CVE-2026-31431: Copy Fail vulnerability enables Linux root privilege escalation](https://www.microsoft.com/en-us/security/blog/2026/05/01/cve-2026-31431-copy-fail-vulnerability-enables-linux-root-privilege-escalation/)
+
+---
+
+### 2. セキュリティ大手Trellixがソースコード漏洩を確認
+**2026年5月初旬**
+
+サイバーセキュリティ企業Trellixは、攻撃者がソースコードリポジトリの一部に不正アクセスしたことを確認した。セキュリティ製品のソースコード漏洩はサプライチェーンリスクを高め、潜在的な脆弱性解析や悪用コード開発に繋がる恐れがある。同社は調査と対応を継続中。
+
+🔗 [Trellix Confirms Source Code Breach With Unauthorized Repository Access](https://thehackernews.com/2026/05/trellix-confirms-source-code-breach.html)
+
+---
+
+### 3. MedtroniとItronにサイバー侵入、ShinyHuntersが数百万件のデータを窃取
+**2026年5月第1週**
+
+医療機器大手Medtronicと計測機器メーカーItronがサイバー侵入被害を報告した。Medtronicへの攻撃はShinyHuntersグループによるものとされ、数百万件の個人情報が流出した可能性がある。医療・産業インフラへの標的型攻撃の深刻化が改めて浮き彫りになった。
+
+🔗 [Supply Chain Attacks, AI Security, and Major Breaches Define This Week in Cybersecurity in May 2026](https://www.esecurityplanet.com/weekly-roundup/supply-chain-attacks-ai-security-and-major-breaches-define-this-week-in-cybersecurity-in-may-2026/)
+
+---
+
+### 4. cPanelの認証バイパス脆弱性（CVE-2026-41940）が東南アジア政府機関を標的に
+**2026年5月**
+
+未特定の脅威アクターがcPanel/WebHost Managerの重大脆弱性CVE-2026-41940を悪用し、東南アジアの政府・軍事機関やマネージドサービスプロバイダーを標的にした攻撃キャンペーンを展開していることが判明。攻撃者はこの認証バイパスを通じてリモートから管理者権限を取得できる。
+
+🔗 [May 2026 Data Breaches: List Major Incidents & Latest Updates - SharkStriker](https://sharkstriker.com/blog/may-2026-data-breaches/)
+
+---
+
+### 5. フィッシングが依然として最多の侵害手口、英国調査が示すリアルな脅威
+**2026年5月1日**
+
+英国政府の最新サイバーセキュリティ調査によると、ビジネスの38%、チャリティの25%が過去12か月でフィッシング攻撃を受けたと回答。フィッシングは依然として最もよく使われ、最も被害をもたらす攻撃手法であることが確認され、人的要因のリスク管理の重要性が再確認された。
+
+🔗 [1st May 2026 Cyber Update: UK Survey Shows Phishing Still Owns the Breach Economy](https://www.cybernewscentre.com/1st-may-2026-cyber-update-uk-survey-phishing-breach-economy/)
+
+---
+
+## 🟠 AI Risk
+
+### 6. 2026年はAI支援攻撃元年：パッチより先にエクスプロイトが届く時代へ
+**2026年5月**
+
+Mandiantの「M-Trends 2026」レポートは衝撃的な事実を明らかにした。CVEの28.3%がパッチ公開から24時間以内に悪用されており、Time-to-Exploit（攻撃到達時間）は2020年の700日超から44日にまで短縮。AIがオフェンシブセキュリティ作業のコストと速度を劇的に変え、脆弱性の悪用が「パッチ前提」の世界になりつつある。
+
+🔗 [2026: The Year of AI-Assisted Attacks](https://thehackernews.com/2026/05/2026-year-of-ai-assisted-attacks.html)
+
+---
+
+### 7. AI駆動ランサムウェアが新たなサイバー犯罪グループの増殖を加速
+**2026年5月**
+
+ISACAの最新レポートは、AI駆動型ランサムウェアが新興犯罪グループの参入障壁を下げていると警告。DragonForceの「RansomBay」などのRaaSサービスがインフラなしで攻撃を可能にし、攻撃者がAI生成マルウェアを実際の攻撃に直接投入する段階に移行している。
+
+🔗 [AI-Driven Ransomware Fuels Rise in New Cyberthreat Groups](https://www.isaca.org/resources/news-and-trends/industry-news/2026/ai-driven-ransomware-fuels-rise-in-new-cyberthreat-groups)
+
+---
+
+### 8. 連邦環境のAIエージェントリスク、従来のガバナンスモデルでは対応不能
+**2026年5月**
+
+連邦政府機関でのAIエージェント導入が加速する中、CVE-2026-25253などのエージェントセッション乗っ取り脆弱性が確認された。研究者は、自律的ツール使用・意思決定を行うエージェントAIには従来のサプライチェーン・ランタイム監視モデルが機能しないと指摘。新たなガバナンスフレームワークの緊急整備が求められている。
+
+🔗 [Mitigating risk from emerging agentic AI in federal environments](https://federalnewsnetwork.com/commentary/2026/05/mitigating-risk-from-emerging-agentic-ai-in-federal-environments/)
+
+---
+
+## 🟡 Data & Privacy
+
+### 9. コネチカット州議会、消費者データプライバシー強化法案を圧倒的多数で可決
+**2026年5月4日**
+
+コネチカット州下院はAI規制法案に続き、上院法案4号（SB4）を賛成141対反対6という圧倒的多数で可決。データブローカーの規制強化、消費者のインターネット上の個人情報削除権、遺伝データの保護などを定めた本法案は知事の署名待ちとなっている。2026年は米国全体で20州以上が包括的プライバシー法を施行する「第二波」の年となっている。
+
+🔗 [Consumer data privacy bill gets final passage in CT House](https://ctmirror.org/2026/05/04/consumer-data-privacy-regulation-ct-house/)
+
+---
+
+## 🟢 Security Governance
+
+### 10. CIRCIAの最終規則2026年5月公開へ、72時間以内のインシデント報告義務が現実に
+**2026年5月**
+
+CISAはCIRCIA（重要インフラサイバーインシデント報告法）の最終規則制定を2026年5月に公開する予定。規則は対象事業者に重大なサイバーインシデントを72時間以内、ランサムウェア支払いを24時間以内に報告することを義務付ける。これにより組織は事前のインシデントレスポンス計画とレポーティング体制の整備が急務となっている。
+
+🔗 [Compliance Report: May 2026](https://www.fortressinfosec.com/resources/reports/compliance-report-may-2026)
+🔗 [2026 Operational Guide to Cybersecurity, AI Governance & Emerging Risks](https://www.corporatecomplianceinsights.com/2026-operational-guide-cybersecurity-ai-governance-emerging-risks/)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴🔴 | CVE-2026-31431、Trellix、ShinyHunters、cPanel、フィッシング |
+| AI Risk | 🟠🟠🟠🟠 | AI支援攻撃、ランサムウェアRaaS、エージェントAI、M-Trends 2026 |
+| Data & Privacy | 🟡🟡🟡 | コネチカット州SB4、データブローカー規制、遺伝データ保護 |
+| Security Governance | 🟢🟢🟢 | CIRCIA、72時間報告義務、DORA、SEC検査優先事項 |
+
+---
+
+*次回配信予定：2026年5月6日（水） | 収集ソース：The Hacker News、ISACA、Federal News Network、CT Mirror、Fortress InfoSec、eSecurity Planet、Microsoft Security Blog、Mandiant M-Trends 2026*
