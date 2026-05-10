@@ -1,0 +1,133 @@
+# セキュリティトレンド Top 10 ニュース
+**配信日：2026年5月11日（月）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **ShinyHunters** | 2026年に急増している国際的ランサムウェア・グループ。教育機関や不動産大手など複数の組織を標的に2億7500万件超のデータを窃取したとされ、今週最大の脅威アクターとして注目される。 |
+| 2 | **AI-Assisted Attacks** | AIを活用した攻撃手法が主流化。Mandiant M-Trends 2026レポートによれば、CVEの28.3%がパッチ公開24時間以内に悪用されており、AIがゼロデイ探索を加速させている。 |
+| 3 | **Zero-Day Exploitation** | SharePointのRCE脆弱性（CVE-2026-32201）やcPanelの認証バイパス（CVE-2026-41940）など、パッチ前に悪用されるゼロデイが急増。脆弱性管理の迅速化が急務に。 |
+| 4 | **CIRCIA** | 2022年成立の「重要インフラサイバーインシデント報告法」。CISAが2026年5月に最終規則を公開予定で、30万以上の組織が重大インシデントの72時間以内報告が義務化される。 |
+| 5 | **Agentic AI Security** | 自律的に行動するAIエージェントのセキュリティリスクが世界的な焦点に。米英などの安全保障機関がエージェント型AIの安全実装に関するガイダンスを発行し、業界全体に注意を促している。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. Instructure Canvas、2億7500万件のデータ漏洩か ― ShinyHunters が主要教育機関を直撃
+**2026年5月上旬**
+
+学習管理システム大手InstructureのCanvas LMSが侵害され、ShinyHuntersランサムウェアグループが約2億7500万件の学生・教職員データを窃取したと主張している。8,809の学区・大学・教育プラットフォームが影響を受ける可能性があり、米国の公教育インフラへの甚大な打撃となっている。一部州では個人情報保護当局への報告義務が発生し、対応が急がれる。
+
+🔗 [Edtech Firm Instructure Discloses Data Breach Amid Hacker Leak Threats - SecurityWeek](https://www.securityweek.com/edtech-firm-instructure-discloses-data-breach/)
+🔗 [Millions of students' personal data stolen in major education breach - Malwarebytes](https://www.malwarebytes.com/blog/news/2026/05/millions-of-students-personal-data-stolen-in-major-education-cyberattack)
+
+---
+
+### 2. SharePoint ゼロデイ（CVE-2026-32201）が野放し ― RCE 攻撃が政府・企業に拡大
+**2026年5月**
+
+Microsoft SharePointにリモートコード実行（RCE）を可能にするゼロデイ脆弱性CVE-2026-32201が確認され、政府機関やMSP（マネージドサービスプロバイダー）ネットワークを標的とした積極的な攻撃が観測されている。パッチ公開前の悪用が確認されており、SharePointを利用する組織は即時の緩和策適用が求められる。
+
+🔗 [Supply Chain Attacks, AI Security, and Major Breaches Define This Week in Cybersecurity - eSecurity Planet](https://www.esecurityplanet.com/weekly-roundup/supply-chain-attacks-ai-security-and-major-breaches-define-this-week-in-cybersecurity-in-may-2026/)
+
+---
+
+### 3. cPanel の重大脆弱性（CVE-2026-41940）― 4万4000超のIPが侵害、ブルートフォース攻撃が波及
+**2026年5月**
+
+cPanel/WHMの認証バイパス脆弱性CVE-2026-41940（CVSS：重大）が悪用され、Shadowserver Foundationの観測では最大44,000ものIPアドレスがハニーポットへのスキャン・ブルートフォース攻撃に参加していた。共有ホスティング環境を大規模に侵害するリスクがあり、Webホスティングプロバイダーへの影響が懸念される。
+
+🔗 [Critical cPanel Vulnerability Weaponized to Target Government and MSP Networks - The Hacker News](https://thehackernews.com/2026/05/critical-cpanel-vulnerability.html)
+
+---
+
+### 4. CISA、Linux ローカル権限昇格バグ（CVE-2026-31431）を KEV カタログに追加
+**2026年5月**
+
+CISAは、Linuxカーネルのローカル権限昇格（LPE）脆弱性CVE-2026-31431（CVSS 7.8）をKnown Exploited Vulnerabilities（KEV）カタログに追加した。ローカルユーザーがroot権限を取得できるこの欠陥は、既に野外で悪用が確認されており、連邦機関および重要インフラ事業者に対して迅速なパッチ適用が義務付けられた。
+
+🔗 [CISA Adds Actively Exploited Linux Root Access Bug CVE-2026-31431 to KEV - The Hacker News](https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html)
+🔗 [Known Exploited Vulnerabilities Catalog - CISA](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+
+---
+
+### 5. Cushman & Wakefield、ShinyHunters に 50万件の Salesforce データを窃取される
+**2026年5月**
+
+世界最大規模の不動産サービス企業の一つCushman & Wakefieldが、ShinyHuntersランサムウェアグループによるサイバー攻撃を受け、500,000件超のSalesforceレコード（個人情報・社内データを含む）が流出した。大手企業のCRMプラットフォームを狙った標的型攻撃が増加しており、クラウドSaaSセキュリティの見直しが急務となっている。
+
+🔗 [May 2026 Data Breaches: List Major Incidents & Latest Updates - SharkStriker](https://sharkstriker.com/blog/may-2026-data-breaches/)
+
+---
+
+## 🟠 AI Risk
+
+### 6. Mandiant M-Trends 2026：CVEの28.3%がパッチ公開24時間以内に悪用 ― 脆弱性対応が「間に合わない」時代へ
+**2026年5月**
+
+Mandiantが公開した「M-Trends 2026」レポートによると、公開済みCVEのうち28.3%がパッチリリースから24時間以内に実際の攻撃で悪用されていることが判明。AIが脆弱性の自動探索・エクスプロイト生成を加速させており、「パッチより先に攻撃が来る」という逆転現象が常態化しつつある。従来のパッチ管理サイクルの抜本的見直しが迫られている。
+
+🔗 [2026: The Year of AI-Assisted Attacks - The Hacker News](https://thehackernews.com/2026/05/2026-year-of-ai-assisted-attacks.html)
+
+---
+
+### 7. IMF 警告：AIが金融システムへのサイバー攻撃を増幅、極端な損失が市場危機を引き起こす恐れ
+**2026年5月7日**
+
+IMFは最新ブログ記事で、AIが攻撃者の能力を飛躍的に高め、金融機関への高度なサイバー攻撃を可能にしていると警告。極端なサイバーインシデント損失が資金調達難、支払い能力への懸念、さらには市場全体の混乱を引き起こしうると分析している。金融セクターにおけるサイバーレジリエンス強化が国際的優先課題と位置付けられた。
+
+🔗 [Financial Stability Risks Mount as Artificial Intelligence Fuels Cyberattacks - IMF](https://www.imf.org/en/blogs/articles/2026/05/07/financial-stability-risks-mount-as-artificial-intelligence-fuels-cyberattacks)
+
+---
+
+### 8. Anthropic「Mythos」が波紋 ― 1万以上の未知脆弱性を発見し業界に衝撃、専門家は「既存モデルでも可能」と指摘
+**2026年5月8日**
+
+Anthropicが開発したとされる高性能AIモデル「Mythos」が世界のソフトウェアインフラに数千の未知脆弱性を発見したとの報告が大きな波紋を呼んだ。銀行・政府機関が対応に追われた一方、サイバーセキュリティ専門家は「既存モデルでも同等の探索が可能」と指摘。エージェント型AIによる大規模脆弱性探索という新たなリスクカテゴリへの対応が急務となっている。
+
+🔗 [Anthropic's Mythos set off a cybersecurity 'hysteria.' Experts say the threat was already here - CNBC](https://www.cnbc.com/2026/05/08/anthropic-mythos-ai-cybersecurity-banks.html)
+
+---
+
+## 🟡 Data & Privacy
+
+### 9. コネチカット州、強化版データプライバシー法を141-6で可決 ― データブローカー規制と遺伝情報保護が柱
+**2026年5月4日**
+
+コネチカット州下院が、消費者データプライバシーを大幅に強化する法案（上院法案第4号）を141対6の圧倒的多数で可決した。データブローカーによる個人情報の利用制限、消費者によるインターネット上の個人情報削除権、遺伝情報の特別保護が主な柱。米国でのデータ保護立法の波は2026年に入りさらに加速しており、企業のコンプライアンス対応コストが増大している。
+
+🔗 [Consumer data privacy bill gets final passage in CT House - CT Mirror](https://ctmirror.org/2026/05/04/consumer-data-privacy-regulation-ct-house/)
+🔗 [The SECURE Data Act is Not a Serious Piece of Privacy Legislation - EFF](https://www.eff.org/deeplinks/2026/05/secure-data-act-not-serious-piece-privacy-legislation)
+
+---
+
+## 🟢 Security Governance
+
+### 10. CISA、CIRCIA 最終規則を5月公開へ ― 30万超の組織に72時間以内のインシデント報告義務
+**2026年5月**
+
+CISAは「重要インフラサイバーインシデント報告法（CIRCIA）」に基づく最終規則を2026年5月に公開する見通しを示した。エネルギー・運輸・医療・金融・ITなど16セクターの30万以上の組織が対象となり、重大サイバーインシデントの72時間以内報告、ランサムウェア身代金支払いの24時間以内報告が義務付けられる。規制対象企業には早急な報告体制の整備が求められる。
+
+🔗 [CISA Unveils Enhanced Cross-Sector Cybersecurity Performance Goals - CISA](https://www.cisa.gov/news-events/news/cisa-unveils-enhanced-cross-sector-cybersecurity-performance-goals)
+🔗 [Cyber security in 2026: the legislative shifts your compliance team should prepare for - VinciWorks](https://vinciworks.com/blog/cyber-security-in-2026-the-legislative-shifts-your-compliance-team-should-prepare-for/)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴🔴 | ShinyHunters, SharePoint RCE, cPanel 0-day, CISA KEV, Ransomware |
+| AI Risk | 🟠🟠🟠🟠 | AI-Assisted Attacks, Zero-Day加速, IMF警告, Agentic AI |
+| Data & Privacy | 🟡🟡🟡 | Connecticut法, SECURE Data Act, データブローカー規制 |
+| Security Governance | 🟢🟢🟢🟢 | CIRCIA最終規則, CISA CPG v2.0, 72時間報告義務 |
+
+---
+
+*次回配信予定：2026年5月12日（火） | 収集ソース：The Hacker News, SecurityWeek, Malwarebytes, eSecurity Planet, CNBC, IMF, CISA, CT Mirror, EFF, SharkStriker*
