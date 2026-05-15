@@ -1,0 +1,139 @@
+# セキュリティトレンド Top 10 ニュース
+**配信日：2026年5月16日（土）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **Supply Chain Attack（サプライチェーン攻撃）** | npm等のオープンソースライブラリへの悪意あるコード注入が急増。OpenAI社内環境への侵入経路にも使われ、ソフトウェア依存関係の脆弱性が改めて問われている。 |
+| 2 | **Agentic AI Risk（エージェント型AIリスク）** | 自律的に行動するAIエージェントの普及に伴い、プロンプトインジェクションや過剰な権限付与による新たな攻撃面が拡大。5カ国のセキュリティ機関が共同ガイダンスを発表。 |
+| 3 | **Zero-Day Exploit（ゼロデイ悪用）** | 脆弱性の公開から24時間以内に悪用されるケースが28.3%に達し、パッチ適用の緊急性が急激に高まっている。2020年の700日超から44日まで悪用までの時間が短縮。 |
+| 4 | **AI-Assisted Attack（AI支援型攻撃）** | AIが生成・最適化したエクスプロイトや2FAバイパス手法が実際の攻撃に使用され始め、攻撃の自動化・精密化が加速している。 |
+| 5 | **SECURE Data Act（連邦プライバシー法案）** | 米国初の包括的連邦プライバシー法案として下院エネルギー・商業委員会に提出。州法の乱立を統一する可能性を持ち、企業のコンプライアンス負担に大きな影響。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. OpenAI社内環境、TanStack npmサプライチェーン攻撃で侵害
+**2026年5月11日〜**
+
+「Mini Shai-Hulud」と名付けられたキャンペーンにより、広く使われているオープンソースJavaScriptライブラリ「TanStack」に悪意あるコードが注入された。OpenAIの企業環境がこの汚染パッケージを取り込み、社員の2台のワークステーションが感染。サプライチェーン攻撃の高度化と、依存関係管理の重要性を改めて浮き彫りにした。
+
+🔗 [OpenAI Confirms Security Breach Via TanStack npm Supply Chain Attack](https://www.cryptika.com/openai-confirms-security-breach-via-tanstack-npm-supply-chain-attack/)
+
+🔗 [Supply Chain Attacks, AI Security, and Major Breaches Define This Week in Cybersecurity in May 2026](https://www.esecurityplanet.com/weekly-roundup/supply-chain-attacks-ai-security-and-major-breaches-define-this-week-in-cybersecurity-in-may-2026/)
+
+---
+
+### 2. Microsoft Exchange Server のゼロデイ脆弱性 CVE-2026-42897 が積極悪用中
+**2026年5月**
+
+オンプレミス型Microsoft Exchange Serverにおけるスプーフィング脆弱性（CVE-2026-42897、CVSS 8.1）が積極的に悪用されていることをMicrosoftが公開。細工されたメールを受信するだけで攻撃が成立する可能性があり、オンプレミス環境を継続利用する組織は緊急パッチの適用が求められる。
+
+🔗 [On-Prem Microsoft Exchange Server CVE-2026-42897 Exploited via Crafted Email](https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html)
+
+---
+
+### 3. Cisco、2026年6件目のSD-WAN ゼロデイ脆弱性をパッチ
+**2026年5月**
+
+CiscoがSD-WANにおける認証バイパス脆弱性（CVE-2026-20182）を修正。リモートから特別に細工したパケットを送信するだけで管理者権限を取得できる重大な欠陥で、2026年に入ってから修正されたSD-WAN脆弱性はこれで6件目となった。ネットワーク機器の継続的なリスク管理の必要性が際立っている。
+
+🔗 [Cisco Patches Another SD-WAN Zero-Day, the Sixth Exploited in 2026](https://www.securityweek.com/cisco-patches-another-sd-wan-zero-day-the-sixth-exploited-in-2026/)
+
+---
+
+### 4. CISA、Linuxルートアクセスバグ CVE-2026-31431 をKEVカタログに追加
+**2026年5月**
+
+米CISA（サイバーセキュリティ・インフラストラクチャセキュリティ庁）が、積極的に悪用されているLinuxのローカル権限昇格脆弱性（CVE-2026-31431）をKnown Exploited Vulnerabilities（KEV）カタログに追加。Linuxベースの多くのサーバー・クラウド環境に影響するため、政府機関・民間企業ともに迅速な対応が求められる。
+
+🔗 [CISA Adds Actively Exploited Linux Root Access Bug CVE-2026-31431 to KEV](https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html)
+
+---
+
+### 5. SharePointゼロデイ CVE-2026-32201 によるリモートコード実行が活発化
+**2026年5月**
+
+Microsoft SharePointにリモートコード実行が可能なゼロデイ脆弱性（CVE-2026-32201）が発見され、実際の攻撃での悪用が確認された。エンタープライズ環境で広く使われるSharePointが標的とされており、特にオンプレミス展開を継続している組織への影響が懸念される。
+
+🔗 [Supply Chain Attacks, AI Security, and Major Breaches Define This Week in Cybersecurity in May 2026](https://www.esecurityplanet.com/weekly-roundup/supply-chain-attacks-ai-security-and-major-breaches-define-this-week-in-cybersecurity-in-may-2026/)
+
+---
+
+## 🟠 AI Risk
+
+### 6. AIが開発した2FAバイパスのゼロデイ exploit、大規模悪用へ
+**2026年5月**
+
+Googleのセキュリティリサーチャーが、AIシステムによって開発されたと思われるゼロデイエクスプロイトを確認。Webベースのシステム管理ツールにおける二要素認証（2FA）を大規模にバイパスできる手法で、「AIによるサイバー攻撃」が実用段階に入ったことを示す初の事例として注目を集めている。
+
+🔗 [Hackers Used AI to Develop First Known Zero-Day 2FA Bypass for Mass Exploitation](https://thehackernews.com/2026/05/hackers-used-ai-to-develop-first-known.html)
+
+🔗 [2026: The Year of AI-Assisted Attacks](https://thehackernews.com/2026/05/2026-year-of-ai-assisted-attacks.html)
+
+---
+
+### 7. 100万件のAIサービスをスキャン——露出したAIインフラの深刻な実態
+**2026年5月**
+
+200万ホストにわたる100万件のAIサービスをスキャンした調査で、AIインフラが他のどのソフトウェアカテゴリよりも脆弱で、設定ミスが多く、広く公開されている実態が明らかになった。デフォルト設定の甘さによるデータ漏洩やシステム侵害のリスクが急増しており、AI展開時のセキュリティ設計の重要性が問われている。
+
+🔗 [We Scanned 1 Million Exposed AI Services. Here's How Bad the Security Actually Is](https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html)
+
+---
+
+### 8. 米英豪など5カ国セキュリティ機関、エージェント型AI導入ガイダンスを発表
+**2026年5月**
+
+オーストラリア、米国、カナダ、ニュージーランド、英国の5カ国のサイバーセキュリティ機関が共同で、エージェント型AIのIT環境導入に伴うリスクと課題に関するガイダンスを発表。プロンプトインジェクション攻撃や過剰な権限昇格のリスクを中心に、安全な実装のための指針を提示している。
+
+🔗 [Security Agencies Issue Guidance on Safely Implementing Agentic AI Capabilities](https://www.asisonline.org/security-management-magazine/latest-news/today-in-security/2026/may/agentic-ai-safety-guidance/)
+
+🔗 [Mitigating risk from emerging agentic AI in federal environments](https://federalnewsnetwork.com/commentary/2026/05/mitigating-risk-from-emerging-agentic-ai-in-federal-environments/)
+
+---
+
+## 🟡 Data & Privacy
+
+### 9. コネチカット州、消費者データプライバシー法が下院を通過 / GM・OnStarが1,275万ドルで和解
+**2026年5月**
+
+コネチカット州下院でSenate Bill 4が141対6の大差で可決。データブローカーの情報利用制限、インターネット上の個人情報削除権、遺伝情報の保護強化が含まれ、Lamont知事の署名待ちとなっている。同時期、カリフォルニアでは自動車大手GMとOnStarがCCPA違反（コネクテッドカーデータの無断収集・販売）で1,275万ドルの和解を成立。プライバシー規制の執行強化が加速している。
+
+🔗 [Consumer data privacy bill gets final passage in CT House](https://ctmirror.org/2026/05/04/consumer-data-privacy-regulation-ct-house/)
+
+🔗 [U.S. Data Privacy Laws and Regulations in 2026](https://www.smarsh.com/blog/thought-leadership/data-privacy-laws/)
+
+---
+
+## 🟢 Security Governance
+
+### 10. 米国「SECURE Data Act」連邦プライバシー法として提出 / SECがサイバー・AIを最重点項目に
+**2026年5月**
+
+下院エネルギー・商業委員会が4月22日、包括的連邦プライバシー法案「SECURE Data Act」を提出。州ごとに異なる現行プライバシー法を単一の国家フレームワークで統一することを目指す。一方、SECの2026年検査優先事項では、サイバーセキュリティとAIへの懸念が暗号資産を抜いて業界最重点項目に浮上し、企業の情報セキュリティガバナンスへの要求水準が一段と高まっている。
+
+🔗 [House Introduces SECURE Data Act to Establish a Federal Privacy Framework](https://www.clarkhill.com/news-events/news/comprehensive-federal-privacy-bill-secure-data-act-introduced-by-house-republicans/)
+
+🔗 [2026 Operational Guide to Cybersecurity, AI Governance & Emerging Risks](https://www.corporatecomplianceinsights.com/2026-operational-guide-cybersecurity-ai-governance-emerging-risks/)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| 🔴 Cyber Security | ★★★★★ | Supply Chain Attack, Zero-Day, Exchange, Cisco SD-WAN, CISA KEV |
+| 🟠 AI Risk | ★★★★☆ | AI-Assisted Attack, 2FA Bypass, Exposed AI Services, Agentic AI |
+| 🟡 Data & Privacy | ★★★☆☆ | CCPA Enforcement, Connecticut Privacy Bill, Data Broker |
+| 🟢 Security Governance | ★★★☆☆ | SECURE Data Act, SEC Priorities, Federal Compliance |
+
+---
+
+*次回配信予定：2026年5月17日（日） | 収集ソース：The Hacker News, SecurityWeek, eSecurity Planet, Cryptika, ASIS Online, Federal News Network, CT Mirror, Clark Hill, Corporate Compliance Insights, Palo Alto Networks Blog*
