@@ -9,153 +9,119 @@
 
 | # | トレンドワード | 解説 |
 |---|--------------|------|
-| 1 | **サプライチェーン攻撃** | 
-第三者関与の侵害が60%増加し、全侵害の48%を占めるまでに拡大。
-ソフトウェアやnpmパッケージを経由した攻撃が相次いでいる。 |
-| 2 | **AIによる脆弱性悪用加速** | 
-AIが脅威アクターによって既知の脆弱性の悪用時間を短縮し、防御のウィンドウが数ヶ月から数時間に縮小している。
- |
-| 3 | **Shadow AI（シャドーAI）** | 
-未承認のAIツールを職場で使用する従業員が増加し、シャドーAIはデータ漏洩関連の第3位のリスク活動に。使用率は1年で15%から45%に急増している。
- |
-| 4 | **SECURE Data Act** | 
-2026年4月22日、下院エネルギー・商業委員会が、現在の州ごとのプライバシー法の乱立を単一の国家フレームワークに置き換えることを目的とした包括的連邦プライバシー法案を提出した。
- |
-| 5 | **AIガバナンスギャップ** | 
-調査によれば、100%の組織が2026年のロードマップにAIを盛り込んでいる一方、63%はAIエージェントへの目的制限を強制できず、60%は誤動作するAIを迅速に停止できない。
- |
+| 1 | **サプライチェーン攻撃** | TanStack npmライブラリへの悪意あるコード注入を通じてOpenAIやGitHubが標的に。オープンソースエコシステムへの信頼を揺るがす大規模攻撃が続発している。 |
+| 2 | **Agentic AI リスク** | AIエージェントが組織内のインサイダーとして機能するリスクが連邦機関や民間企業で認識され始め、CISA・NSA等が国際共同ガイダンスを発表した。 |
+| 3 | **ゼロデイ即日悪用** | CVEの28.3%が公開後24時間以内に悪用される新常態。PraisonAI認証バイパスCVEは開示後わずか3時間44分でスキャンが開始された。 |
+| 4 | **TeamPCP** | GitHubとOpenAIを相次いで標的にした新興脅威アクター。ランサムウェア・データ窃取・サプライチェーン汚染を組み合わせた高度な手口が特徴。 |
+| 5 | **AIガバナンス＝データガバナンス** | 2026年5月を境にAIガバナンスとデータガバナンスの統合が加速。63%の企業がAIエージェントの利用目的制限を執行できていないとの調査結果が明らかに。 |
 
 ---
 
 ## 🔴 Cyber Security
 
-### 1. GitHub内部リポジトリ侵害 — 3,800件超が流出、従業員デバイス経由の攻撃
-**2026年5月20日**
-
-
-GitHubは、悪意のあるVisual Studio Code拡張機能を通じて従業員デバイスが侵害され、内部リポジトリへの不正アクセスが確認されたことを公式に発表した。Microsoftが所有するこのプラットフォームは、拡張機能の毒入れによって従業員のエンドポイントが侵害されたと説明した。
- 
-脅威アクターTeamPCPがGitHubのソースコードをサイバー犯罪フォーラムに売りに出しており、LAPSUS$グループとの共同売却価格は95,000ドルとされている。
- 
-漏洩したリポジトリにはGitHub Actions、Copilot関連プロジェクト、CodeQLツール、内部インフラなどが含まれるとされる。
-
+### 1. GitHub内部リポジトリ侵害 — 3,800件以上が流出の可能性
+**2026年5月**
+TeamPCPと呼ばれる脅威アクターがGitHubの従業員デバイスをハックし、約3,800件の内部リポジトリをサイバー犯罪フォーラムで販売リストに掲載。GitHub社は「現時点での調査結果と方向性は一致している」と認めており、ソースコードおよび内部組織情報の流出が懸念される。
 
 🔗 [GitHub Breached — Employee Device Hack Led to Exfiltration of 3,800+ Internal Repos](https://thehackernews.com/2026/05/github-investigating-teampcp-claimed.html)
 
 ---
 
-### 2. Verizon DBIR 2026：脆弱性悪用が19年間で初めて盗用認証情報を抜きトップに
-**2026年5月19日**
+### 2. Microsoft Exchange Server ゼロデイ CVE-2026-42897 が野外で悪用中
+**2026年5月**
+オンプレミス版Microsoft Exchange Serverに影響する新たなセキュリティ脆弱性（CVSS: 8.1）が野外で積極的に悪用されている。クロスサイトスクリプティング起因のスプーフィングバグであり、細工したメールを通じて悪用可能。パッチの早急な適用が強く推奨される。
 
-
-脆弱性の悪用が、攻撃者がターゲットネットワークへの初期アクセスを得る最も一般的な手法として盗用認証情報を超えた。DBIRの19年の歴史で初めて認証情報の盗用がトップから陥落した。
- 
-ランサムウェアは全侵害の48%に増加（前年比44%）。一方で被害者の69%は身代金を支払っておらず、支払額は減少傾向にある。
-
-
-🔗 [Verizon DBIR: Vulnerability exploitation is the dominant initial access vector](https://www.helpnetsecurity.com/2026/05/20/verizon-2026-dbir-findings/)
+🔗 [On-Prem Microsoft Exchange Server CVE-2026-42897 Exploited via Crafted Email](https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html)
 
 ---
 
-### 3. Cisco SD-WAN ゼロデイ (CVE-2026-20182)：2026年で6件目の悪用済み脆弱性
-**2026年5月15日頃**
+### 3. OpenAI TanStack npmサプライチェーン攻撃「Mini Shai-Hulud」
+**2026年5月11日**
+TeamPCPがオープンソースJavaScriptライブラリ「TanStack」に悪意あるコードを注入するサプライチェーン攻撃キャンペーンを実施。OpenAIがセキュリティ侵害を公式に確認。広く使われているオープンソースライブラリへの攻撃が依存関係全体への波及リスクを改めて示した。
 
+🔗 [OpenAI Confirms Security Breach Via TanStack npm Supply Chain Attack](https://cybersecuritynews.com/openai-confirms-security-breach/)
 
-Ciscoはまた別のSD-WANのクリティカルなゼロデイ脆弱性にパッチを適用した。これは2026年に悪用が判明した6件目のSD-WANの欠陥である。このゼロデイ(CVE-2026-20182)は、高度な脅威アクターUAT-8616による標的型攻撃で悪用された。
- 
-この脆弱性は認証バイパスの脆弱性として説明されており、リモートの攻撃者が特別に細工されたパケットを通じて対象システム上の管理者権限を取得できる。
- 
-CISAはCVE-2026-20182をKEVカタログに追加し、連邦機関に3日以内の対応を指示した。
+---
 
+### 4. Cisco SD-WAN 2026年6件目のゼロデイ CVE-2026-20182
+**2026年5月**
+Ciscoが2026年に入り6件目となるSD-WANゼロデイ脆弱性にパッチを適用。CVE-2026-20182は認証バイパスの欠陥で、特別細工されたパケットを通じてリモート攻撃者がターゲットシステムの管理者権限を取得できる。エンタープライズネットワークインフラへの継続的な攻撃圧力が浮き彫りに。
 
 🔗 [Cisco Patches Another SD-WAN Zero-Day, the Sixth Exploited in 2026](https://www.securityweek.com/cisco-patches-another-sd-wan-zero-day-the-sixth-exploited-in-2026/)
 
 ---
 
-### 4. Webworm（中国系）がDiscord・MS Graph APIを悪用した新型バックドアを展開
-**2026年5月20日**
+### 5. サプライチェーン攻撃・AIセキュリティ・大規模侵害が今週のサイバーセキュリティを定義
+**2026年5月**
+eSecurity Planetの週次まとめによると、5月第3週はサプライチェーン攻撃の多発、AIセキュリティの懸念拡大、複数組織への大規模侵害が主要トピック。Grafanaがランサムウェアグループ「Coinbase Cartel」の攻撃を受け、シンガポール国立大学もCanvasデータ侵害（約9,000教育機関に影響）の被害に遭った。
 
-
-サイバーセキュリティ研究者は、中国と関連する脅威アクター「Webworm」による新たな活動を確認した。Discord及びMicrosoft Graph APIをC2通信に利用するカスタムバックドアを展開している。Webwormは少なくとも2022年から活動し、政府機関を標的にしていると評価されている。
- 今回新たに「EchoCreep」「GraphWorm」という2種のバックドアが使用されたことが判明した。
-
-🔗 [Webworm Deploys EchoCreep and GraphWorm Backdoors Using Discord and MS Graph API](https://www.wiu.edu/cybersecuritycenter/cybernews.php)
-
----
-
-### 5. NGINX CVE-2026-42945 (CVSS 9.2) がワイルドで悪用、RCEリスク
-**2026年5月17日**
-
-
-NGINX PlusおよびNGINX Openに影響を与える新たなセキュリティ欠陥が、公開からわずか数日で実際に悪用されていることが確認された。CVE-2026-42945（CVSSスコア：9.2）として追跡されるこの脆弱性は、NGINXバージョン0.6.27から1.30.0に影響するヒープバッファオーバーフローである。
-
-
-🔗 [NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible RCE](https://www.wiu.edu/cybersecuritycenter/cybernews.php)
+🔗 [Supply Chain Attacks, AI Security, and Major Breaches Define This Week in Cybersecurity in May 2026](https://www.esecurityplanet.com/weekly-roundup/supply-chain-attacks-ai-security-and-major-breaches-define-this-week-in-cybersecurity-in-may-2026/)
 
 ---
 
 ## 🟠 AI Risk
 
-### 6. Verizon DBIR 2026：AIが防御ウィンドウを「数ヶ月から数時間」に縮小
-**2026年5月19日**
+### 6. 100万件のAIサービスをスキャン — セキュリティの実態は想定以上に深刻
+**2026年5月**
+200万ホストから100万件以上の公開AIサービスをスキャンした調査で、AIインフラはこれまで調査したどのソフトウェアよりも脆弱で、露出しており、設定ミスが多いことが判明。ClawdBotのような自己ホスト型AIアシスタントは平均2.6件/日のCVEが発見されており、AI基盤の根本的なセキュリティ強化が急務となっている。
 
-
-DBIRは、AIが加速させるソフトウェアの欠陥識別への増大するパッチ対応、「セキュア・バイ・デザイン」フレームワークへのAI統合、そして総攻撃面を最小化するための防御的AI活用など、今日のAI環境を踏まえた勧告を提供している。このレポートは2025年データを使用しているが、傾向は明確でありAIはサイバーセキュリティ業界を根本的に再形成している。
- 
-CrowdStrikeの今年初めのグローバル脅威レポートでは、2025年に「AIを活用した攻撃者が前年比89%増加した」と記録されている。
-
-
-🔗 [Verizon's 2026 Breach Report: AI Shrinks Defense Time to Hours](https://www.technology.org/2026/05/20/verizon-dbir-2026-ai-vulnerability-breaches/)
+🔗 [We Scanned 1 Million Exposed AI Services. Here's How Bad the Security Actually Is](https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html)
 
 ---
 
-### 7. Proofpoint調査：世界の組織の半数がAIセキュリティ管理があるにも関わらずAIインシデントを経験
-**2026年4月28日**
+### 7. CISA・NSA・ASD等がAgentic AIの安全導入ガイダンスを共同発表
+**2026年5月**
+米CISA、NSA、オーストラリアASD、カナダCSE、ニュージーランドNCSC、英国NCSCが連名で、IT環境へのエージェント型AIの安全な導入に関するガイダンスを発表。AIエージェントが「組織内のインサイダー」として機能するリスクに対し、各国政府が協調して対策の枠組み作りに乗り出した形。
 
-
-Proofpointの「2026 AI and Human Risk Landscape」レポートの主要な知見によると、AIの導入はガバナンスフレームワークの成熟より速く進んでいる。87%の組織がAIアシスタントをパイロット段階を超えて展開しているが、半数以上がセキュリティ対応を「追いついていない、一貫性がない、または後手に回っている」と認識している。
- 
-42%がAI関連のインシデントを経験済みと報告しており、実運用環境でのリスクはすでに顕在化している。
-
-
-🔗 [Proofpoint Research Reveals Half of Global Organizations Experienced AI Incidents](https://www.proofpoint.com/us/newsroom/press-releases/proofpoint-research-reveals-half-global-organizations-experienced-ai)
+🔗 [Security Agencies Issue Guidance on Safely Implementing Agentic AI Capabilities](https://www.asisonline.org/security-management-magazine/latest-news/today-in-security/2026/may/agentic-ai-safety-guidance/)
 
 ---
 
-### 8. IMF警告：AIが金融システムへのサイバー攻撃を加速、マクロ金融ショックのリスク
-**2026年5月7日**
+### 8. AI支援攻撃が2026年の「ニューノーマル」に — 組織に3〜5か月の猶予
+**2026年5月**
+Palo Alto Networksの分析によると、組織が攻撃者より先手を打てる猶予は残り3〜5か月。フロンティアAIモデルがコードをスキャンして脆弱性を発見するケースが主要発見事例となっており、AI駆動のエクスプロイトが標準化する前の早急なセキュリティ強化が不可欠とされる。
 
-
-高度なAIモデルは、脆弱性の特定と悪用に必要な時間とコストを劇的に削減し、広く使用されているシステムの欠陥を同時に発見・標的化する可能性を高めている。その結果、サイバーリスクは金融仲介、決済、信頼をシステムレベルで混乱させる可能性のある相関的障害の問題になりつつある。
- 
-AIは単一の脆弱性が多くの機関に波及するリスク集中をさらに高める恐れがある。少数のソフトウェアプラットフォームやクラウドプロバイダーへの依存が単一の悪用された脆弱性の影響を増大させ、潜在的なマクロ金融ショックへのリスクを高めている。
-
-
-🔗 [Financial Stability Risks Mount as Artificial Intelligence Fuels Cyberattacks](https://www.imf.org/en/blogs/articles/2026/05/07/financial-stability-risks-mount-as-artificial-intelligence-fuels-cyberattacks)
+🔗 [Defender's Guide to the Frontier AI Impact on Cybersecurity: May 2026 Update](https://www.paloaltonetworks.com/blog/2026/05/defenders-guide-frontier-ai-impact-cybersecurity-may-2026-update/)
 
 ---
 
 ## 🟡 Data & Privacy
 
-### 9. SECURE Data Act：連邦プライバシー統一法案を下院提出、州法の"上書き"で波紋
-**2026年4月22日（継続審議中）**
+### 9. コネチカット州、AIおよびデータプライバシー保護強化法を可決
+**2026年5月4日**
+コネチカット州下院が141対6の圧倒的多数でSenate Bill 4を可決。データブローカーによる消費者情報利用の制限、消費者のインターネット上の個人情報削除権、遺伝子・個人データ保護を規定。AI規制と消費者データプライバシー強化を組み合わせた包括的な法律として注目される。
 
+🔗 [Consumer data privacy bill gets final passage in CT House](https://ctmirror.org/2026/05/04/consumer-data-privacy-regulation-ct-house/)
 
-2026年4月22日、下院エネルギー・商業委員会は「SECURE Data Act」を提出した。現在のバラバラな州のプライバシー法を単一の国家フレームワークに置き換えることを目的とした包括的な連邦プライバシー提案である。この法案の重要性は、それが創出する権利よりも規制の景観をどう再構築するかにある。
- 
-この法案は数百にわたる州のプライバシー保護を無効化する可能性があり、消費者が自らの権利を守るための訴訟を提起すること（プライベート・ライト・オブ・アクション）を認めない点が最大の問題として挙げられている。
+---
 
+### 10. SECURE Data Act — 米連邦統一プライバシー法案が正式に導入
+**2026年4月22日**
+米下院エネルギー・商業委員会が「SECURE Data Act（消費者統一権利・データ執行確立法）」を正式発表。州ごとに異なるデータプライバシー法の乱立を解消し、単一の全国統一フレームワークに置き換えることを目的とする。同時に英国ICOはAI駆動攻撃カテゴリをUK GDPR第32条に対応付けた5ステップ計画を公表した。
 
-🔗 [The SECURE Data Act is Not a Serious Piece of Privacy Legislation | EFF](https://www.eff.org/deeplinks/2026/05/secure-data-act-not-serious-piece-privacy-legislation)
+🔗 [House Introduces SECURE Data Act to Establish a Federal Privacy Framework](https://www.clarkhill.com/news-events/news/comprehensive-federal-privacy-bill-secure-data-act-introduced-by-house-republicans/)
 
 ---
 
 ## 🟢 Security Governance
 
-### 10. AIガバナンスがデータガバナンスと一体化：「ガバナンスvs封じ込めギャップ」の現実
-**2026年5月21日**
+### Bonus. グローバルコンプライアンス違反の罰金が2026年Q1に急増
+**2026年5月16日**
+19の主要グローバル規制当局を対象とした分析により、2026年第1四半期のコンプライアンス違反罰金の件数・金額が加速していることが確認された。データプライバシー違反、オペレーショナルリスク、AML管理の失敗が最大の個別罰金を生み出している。企業は「法律作成期」から「法律執行期」への転換を肌で感じている段階に入った。
 
+🔗 [Global Compliance Fines Surge in Q1 2026 as Data Privacy and Operational Risk Enforcement Takes Centre Stage](https://www.foreignpolicyjournal.com/2026/05/16/global-compliance-fines-surge-in-q1-2026-as-data-privacy-and-operational-risk-enforcement-takes-centre-stage/)
 
-調査データは深刻な実態を明らかにしている。100%の組織がAIをロードマップに組み込んでいる一方で、63%はAIエージェントへの目的制限を強制できず、60%は誤動作するAIを迅速に停止させられない。
- 
-組織はAIの行動を監視することには投資してきたが、停止させることには投資してこなかった。目的拘束、キルスイッチ、ネットワーク分離などの封じ込め制御は、監視制御より
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴🔴 | サプライチェーン攻撃、TeamPCP、Exchange/SD-WAN ゼロデイ |
+| AI Risk | 🟠🟠🟠🟠 | Agentic AI、露出AIサービス、AI支援攻撃 |
+| Data & Privacy | 🟡🟡🟡 | SECURE Data Act、州法整備、コンプライアンス執行強化 |
+| Security Governance | 🟢🟢🟢 | 罰金急増、NIST CSF 2.0、SEC優先事項 |
+
+---
+
+*次回配信予定：2026年5月22日（金） | 収集ソース：The Hacker News、SecurityWeek、Cyber Security News、eSecurity Planet、Palo Alto Networks Blog、ASIS Online、Federal News Network、CT Mirror、Clark Hill、Foreign Policy Journal*
