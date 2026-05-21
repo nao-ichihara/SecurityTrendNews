@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecurityTrend Top10 - 2026-05-21</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f1117; --surface: #1a1d27; --border: #2d3148;
+      --text: #e2e8f0; --muted: #8892a4; --accent: #6366f1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; }
+    .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .header { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+    .header-logo { font-size: 2rem; }
+    .header-title { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+    .header-date { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+    .badge { display: inline-block; background: rgba(99,102,241,0.15); border: 1px solid var(--accent); color: var(--accent); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 20px; margin-top: 0.5rem; }
+    #content h1 { display: none; }
+    #content h2 { font-size: 1.1rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    #content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.5rem 0 0.5rem; }
+    #content p { color: #c8d3e0; margin-bottom: 0.75rem; }
+    #content a { color: var(--accent); text-decoration: none; }
+    #content a:hover { text-decoration: underline; }
+    #content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+    #content blockquote { border-left: 3px solid var(--accent); padding: 0.75rem 1rem; background: rgba(99,102,241,0.08); border-radius: 0 8px 8px 0; margin: 1rem 0; color: var(--muted); font-size: 0.9rem; }
+    #content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    #content th { background: var(--surface); padding: 0.6rem 1rem; text-align: left; border: 1px solid var(--border); color: var(--muted); font-weight: 600; }
+    #content td { padding: 0.6rem 1rem; border: 1px solid var(--border); }
+    #content tr:hover td { background: rgba(99,102,241,0.05); }
+    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+    .back-link { display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-logo">🔐</div>
+      <div>
+        <div class="header-title">SecurityTrend Top10</div>
+        <div class="header-date">2026-05-21</div>
+        <div class="badge">AI Generated Report</div>
+      </div>
+    </div>
+    <div id="content"></div>
+    <div class="footer">
+      <p>このレポートはClaudeのAIが独自に収集・編集したものです</p>
+      <a class="back-link" href="../index.html">← 過去レポート一覧へ</a>
+    </div>
+  </div>
+  <script>
+    const md = `# セキュリティトレンド Top 10 ニュース
+**配信日：2026年5月21日（木）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **サプライチェーン攻撃** | TanStack npmライブラリへの悪意あるコード注入を通じてOpenAIやGitHubが標的に。オープンソースエコシステムへの信頼を揺るがす大規模攻撃が続発している。 |
+| 2 | **Agentic AI リスク** | AIエージェントが組織内のインサイダーとして機能するリスクが連邦機関や民間企業で認識され始め、CISA・NSA等が国際共同ガイダンスを発表した。 |
+| 3 | **ゼロデイ即日悪用** | CVEの28.3%が公開後24時間以内に悪用される新常態。PraisonAI認証バイパスCVEは開示後わずか3時間44分でスキャンが開始された。 |
+| 4 | **TeamPCP** | GitHubとOpenAIを相次いで標的にした新興脅威アクター。ランサムウェア・データ窃取・サプライチェーン汚染を組み合わせた高度な手口が特徴。 |
+| 5 | **AIガバナンス＝データガバナンス** | 2026年5月を境にAIガバナンスとデータガバナンスの統合が加速。63%の企業がAIエージェントの利用目的制限を執行できていないとの調査結果が明らかに。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. GitHub内部リポジトリ侵害 — 3,800件以上が流出の可能性
+**2026年5月**
+TeamPCPと呼ばれる脅威アクターがGitHubの従業員デバイスをハックし、約3,800件の内部リポジトリをサイバー犯罪フォーラムで販売リストに掲載。GitHub社は「現時点での調査結果と方向性は一致している」と認めており、ソースコードおよび内部組織情報の流出が懸念される。
+
+🔗 [GitHub Breached — Employee Device Hack Led to Exfiltration of 3,800+ Internal Repos](https://thehackernews.com/2026/05/github-investigating-teampcp-claimed.html)
+
+---
+
+### 2. Microsoft Exchange Server ゼロデイ CVE-2026-42897 が野外で悪用中
+**2026年5月**
+オンプレミス版Microsoft Exchange Serverに影響する新たなセキュリティ脆弱性（CVSS: 8.1）が野外で積極的に悪用されている。クロスサイトスクリプティング起因のスプーフィングバグであり、細工したメールを通じて悪用可能。パッチの早急な適用が強く推奨される。
+
+🔗 [On-Prem Microsoft Exchange Server CVE-2026-42897 Exploited via Crafted Email](https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html)
+
+---
+
+### 3. OpenAI TanStack npmサプライチェーン攻撃「Mini Shai-Hulud」
+**2026年5月11日**
+TeamPCPがオープンソースJavaScriptライブラリ「TanStack」に悪意あるコードを注入するサプライチェーン攻撃キャンペーンを実施。OpenAIがセキュリティ侵害を公式に確認。広く使われているオープンソースライブラリへの攻撃が依存関係全体への波及リスクを改めて示した。
+
+🔗 [OpenAI Confirms Security Breach Via TanStack npm Supply Chain Attack](https://cybersecuritynews.com/openai-confirms-security-breach/)
+
+---
+
+### 4. Cisco SD-WAN 2026年6件目のゼロデイ CVE-2026-20182
+**2026年5月**
+Ciscoが2026年に入り6件目となるSD-WANゼロデイ脆弱性にパッチを適用。CVE-2026-20182は認証バイパスの欠陥で、特別細工されたパケットを通じてリモート攻撃者がターゲットシステムの管理者権限を取得できる。エンタープライズネットワークインフラへの継続的な攻撃圧力が浮き彫りに。
+
+🔗 [Cisco Patches Another SD-WAN Zero-Day, the Sixth Exploited in 2026](https://www.securityweek.com/cisco-patches-another-sd-wan-zero-day-the-sixth-exploited-in-2026/)
+
+---
+
+### 5. サプライチェーン攻撃・AIセキュリティ・大規模侵害が今週のサイバーセキュリティを定義
+**2026年5月**
+eSecurity Planetの週次まとめによると、5月第3週はサプライチェーン攻撃の多発、AIセキュリティの懸念拡大、複数組織への大規模侵害が主要トピック。Grafanaがランサムウェアグループ「Coinbase Cartel」の攻撃を受け、シンガポール国立大学もCanvasデータ侵害（約9,000教育機関に影響）の被害に遭った。
+
+🔗 [Supply Chain Attacks, AI Security, and Major Breaches Define This Week in Cybersecurity in May 2026](https://www.esecurityplanet.com/weekly-roundup/supply-chain-attacks-ai-security-and-major-breaches-define-this-week-in-cybersecurity-in-may-2026/)
+
+---
+
+## 🟠 AI Risk
+
+### 6. 100万件のAIサービスをスキャン — セキュリティの実態は想定以上に深刻
+**2026年5月**
+200万ホストから100万件以上の公開AIサービスをスキャンした調査で、AIインフラはこれまで調査したどのソフトウェアよりも脆弱で、露出しており、設定ミスが多いことが判明。ClawdBotのような自己ホスト型AIアシスタントは平均2.6件/日のCVEが発見されており、AI基盤の根本的なセキュリティ強化が急務となっている。
+
+🔗 [We Scanned 1 Million Exposed AI Services. Here's How Bad the Security Actually Is](https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html)
+
+---
+
+### 7. CISA・NSA・ASD等がAgentic AIの安全導入ガイダンスを共同発表
+**2026年5月**
+米CISA、NSA、オーストラリアASD、カナダCSE、ニュージーランドNCSC、英国NCSCが連名で、IT環境へのエージェント型AIの安全な導入に関するガイダンスを発表。AIエージェントが「組織内のインサイダー」として機能するリスクに対し、各国政府が協調して対策の枠組み作りに乗り出した形。
+
+🔗 [Security Agencies Issue Guidance on Safely Implementing Agentic AI Capabilities](https://www.asisonline.org/security-management-magazine/latest-news/today-in-security/2026/may/agentic-ai-safety-guidance/)
+
+---
+
+### 8. AI支援攻撃が2026年の「ニューノーマル」に — 組織に3〜5か月の猶予
+**2026年5月**
+Palo Alto Networksの分析によると、組織が攻撃者より先手を打てる猶予は残り3〜5か月。フロンティアAIモデルがコードをスキャンして脆弱性を発見するケースが主要発見事例となっており、AI駆動のエクスプロイトが標準化する前の早急なセキュリティ強化が不可欠とされる。
+
+🔗 [Defender's Guide to the Frontier AI Impact on Cybersecurity: May 2026 Update](https://www.paloaltonetworks.com/blog/2026/05/defenders-guide-frontier-ai-impact-cybersecurity-may-2026-update/)
+
+---
+
+## 🟡 Data & Privacy
+
+### 9. コネチカット州、AIおよびデータプライバシー保護強化法を可決
+**2026年5月4日**
+コネチカット州下院が141対6の圧倒的多数でSenate Bill 4を可決。データブローカーによる消費者情報利用の制限、消費者のインターネット上の個人情報削除権、遺伝子・個人データ保護を規定。AI規制と消費者データプライバシー強化を組み合わせた包括的な法律として注目される。
+
+🔗 [Consumer data privacy bill gets final passage in CT House](https://ctmirror.org/2026/05/04/consumer-data-privacy-regulation-ct-house/)
+
+---
+
+### 10. SECURE Data Act — 米連邦統一プライバシー法案が正式に導入
+**2026年4月22日**
+米下院エネルギー・商業委員会が「SECURE Data Act（消費者統一権利・データ執行確立法）」を正式発表。州ごとに異なるデータプライバシー法の乱立を解消し、単一の全国統一フレームワークに置き換えることを目的とする。同時に英国ICOはAI駆動攻撃カテゴリをUK GDPR第32条に対応付けた5ステップ計画を公表した。
+
+🔗 [House Introduces SECURE Data Act to Establish a Federal Privacy Framework](https://www.clarkhill.com/news-events/news/comprehensive-federal-privacy-bill-secure-data-act-introduced-by-house-republicans/)
+
+---
+
+## 🟢 Security Governance
+
+### Bonus. グローバルコンプライアンス違反の罰金が2026年Q1に急増
+**2026年5月16日**
+19の主要グローバル規制当局を対象とした分析により、2026年第1四半期のコンプライアンス違反罰金の件数・金額が加速していることが確認された。データプライバシー違反、オペレーショナルリスク、AML管理の失敗が最大の個別罰金を生み出している。企業は「法律作成期」から「法律執行期」への転換を肌で感じている段階に入った。
+
+🔗 [Global Compliance Fines Surge in Q1 2026 as Data Privacy and Operational Risk Enforcement Takes Centre Stage](https://www.foreignpolicyjournal.com/2026/05/16/global-compliance-fines-surge-in-q1-2026-as-data-privacy-and-operational-risk-enforcement-takes-centre-stage/)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴🔴 | サプライチェーン攻撃、TeamPCP、Exchange/SD-WAN ゼロデイ |
+| AI Risk | 🟠🟠🟠🟠 | Agentic AI、露出AIサービス、AI支援攻撃 |
+| Data & Privacy | 🟡🟡🟡 | SECURE Data Act、州法整備、コンプライアンス執行強化 |
+| Security Governance | 🟢🟢🟢 | 罰金急増、NIST CSF 2.0、SEC優先事項 |
+
+---
+
+*次回配信予定：2026年5月22日（金） | 収集ソース：The Hacker News、SecurityWeek、Cyber Security News、eSecurity Planet、Palo Alto Networks Blog、ASIS Online、Federal News Network、CT Mirror、Clark Hill、Foreign Policy Journal*
+`;
+    document.getElementById('content').innerHTML = marked.parse(md);
+  </script>
+</body>
+</html>
