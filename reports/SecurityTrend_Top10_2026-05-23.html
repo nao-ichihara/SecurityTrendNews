@@ -63,111 +63,126 @@
 
 | # | トレンドワード | 解説 |
 |---|--------------|------|
-| 1 | **Agentic AI（エージェンティックAI）** | 自律的に行動するAIシステムが急拡大し、セキュリティの新たな盲点に。過剰な権限付与や説明責任の曖昧さがリスクを拡大している。 |
-| 2 | **AI生成ゼロデイ** | Googleが初めてAIによって発見・悪用されたゼロデイ脆弱性を検出。2FAバイパスを可能にする危険性を持ち、攻撃自動化の新時代を示す。 |
-| 3 | **Supply Chain Attack（サプライチェーン攻撃）** | GitHubへの侵害やMicrosoftの署名サービス悪用など、ソフトウェア開発インフラを標的とした攻撃が激化している。 |
-| 4 | **GDPR強化執行** | 累計罰則金が71億ユーロを超え、TikTok・Metaへの大型制裁が続く。構造的なコンプライアンス欠陥への取り締まりが強化されている。 |
-| 5 | **Prompt Injection（プロンプトインジェクション）** | モデルレベルからインフラレベルへと脅威が拡大。数十億のWebページに悪意ある間接的プロンプトインジェクションの実例が確認された。 |
+| 1 | **Agentic AI Security** | 自律的に行動するAIエージェントのセキュリティリスクが急浮上。CISA・NSAなど6カ国機関が初の共同ガイダンスを発表し、権限昇格・アカウンタビリティ欠如などを主要リスクとして定義。 |
+| 2 | **サプライチェーン攻撃** | VS Code拡張機能を悪用したGitHub内部リポジトリ侵害など、開発ツールや依存関係を狙った攻撃が2026年のサイバー脅威の中心となっている。 |
+| 3 | **脆弱性の即日悪用（Zero-Day Race）** | Mandiantのレポートによると公開から24時間以内に悪用されるCVEが28.3%に達し、パッチ適用よりも先にエクスプロイトが出回る「ネガティブ猶予期間」が常態化。 |
+| 4 | **GDPR強化執行** | GDPRの累計罰金が71億ユーロを突破。TikTokへの5.3億ユーロ、Metaへの4.79億ユーロなど大型制裁が続き、違反の構造的欠陥を標的にする傾向が加速。 |
+| 5 | **教育機関へのランサムウェア** | Canvas LMS侵害で9,000校・2億7,500万名のデータが流出。教育セクターが高価値標的として脅迫者に狙われる構造的脆弱性が浮き彫りに。 |
 
 ---
 
 ## 🔴 Cyber Security
 
-### 1. GitHub侵害 — 内部リポジトリ3,800件以上が流出
-**2026年5月**
+### 1. GitHubが内部リポジトリ侵害を確認 — 悪意あるVS Code拡張で3,800件のリポジトリが流出
 
-脅威アクターグループ「TeamPCP」が従業員デバイスへのハッキングを通じてGitHubの内部ソースコードと組織情報をサイバー犯罪フォーラムに出品。GitHubは調査を開始し、約3,800件のリポジトリが影響を受けた可能性を認めた。ソフトウェア開発インフラを標的とするサプライチェーン攻撃の深刻さを示す事例となった。
+**2026年5月19日〜20日**
+
+脅威アクターTeamPCP（別名UNC6780）が、GitHubの従業員のデバイスに侵入し、内部リポジトリ約3,800件を窃取したことが明らかになった。攻撃ベクターは不正に改ざんされたVisual Studio Code拡張機能で、GitHub Copilot・Actions・Dependabotなどの内部プロジェクトデータが流出した。TeamPCPはBreachedハッキングフォーラムでソースコードを最低5万ドルで売りに出したと報告されている。GitHubは顧客データへの影響はないとしているが、調査は継続中。
 
 🔗 [GitHub Breached — Employee Device Hack Led to Exfiltration of 3,800+ Internal Repos](https://thehackernews.com/2026/05/github-investigating-teampcp-claimed.html)
+🔗 [TeamPCP breached GitHub's internal codebase via poisoned VS Code extension](https://www.helpnetsecurity.com/2026/05/20/github-breached-teampcp/)
 
 ---
 
-### 2. Canvasランサムウェア攻撃 — 9,000教育機関・2億7,500万人のデータ脅迫
-**2026年5月**
+### 2. Canvas LMS 大規模データ侵害 — 9,000校・2億7,500万名に影響
 
-ShinyHuntersランサムウェアグループが学習管理システム「Canvas」に対するデータ強奪攻撃を実行。全米の学区・大学の授業が中断され、世界9,000近くの教育機関で2億7,500万人分の学生・教職員データの漏洩が脅迫された。UC Berkeley、シンガポール国立大学なども被害機関に含まれる。
+**2026年5月7日**
 
-🔗 [May 2026 Data Breaches: List Major Incidents & Latest Updates](https://sharkstriker.com/blog/may-2026-data-breaches/)
+学習管理システムCanvas（Instructure社）がShinyHuntersによるサイバー攻撃を受け、世界中の約9,000校に在籍する2億7,500万名の学生・教員・職員データ3.65TBが流出した。氏名・メールアドレス・学生IDナンバー・プライベートメッセージが含まれ、期末試験期間に重なったことで授業や課題提出が大規模に混乱。5月11日にInstructure社は「攻撃者との合意」を発表し、非公開条件でデータが破棄されたと主張（身代金1,000万ドル支払い説が流れている）。
+
+🔗 [Canvas hack: What we know about apparent cyberattack that impacted thousands of schools](https://www.cnn.com/2026/05/07/us/canvas-hack-strands-college-students-finals-week)
+🔗 [Canvas LMS Breach 2026: Risks for Schools and Firms](https://bellatorcyber.com/blog/canvas-lms-breach-275-million-students-faculty-2026)
 
 ---
 
-### 3. Microsoft Exchange Server CVE-2026-42897 が積極的に悪用中
+### 3. Microsoft Exchange Server CVE-2026-42897 が野生で悪用中
+
 **2026年5月**
 
-オンプレミス版Microsoft Exchange Serverに新たな深刻な脆弱性（CVE-2026-42897、CVSSスコア8.1）が発見され、細工したメールを通じた積極的な悪用が確認された。組織はただちにセキュリティパッチの適用が推奨される。
+オンプレミス版Microsoft Exchange Serverに影響する新たなセキュリティ脆弱性（CVE-2026-42897、CVSS 8.1）が野生で積極的に悪用されていることが判明。クロスサイトスクリプティングに起因するスプーフィングバグで、細工されたメールを通じて攻撃が実行される。Microsoftはパッチをリリース済みで、直ちに適用することを強く推奨している。
 
 🔗 [On-Prem Microsoft Exchange Server CVE-2026-42897 Exploited via Crafted Email](https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html)
 
 ---
 
-### 4. Cisco Secure Workload に CVSS 10.0 の最大深刻度脆弱性
+### 4. NGINX CVE-2026-42945（CVSS 9.2）— ヒープバッファオーバーフローが悪用される
+
 **2026年5月**
 
-Cisco Secure Workloadに最大深刻度（CVSSスコア10.0）の脆弱性CVE-2026-20223が発見された。未認証のリモート攻撃者が機密データにアクセスできる可能性があり、即時パッチ適用が必須。企業のワークロードセキュリティに広範な影響を与える重大な欠陥である。
+NGINX PlusおよびNGINX Open Sourceに影響する重大な脆弱性（CVE-2026-42945、CVSS 9.2）が野生で悪用されていることが確認された。\`ngx_http_rewrite_module\`に存在するヒープバッファオーバーフローで、NGINX 0.6.27〜1.30.0のバージョンが対象。また、Cisco Secure WorkloadにはCVSS 10.0の最大深刻度脆弱性（CVE-2026-20223）も公開されており、REST APIエンドポイントの認証不備が原因。
 
 🔗 [Supply Chain Attacks, AI Security, and Major Breaches Define This Week in Cybersecurity in May 2026](https://www.esecurityplanet.com/weekly-roundup/supply-chain-attacks-ai-security-and-major-breaches-define-this-week-in-cybersecurity-in-may-2026/)
 
 ---
 
-### 5. Pwn2Own Berlin 2026 — 47件のゼロデイで約1.3億円の報奨金
+### 5. MuddyWater — イラン国家支援グループがChaosランサムウェアを偽装として諜報活動
+
 **2026年5月**
 
-Pwn2Own Berlin 2026ハッキングコンテストが終了し、セキュリティ研究者がWindows、Linux、VMware、NVIDIAなど主要製品で47件のゼロデイ脆弱性を悪用し、総額128万ドル（約1.3億円）の報奨金を獲得。企業システムに潜む未修正の脆弱性の多さが改めて浮き彫りとなった。
+イラン情報省（MOIS）と関連する国家支援脅威アクターMuddyWaterが、Chaosランサムウェアのブランドを利用してスパイ活動を隠蔽していることが新たな調査で判明した。既知のサイバー犯罪グループの手口を模倣することで帰属分析を困難にし、諜報活動の真の意図を偽装する高度な作戦手法が採用されている。
 
-🔗 [Google Detects First AI-Generated Zero-Day Exploit](https://www.securityweek.com/google-detects-first-ai-generated-zero-day-exploit/)
+🔗 [Weekly Intelligence Report – 15 May 2026](https://www.cyfirma.com/news/weekly-intelligence-report-15-may-2026/)
+🔗 [May 2026 Data Breaches: List Major Incidents & Latest Updates](https://sharkstriker.com/blog/may-2026-data-breaches/)
 
 ---
 
 ## 🟠 AI Risk
 
-### 6. 史上初：AIが生成したゼロデイエクスプロイトをGoogleが検出
+### 6. 100万件のAIサービスをスキャン — セキュリティの惨状が明らかに
+
 **2026年5月**
 
-Googleがサイバーセキュリティ史上初となる「AIが発見・生成したゼロデイ脆弱性」を検出したと報告。このゼロデイはGoogleの複数製品で二要素認証（2FA）をバイパスできる特に危険なものだった。攻撃者主導のAI活用が新たな段階に入ったことを示す画期的な事例であり、防御側のAI活用加速が急務となっている。
+大規模なセキュリティ調査により、200万ホストから100万件のAIサービスが脆弱なデフォルト設定のまま公開されていることが判明。PraisonAIの認証バイパス脆弱性（CVE-2026-44338）は公開からわずか3時間39分でインターネットスキャナーによる探索が始まった事例も報告された。AIインフラはこれまで分析されたどのソフトウェアよりも脆弱・公開・設定不備の状態にあるとされ、データ漏洩やシステム侵害のリスクが急増している。
 
-🔗 [Google Detects First AI-Generated Zero-Day Exploit - SecurityWeek](https://www.securityweek.com/google-detects-first-ai-generated-zero-day-exploit/)
+🔗 [We Scanned 1 Million Exposed AI Services. Here's How Bad the Security Actually Is](https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html)
 
 ---
 
-### 7. エージェンティックAI：セキュリティの「次なる盲点」として警戒高まる
-**2026年5月**
+### 7. CISA・NSA・英国NCSC ら6カ国機関がAgentic AIセキュリティ指針を共同発表
 
-エージェンティックAIが企業環境で急拡大する中、セキュリティ機関がAIエージェント安全実装のガイダンスを緊急公開。CVE-2026-32173（CVSS 8.6）のAzure SRE Agentの脆弱性など実際のインシデントも発生。プロンプトインジェクション攻撃がインフラレベルの脅威に進化し、組織の83%がエージェンティックAI展開を計画する一方、安全運用の準備が整っているのはわずか29%にとどまる。
+**2026年5月1日**
 
-🔗 [Why Agentic AI Is Security's Next Blind Spot](https://thehackernews.com/2026/05/why-agentic-ai-is-securitys-next-blind.html)
+CISA、NSA、オーストラリア・カナダ・ニュージーランド・英国のサイバーセキュリティ機関が共同で「Careful Adoption of Agentic AI Services」を公開。Agentic AIに固有の5カテゴリのリスク（権限昇格、設計・設定の欠陥、行動の不整合、構造的脆弱性、アカウンタビリティの欠如）を定義し、各エージェントに短命のクレデンシャルと暗号的に検証されたアイデンティティを要求するよう勧告している。
+
 🔗 [Security Agencies Issue Guidance on Safely Implementing Agentic AI Capabilities](https://www.asisonline.org/security-management-magazine/latest-news/today-in-security/2026/may/agentic-ai-safety-guidance/)
+🔗 [Institutionalizing AI Safety: CISA's Agentic Guide and CAISI Agreements](https://labs.cloudsecurityalliance.org/research/csa-research-note-agentic-ai-governance-cisa-nist-caisi-2026/)
 
 ---
 
-### 8. IMF警告：AIが金融システムへのサイバー攻撃リスクを増幅
+### 8. Mandiant M-Trends 2026 — 脆弱性悪用がクレデンシャル盗用を超えて主要侵害ベクターに
+
 **2026年5月**
 
-国際通貨基金（IMF）がAIによる金融安定リスクの高まりを警告。高度なAIモデルが脆弱性の特定・悪用にかかる時間とコストを劇的に削減し、広く使用されているシステムへの同時攻撃の可能性が増加している。成功したデータ侵害の6件に1件が攻撃者主導のAIを活用しており、87%の組織がAI関連脆弱性を最速で拡大するサイバーリスクと認識している。
+MandiantのM-Trends 2026レポートで、脆弱性の悪用（31%）がクレデンシャル盗用を抜いて侵害の主要ベクターになったことが確認された。CVEが公開から24時間以内に悪用されるケースが28.3%に達し、時間的猶予が事実上マイナスに。生成AIが攻撃自動化を加速させており、2026年を「AI支援攻撃の年」と位置づける分析も出ている。
 
-🔗 [Financial Stability Risks Mount as Artificial Intelligence Fuels Cyberattacks - IMF](https://www.imf.org/en/blogs/articles/2026/05/07/financial-stability-risks-mount-as-artificial-intelligence-fuels-cyberattacks)
+🔗 [2026: The Year of AI-Assisted Attacks](https://thehackernews.com/2026/05/2026-year-of-ai-assisted-attacks.html)
+🔗 [Defender's Guide to the Frontier AI Impact on Cybersecurity: May 2026 Update](https://www.paloaltonetworks.com/blog/2026/05/defenders-guide-frontier-ai-impact-cybersecurity-may-2026-update/)
 
 ---
 
 ## 🟡 Data & Privacy
 
-### 9. GDPR累計罰則金71億ユーロ超 — TikTok €5.3億・Meta €4.79億の大型制裁
+### 9. GDPRの累計罰金が71億ユーロ突破 — TikTok 5.3億€・Meta 4.79億€ の大型制裁
+
 **2026年5月**
 
-欧州データ保護当局によるGDPR罰則金が2018年5月の施行以来の累計で71億ユーロ（約84億ドル）を突破。TikTokが中国への違法データ移転で5.3億ユーロ、MetaがConsent操作で4.79億ユーロの制裁を受けた。規制当局は侵害が起きるのを待つのではなく、脆弱なベンダー管理・暗号化不足・不十分なログ記録などの構造的欠陥を積極的に制裁する方針に転換しており、毎日平均443件の個人データ侵害通知が寄せられている（前年比22%増）。
+GDPR施行以来の累計罰金が71億ユーロ（うち2025年だけで12億ユーロ）を突破。TikTokが中国への違法データ移転で5.3億ユーロ、Metaが同意操作で4.79億ユーロ、Vodafoneがベンダーセキュリティ不備で4,500万ユーロの制裁を受けた。EU規制当局は現在、侵害発生を待たず、構造的な管理欠陥（ベンダー管理・暗号化・ロギング不備）を標的とした能動的な執行スタイルに移行している。EU AI Actは2026年8月に高リスクシステムへの完全適用を迎え、最大3,500万ユーロまたはグローバル売上の7%の制裁層が追加される。
 
 🔗 [GDPR Fines Hit €7.1 Billion: Data Privacy Enforcement Trends in 2026](https://www.kiteworks.com/gdpr-compliance/gdpr-fines-data-privacy-enforcement-2026/)
+🔗 [Privacy Laws 2026: Global Changes, Enforcement & Compliance Guide](https://secureprivacy.ai/blog/privacy-laws-2026)
 
 ---
 
 ## 🟢 Security Governance
 
-### 10. EU AI Act 2026年8月完全適用 — AIガバナンスとデータガバナンスが一体化
+### 10. CISAがCPG 2.0を公開 — NIST CSF 2.0準拠の強化サイバーセキュリティ目標フレームワーク
+
 **2026年5月**
 
-EU AI Actが2026年8月2日に完全適用（一部高リスク製品は2027年まで延長）となる。Cybersecurity Insidersの調査では、100%の組織が2026年ロードマップにAIを含める一方、63%がAIエージェントに対する目的制限（purpose limitation）を強制できていない現状が判明。AIガバナンスとデータガバナンスの融合が不可避となり、NIST CSF 2.0やISO 27001バージョン3.3の改訂版（2026年4月公開予定）も加わり、セキュリティガバナンスの枠組みが急速に再構築されている。
+CISAはCross-Sector Cybersecurity Performance Goals（CPG）バージョン2.0を公開した。NIST Cybersecurity Framework 2.0に準拠し、3年間の運用実績から得た知見を反映した内容で、ITおよびOT環境の両方をガイドする。特筆すべきは新設された「Govern（ガバナンス）」機能で、リスク管理戦略の策定、ポリシー整備、および経営陣のアカウンタビリティを明示的に要求する方向性が示された。CIRCIAのサイバーインシデント報告規則の最終化期限も2026年5月に設定されており、インシデント報告義務の対象範囲が拡大する見通し。
 
-🔗 [May 2026 Is the Forecast: AI Governance Just Became Data Governance](https://www.cybersecurity-insiders.com/may-2026-is-the-forecast-ai-governance-just-became-data-governance/)
-🔗 [2026 Operational Guide to Cybersecurity, AI Governance & Emerging Risks](https://www.corporatecomplianceinsights.com/2026-operational-guide-cybersecurity-ai-governance-emerging-risks/)
+🔗 [CISA Unveils Enhanced Cross-Sector Cybersecurity Performance Goals](https://www.cisa.gov/news-events/news/cisa-unveils-enhanced-cross-sector-cybersecurity-performance-goals)
+🔗 [CISA's updated CPG 2.0 framework guides IT and OT environments](https://industrialcyber.co/cisa/cisas-updated-cpg-2-0-framework-guides-it-and-ot-environments-targets-foundational-cyber-resilience/)
 
 ---
 
@@ -175,14 +190,14 @@ EU AI Actが2026年8月2日に完全適用（一部高リスク製品は2027年�
 
 | カテゴリ | 注目度 | 主なキーワード |
 |----------|--------|----------------|
-| Cyber Security | 🔴🔴🔴🔴🔴 | Exchange脆弱性、Canvasランサムウェア、GitHub侵害、CVSS 10.0 |
-| AI Risk | 🟠🟠🟠🟠 | AIゼロデイ、Agentic AI、プロンプトインジェクション、IMF警告 |
-| Data & Privacy | 🟡🟡🟡 | GDPR執行強化、TikTok制裁、データ侵害急増 |
-| Security Governance | 🟢🟢🟢 | EU AI Act、NIST CSF 2.0、AIガバナンス統合 |
+| 🔴 Cyber Security | ██████████ 高 | GitHub侵害、Canvas LMS、Exchange CVE、NGINX CVE、MuddyWater |
+| 🟠 AI Risk | ████████ 高 | Agentic AI、AIインフラ脆弱性、M-Trends 2026、AI支援攻撃 |
+| 🟡 Data & Privacy | ██████ 中 | GDPRフィン71億€、EU AI Act、グローバルプライバシー法 |
+| 🟢 Security Governance | █████ 中 | CISA CPG 2.0、NIST CSF 2.0、CIRCIA、アカウンタビリティ |
 
 ---
 
-*次回配信予定：2026年5月24日（日） | 収集ソース：The Hacker News、SecurityWeek、SharkStriker、IMF、Cybersecurity Insiders、Kiteworks、ASIS Online、eSecurity Planet*
+*次回配信予定：2026年5月24日（日） | 収集ソース：The Hacker News、BleepingComputer、Help Net Security、eSecurity Planet、CYFIRMA、Palo Alto Networks、CISA、Kiteworks、SecurePrivacy*
 `;
     document.getElementById('content').innerHTML = marked.parse(md);
   </script>
