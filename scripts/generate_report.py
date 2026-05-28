@@ -39,13 +39,14 @@ def build_prompt(report_date: str, today_jp: str, tomorrow_jp: str) -> str:
 今日の日付: {report_date}（{today_jp}）
 翌日の日付: {tomorrow_jp}
 
-以下の4カテゴリで最新ニュースをweb_searchツールを使って検索してください:
+以下の5カテゴリで最新ニュースをweb_searchツールを使って検索してください:
 1. cyber security news {report_date} latest breach vulnerability
 2. AI risk security news {report_date}
 3. data privacy regulation news {report_date}
 4. security governance compliance news {report_date}
+5. cryptocurrency crypto security hack fraud regulation news {report_date}
 
-収集した記事の中から重要度・新規性・影響範囲を基準にTop10を選定し、
+収集した記事の中から重要度・新規性・影響範囲を基準にTop10を選定し（Crypto Currencyを必ず1〜2件含めること）、
 以下のフォーマットに厳密に従ってMarkdownレポートを生成してください。
 Markdownテキストのみを出力し、前置き・後置きの説明文は不要です。
 
@@ -79,17 +80,21 @@ Markdownテキストのみを出力し、前置き・後置きの説明文は不
 
 ---
 
-（Cyber Securityは4〜5件、同形式で繰り返す）
+（Cyber Securityは3〜4件、同形式で繰り返す）
 
 ## 🟠 AI Risk
 
-（2〜3件、同形式）
+（1〜2件、同形式）
 
 ## 🟡 Data & Privacy
 
 （1〜2件、同形式）
 
 ## 🟢 Security Governance
+
+（1〜2件、同形式）
+
+## 🟣 Crypto Currency
 
 （1〜2件、同形式）
 
@@ -101,6 +106,7 @@ Markdownテキストのみを出力し、前置き・後置きの説明文は不
 | AI Risk | 🟠🟠🟠🟠 | キーワード |
 | Data & Privacy | 🟡🟡🟡 | キーワード |
 | Security Governance | 🟢🟢🟢 | キーワード |
+| Crypto Currency | 🟣🟣🟣 | キーワード |
 
 ---
 
