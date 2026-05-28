@@ -173,6 +173,8 @@ def md_to_line_summary(md: str, report_date_str: str, report_url: str, index_url
             current_category = "🟡 Data & Privacy"
         elif line.startswith("## 🟢"):
             current_category = "🟢 Security Governance"
+        elif line.startswith("## 🟣"):
+            current_category = "🟣 Crypto Currency"
         elif line.startswith("### "):
             title = re.sub(r'\*\*(.+?)\*\*', r'\1', line[4:])
             headlines.append(f"{current_category}｜{title}")
@@ -195,7 +197,7 @@ def md_to_line_summary(md: str, report_date_str: str, report_url: str, index_url
         parts += ["", "【📋 今日のTop10】"]
         for i, h in enumerate(headlines[:10], 1):
             parts.append(f"{i}. {h}")
-    parts += ["", "─" * 14]
+    parts += ["", "─" * 28]
     if next_date_jp:
         parts.append(f"次回配信：{next_date_jp}")
     if report_url:
