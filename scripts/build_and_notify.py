@@ -177,7 +177,9 @@ def md_to_line_summary(md: str, report_date_str: str, report_url: str, index_url
             current_category = "🟣 Crypto Currency"
         elif line.startswith("### "):
             title = re.sub(r'\*\*(.+?)\*\*', r'\1', line[4:])
-            headlines.append(f"{current_category}｜{title}")
+            title = re.sub(r'^\d+\.\s*', '', title)  # 先頭の番号を除去
+            icon = current_category.split()[0] if current_category else "📌"
+            headlines.append(f"{icon}｜{title}")
         elif re.match(r'^\|\s*\d+\s*\|', line):
             cells = [c.strip() for c in line.strip("|").split("|")]
             cells = [re.sub(r'\*\*(.+?)\*\*', r'\1', c) for c in cells if c and not re.match(r'^-+$', c)]
@@ -197,6 +199,15 @@ def md_to_line_summary(md: str, report_date_str: str, report_url: str, index_url
         parts += ["", "【📋 今日のTop10】"]
         for i, h in enumerate(headlines[:10], 1):
             parts.append(f"{i}. {h}")
+    parts += ["", "─" * 28]
+    parts += [
+        "【凡例】",
+        "🔴 Cyber Security",
+        "🟠 AI Risk",
+        "🟡 Data & Privacy",
+        "🟢 Security Governance",
+        "🟣 Crypto Currency",
+    ]
     parts += ["", "─" * 28]
     if next_date_jp:
         parts.append(f"次回配信：{next_date_jp}")
