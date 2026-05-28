@@ -9,109 +9,111 @@
 
 | # | トレンドワード | 解説 |
 |---|--------------|------|
-| 1 | **脆弱性エクスプロイト（Vulnerability Exploitation）** | Verizon DBIR 2026によると、脆弱性悪用が初めてクレデンシャル窃取を抜き、データ侵害の最多侵入経路となった。2025年に確認された侵害数は前年比でほぼ倍増し22,000件以上に達した。 |
-| 2 | **AI支援型攻撃（AI-Assisted Attacks）** | 2026年はAIを活用した攻撃が急増。CVEの28.3%が公開から24時間以内に悪用され、エクスプロイト開発期間が2020年の700日超から2025年には44日まで短縮されている。 |
-| 3 | **サプライチェーン攻撃（Supply Chain Attack）** | TanStackサプライチェーン攻撃でOpenAIの開発者端末2台が侵害された事例をはじめ、CI/CDパイプラインを標的とした攻撃が急増している。 |
-| 4 | **ゼロデイ（Zero-day）** | SharePoint（CVE-2026-32201）やcPanelのゼロデイが実環境で積極的に悪用されている。パッチ適用前に攻撃が展開されるケースが常態化しつつある。 |
-| 5 | **AIガバナンス（AI Governance）** | AI導入企業の100%が2026年のロードマップにAIを組み込む一方、63%がAIエージェントへの目的制限を実施できていないという調査結果が出ており、ガバナンス体制の整備が急務となっている。 |
+| 1 | **NGINX/Exchange ゼロデイ連鎖悪用** | CVSS 9.2のNGINX脆弱性とCVSS 8.1のMicrosoft Exchange脆弱性が相次いで実環境で悪用。パッチ適用前の攻撃が常態化している。 |
+| 2 | **AI金融リスク（AI Financial Risk）** | IMFがAIを活用したサイバー攻撃が金融安定性リスクを高め、マクロ経済規模のショックを引き起こし得ると警告。 |
+| 3 | **暗号資産詐欺国際摘発** | FBI・UAE・中国当局が合同オペレーションで276人逮捕、詐欺センター9拠点閉鎖、7億ドル超を押収。過去最大規模の連携摘発。 |
+| 4 | **EU AI Act完全適用（2026年8月）** | 2026年8月2日にEU AI Actが完全適用予定。企業のコンプライアンス対応期限が迫っており、準備状況の確認が急務。 |
+| 5 | **AIガバナンス＝データガバナンス化** | AIエージェントが企業内の新たなアイデンティティ型リスクとなり、AI管理がデータガバナンスと一体化する転換点を迎えている。 |
 
 ---
 
 ## 🔴 Cyber Security
 
-### 1. Verizon DBIR 2026：脆弱性悪用がクレデンシャル窃取を超え、最多の侵害経路に
-**2026年5月25日**
-
-Verizonが発表した「2026 Data Breach Investigations Report（DBIR）」によると、脆弱性の悪用がデータ侵害における最も一般的なアクセス経路となり、クレデンシャル窃取を初めて上回った。2025年に分析された確認済み侵害件数は22,000件以上と、前年の12,195件からほぼ倍増。企業はパッチ管理と脆弱性対応プロセスの抜本的な見直しを迫られている。
-
-🔗 [Verizon DBIR 2026: Vulnerability Exploitation Overtakes Credential Theft as Top Breach Vector](https://www.securityweek.com/verizon-dbir-2026-vulnerability-exploitation-overtakes-credential-theft-as-top-breach-vector/)
-
----
-
-### 2. SharePoint ゼロデイ（CVE-2026-32201）：リモートコード実行が野放し状態で悪用中
+### 1. Microsoft Exchange Server CVE-2026-42897：CVSS 8.1の脆弱性が野放し状態で悪用中
 **2026年5月下旬**
 
-SharePointに発見されたゼロデイ脆弱性（CVE-2026-32201）が、実環境で積極的に悪用されていることが確認された。リモートコード実行（RCE）を可能にするこの脆弱性は、パッチ適用前から攻撃者に利用されており、緊急対応が求められる。エンタープライズ環境でSharePointを利用する組織への影響が広範囲に及ぶ可能性がある。
+Microsoftがオンプレミス版Exchange Serverに存在するリモートコード実行脆弱性（CVE-2026-42897、CVSS 8.1）を公開した。細工されたメールを送信するだけで攻撃可能なこの脆弱性は、すでに実環境での悪用が確認されており、緊急パッチ適用が求められる。オンプレミスExchangeを運用している組織は即時対応が必要。
 
-🔗 [May 2026 Data Breaches: List Major Incidents & Latest Updates](https://sharkstriker.com/blog/may-2026-data-breaches/)
+🔗 [On-Prem Microsoft Exchange Server CVE-2026-42897 Exploited via Crafted Email](https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html)
 
 ---
 
-### 3. イランAPT「MuddyWater」が4大陸9カ国9組織を標的に
-**2026年5月**
+### 2. NGINX CVE-2026-42945：CVSS 9.2のヒープバッファオーバーフローが実環境で悪用
+**2026年5月下旬**
 
-イランのハッキンググループ「MuddyWater」が、2026年第1四半期だけで4大陸9カ国の少なくとも9組織に対するキャンペーンを展開していたことが明らかになった。対象は産業・電子製造、教育・公共機関、金融サービス、専門サービスと多岐にわたり、地政学的リスクと連動した国家支援型攻撃の活発化が懸念される。
+NGINX PlusおよびNGINX Openに発見されたヒープバッファオーバーフロー脆弱性（CVE-2026-42945、CVSS 9.2）が実環境で積極的に悪用されていることが確認された。深刻度の高さから広範な影響が懸念されており、Webインフラを支えるNGINXを利用するすべての組織での緊急対応が必要。
 
 🔗 [Supply Chain Attacks, AI Security, and Major Breaches Define This Week in Cybersecurity in May 2026](https://www.esecurityplanet.com/weekly-roundup/supply-chain-attacks-ai-security-and-major-breaches-define-this-week-in-cybersecurity-in-may-2026/)
 
 ---
 
-### 4. OpenAI開発者端末、TanStackサプライチェーン攻撃で侵害
+### 3. Gitea CVE-2026-27771：30,000件超の環境で4年間無検出だった未認証コンテナ漏洩
 **2026年5月**
 
-OpenAIは、TanStackサプライチェーン攻撃により開発者端末2台が侵害されたことを公式に確認した。オープンソースの依存ライブラリを悪用したこの攻撃は、CI/CDパイプラインのセキュリティリスクを改めて浮き彫りにした。ソフトウェア開発ライフサイクル全体を通じたセキュリティ対策の重要性が再認識されている。
+GitホスティングプラットフォームGiteaに、未認証のリモート攻撃者がプライベートコンテナイメージを取得できる重大脆弱性（CVE-2026-27771）が発見された。バージョン1.26.2未満の全バージョンが影響対象で、30カ国以上3万件超の環境に存在し、約4年間検出されなかったことも判明。CI/CDパイプラインのセキュリティ見直しが急務。
 
-🔗 [AI-Driven Threats, Critical Vulnerabilities, and Supply Chain Breaches Define the Week in May 2026](https://www.esecurityplanet.com/weekly-roundup/ai-driven-threats-critical-vulnerabilities-and-supply-chain-breaches-define-the-week-in-may-2026/)
+🔗 [Weekly Intelligence Report – 15 May 2026](https://www.cyfirma.com/news/weekly-intelligence-report-15-may-2026/)
 
 ---
 
-### 5. cPanel ゼロデイがグアム政府機関のWebサイトを標的に
+### 4. Canvas大規模侵害：ShinyHuntersが9,000校に影響するInstructure攻撃を繰り返す
 **2026年5月**
 
-cPanelの重大なゼロデイ脆弱性が攻撃者に悪用され、グアム政府およびその関連機関のWebサイトが侵害・サービス停止状態に陥った。政府機関のインフラに対するサイバー攻撃が増加しており、公共セクターにおける迅速なパッチ適用体制の整備が急務とされている。
+学習管理システムCanvasを運営するInstructureがShinyHuntersによる侵害を受け、世界9,000校近くの教育機関に影響が拡大した。過去8カ月間で少なくとも3回にわたる攻撃が確認されており、計画的なエスカレーション型攻撃とみられる。教育セクターのデータ保護対策強化が急務となっている。
 
-🔗 [Data Breach News | Recent Data Breaches in 2026](https://www.breachsense.com/breaches/)
+🔗 [May 2026 Data Breaches: List Major Incidents & Latest Updates](https://sharkstriker.com/blog/may-2026-data-breaches/)
 
 ---
 
 ## 🟠 AI Risk
 
-### 6. 100万件のAIサービスをスキャン：深刻なセキュリティ実態が判明
+### 5. IMF警告：AIがサイバー攻撃を加速し金融システム安定性を脅かす
+**2026年5月7日**
+
+IMFは、AIが脆弱性の特定・悪用に要する時間とコストを劇的に短縮することで、大規模システムへの攻撃が同時多発的に発生するリスクが高まると警告した。金融機関への標的型攻撃がマクロ経済規模のショックを引き起こす可能性があるとし、金融セクターにおけるAIリスク管理フレームワークの早急な整備を求めている。
+
+🔗 [Financial Stability Risks Mount as Artificial Intelligence Fuels Cyberattacks](https://www.imf.org/en/blogs/articles/2026/05/07/financial-stability-risks-mount-as-artificial-intelligence-fuels-cyberattacks)
+
+---
+
+### 6. 100万件のAIサービスをスキャン：既存ソフトウェア史上最悪レベルのセキュリティ実態
 **2026年5月**
 
-The Hacker Newsが掲載した調査レポートによると、200万ホストから露出した100万件以上のAIサービスをスキャンした結果、AIインフラは過去に調査された他のいかなるソフトウェアと比較しても、脆弱性・露出・設定ミスの程度が最も深刻であることが判明した。セルフホスト型AIアシスタント「ClawdBot」は平均2.6件/日のCVEを記録しており、AI基盤の早急なセキュリティ強化が求められる。
+200万ホストから公開されている100万件以上のAIサービスをスキャンした調査で、AIインフラのセキュリティが従来調査された他のどのソフトウェアと比べても最も深刻な脆弱性・露出・設定ミスを抱えていることが判明した。セルフホスト型AIアシスタント「ClawdBot」では平均2.6件/日のCVEが報告されており、AI導入を急ぐ組織のセキュリティ対策の遅れが浮き彫りになった。
 
 🔗 [We Scanned 1 Million Exposed AI Services. Here's How Bad the Security Actually Is](https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html)
 
 ---
 
-### 7. 2026年はAI支援型攻撃の年：CVEの28.3%が公開24時間以内に悪用
-**2026年5月**
-
-The Hacker Newsの分析によると、2026年はAIを活用したサイバー攻撃が一般化した年となっている。パッチよりも早くエクスプロイトが到着するケースが常態化し、CVEの28.3%が公開から24時間以内に悪用されている。エクスプロイト開発期間は2020年の700日超から2025年にはわずか44日まで短縮されており、防御側の対応スピードが追いつかない状況が続いている。
-
-🔗 [2026: The Year of AI-Assisted Attacks](https://thehackernews.com/2026/05/2026-year-of-ai-assisted-attacks.html)
-
----
-
-### 8. 連邦機関のAIインサイダーリスク：AIが新たな内部脅威に
-**2026年5月**
-
-Federal News Networkの論考によると、AI自体がインサイダーとして機能するリスクが顕在化している。AIシステムが機密タスクをマシンスピードで実行する中、人間のアイデンティティ管理向けに設計された従来の標準的なガバナンス・セキュリティ制御では対応が困難な状況が生じている。連邦政府機関において、AIエージェントを人間と同等に扱うリスク管理フレームワークの再設計が喫緊の課題となっている。
-
-🔗 [When AI becomes the insider: Rethinking federal risk in 2026](https://federalnewsnetwork.com/commentary/2026/05/when-ai-becomes-the-insider-rethinking-federal-risk-in-2026/)
-
----
-
 ## 🟡 Data & Privacy
 
-### 9. コネチカット州、消費者データプライバシー強化法案を可決（141対6）
-**2026年5月4日**
+### 7. EU AI Act 2026年8月全面適用迫る：企業コンプライアンス対応期限が目前
+**2026年5月**
 
-コネチカット州下院は、AI規制法案の可決に続き、消費者データプライバシーを強化するSenate Bill 4を141対6の圧倒的多数で可決した。本法案は、データブローカーによる消費者情報の利用制限、個人情報のインターネット上からの削除権付与、遺伝情報・個人データへの特別保護を規定している。2026年は米国における州レベルのプライバシー法制が急速に整備されており、企業のコンプライアンス対応が急務となっている。
+2026年8月2日のEU AI Act全面適用まで約3カ月となり、企業のコンプライアンス対応への圧力が高まっている。同時に米国でもインディアナ・ケンタッキー・ロードアイランドの包括的プライバシー法が新たに施行され、カリフォルニア・コロラド・コネチカット等の既存法が強化改正される。神経データ・青少年保護・ジオロケーションデータ規制など適用範囲が拡大しており、グローバル対応が必須となっている。
 
-🔗 [Consumer data privacy bill gets final passage in CT House](https://ctmirror.org/2026/05/04/consumer-data-privacy-regulation-ct-house/)
+🔗 [New Privacy, Data Protection and AI Laws in 2026](https://www.pearlcohen.com/new-privacy-data-protection-and-ai-laws-in-2026/)
 
 ---
 
 ## 🟢 Security Governance
 
-### 10. AIガバナンスがデータガバナンスに融合：63%が目的制限を実施できず
+### 8. AIガバナンスがデータガバナンスに融合：63%の組織がAIエージェントへの目的制限を未実施
 **2026年5月**
 
-Cybersecurity Insidersのレポートによると、2026年5月は「AIガバナンスがデータガバナンスになる」転換点として位置づけられる。企業の100%が2026年ロードマップにAIを組み込む一方、63%がAIエージェントへの目的制限を実施できていない。SECの2026年審査優先事項でも、サイバーセキュリティとAIへの懸念が暗号資産を抜いて最重要課題となったと報告されており、組織横断的なAIガバナンス体制の整備が業界全体の優先事項となっている。
+2026年5月はAIガバナンスとデータガバナンスが一体化する転換点として位置付けられている。企業の100%が2026年ロードマップにAIを組み込む一方、63%がAIエージェントへの目的制限を実施できていない。AIエージェントが企業内で新たなアイデンティティ型リスクとなるなか、シャドーエージェント・過剰権限付与・AI主導型攻撃への対応を含む統合ガバナンスモデルの構築が急務とされている。
 
 🔗 [May 2026 Is the Forecast: AI Governance Just Became Data Governance](https://www.cybersecurity-insiders.com/may-2026-is-the-forecast-ai-governance-just-became-data-governance/)
+
+---
+
+## 🟣 Crypto Currency
+
+### 9. 国際合同オペレーション：276人逮捕・詐欺センター9拠点閉鎖・7億ドル超押収
+**2026年5月**
+
+FBI・UAE当局・中国公安部の連携によるOperation Level Upで、暗号資産投資詐欺に関与した276人が逮捕され、詐欺センター9拠点が閉鎖された。マネーロンダリングに使われた7億1,600万ドル超の暗号資産を押収し、米国の被害者約9,000人に通知。2026年4月時点で被害5億6,200万ドルの回避に貢献した過去最大規模の国際連携摘発となった。
+
+🔗 [Global Crackdown Arrests 276, Shuts 9 Crypto Scam Centers, Seizes $701M](https://thehackernews.com/2026/05/global-crackdown-arrests-276-shuts-9.html)
+
+---
+
+### 10. 2週間で45プロトコルから4億5,000万ドル流出、SECが暗号資産規制に初の明確指針
+**2026年5月**
+
+2026年に入り45の暗号資産プロトコルが攻撃を受け、わずか2週間で4億5,000万ドル超が流出するという業界全体のセキュリティ崩壊ともいえる事態が発生した。一方でSECがポール・アトキンス委員長のもと、10年以上の不確実性を経て連邦証券法の暗号資産への適用に関する初の明確な解釈指針を公表した。規制明確化と同時にセキュリティ強化が業界全体の喫緊課題となっている。
+
+🔗 [Crypto Hacks in 2026: $450M Lost Across 45 Protocols in Two Weeks](https://www.mexc.com/news/1031060)
 
 ---
 
@@ -119,11 +121,12 @@ Cybersecurity Insidersのレポートによると、2026年5月は「AIガバナ
 
 | カテゴリ | 注目度 | 主なキーワード |
 |----------|--------|----------------|
-| Cyber Security | 🔴🔴🔴🔴🔴 | 脆弱性エクスプロイト、ゼロデイ、APT、サプライチェーン攻撃 |
-| AI Risk | 🟠🟠🟠🟠 | AI支援型攻撃、AIインフラ露出、インサイダーリスク |
-| Data & Privacy | 🟡🟡🟡 | 州プライバシー法、データブローカー規制、遺伝情報保護 |
-| Security Governance | 🟢🟢🟢 | AIガバナンス、SEC審査優先事項、インシデント報告義務 |
+| Cyber Security | 🔴🔴🔴🔴🔴 | Exchange/NGINX脆弱性悪用、Gitea未検出CVE、Canvas大規模侵害 |
+| AI Risk | 🟠🟠🟠🟠 | IMF金融リスク警告、AIサービス露出、CVE24時間以内悪用 |
+| Data & Privacy | 🟡🟡🟡 | EU AI Act全面適用、米国州プライバシー法拡大、神経データ規制 |
+| Security Governance | 🟢🟢🟢 | AIガバナンス融合、AIエージェント目的制限未実施63% |
+| Crypto Currency | 🟣🟣🟣🟣 | 国際合同摘発276人逮捕、45プロトコル流出、SEC規制指針 |
 
 ---
 
-*次回配信予定：2026年5月29日（金） | 収集ソース：SecurityWeek, The Hacker News, eSecurity Planet, Federal News Network, Cybersecurity Insiders, CT Mirror, SharkStriker, Breachsense*
+*次回配信予定：2026年5月29日（金） | 収集ソース：The Hacker News, SecurityWeek, eSecurity Planet, IMF, CYFIRMA, Cybersecurity Insiders, Pearl Cohen, SharkStriker, MEXC News*
