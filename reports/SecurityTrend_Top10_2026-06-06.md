@@ -1,6 +1,3 @@
-I'll search all 5 categories simultaneously to gather the latest security news.
-収集完了。全カテゴリのデータを統合してレポートを生成します。
-
 # セキュリティトレンド Top 10 ニュース
 **配信日：2026年6月6日（土）**
 
@@ -12,170 +9,126 @@ I'll search all 5 categories simultaneously to gather the latest security news.
 
 | # | トレンドワード | 解説 |
 |---|--------------|------|
-| 1 | **AIサイバーセキュリティ行政命令** | トランプ大統領がAIモデルの公開前に最大30日間の政府審査を求める大統領令に署名。フロンティアAIのサイバーリスク評価が義務化へ。 |
-| 2 | **ShinyHunters** | 2026年最多被害を出しているサイバー犯罪グループ。DentaQuest・Match Group・Crunchbaseなど多数の組織を標的にデータ恐喝を続ける。 |
-| 3 | **クロスチェーンブリッジ攻撃** | 2026年を通じてDeFiブリッジへの攻撃が急増。14件の主要エクスプロイトで累計3億4,070万ドルが流出し、最大案件は2億9,200万ドル。 |
-| 4 | **Shadow AI（シャドーAI）** | 企業内で管理外のAIツールが無秩序に利用される問題。上位5%のAI「パワーユーザー」が企業全体のAIリスクを不均等に集中させる構造が判明。 |
-| 5 | **SECURE Data Act** | 米国議会で審議中の連邦データプライバシー統一法案。22州のパッチワーク規制を一本化する試みだが、データ最小化原則の欠如を巡り議論が紛糾。 |
+| 1 | **LLM自律攻撃** | 大規模言語モデル（LLM）が人間の介入なしに自律的にサイバー攻撃を実行する新たな脅威。Sysdigが初の実例を記録し、AWSデータベースが1時間以内に侵害された。 |
+| 2 | **DeFiブリッジ攻撃** | クロスチェーンブリッジを標的にしたDeFiへの攻撃が急増。2026年だけで14件・3億4000万ドル超の被害が発生し、ブロックチェーン間の橋渡し機能が最大の弱点と化している。 |
+| 3 | **サプライチェーン攻撃** | 開発ツールやリポジトリを介してソフトウェアの供給網を汚染する攻撃手法。MicrosoftのGitHubリポジトリ73件に自己増殖型「Miasma」攻撃が確認された。 |
+| 4 | **AI安全規制** | トランプ政権がAIモデルの公開前30日以内の政府レビューを求める大統領令に署名。コロラド州AI法（6月30日施行）、EU AI法（8月完全施行）など規制の波が加速。 |
+| 5 | **ゼロデイ脆弱性** | パッチが存在しない未知の脆弱性。Cisco SD-WAN ManagerのCVE-2026-20245など、積極的に悪用されているゼロデイが複数確認され、CISAのKEVカタログへの追加が相次いでいる。 |
 
 ---
 
 ## 🔴 Cyber Security
 
-### 1. ShinyHunters、DentaQuestから2.6百万人分・234GBのデータを窃取・公開
-**2026年6月4日**
+### 1. Cisco SD-WAN Managerにゼロデイ脆弱性（CVE-2026-20245）—積極的に悪用中
+**2026年6月上旬**
 
+Cisco Catalyst SD-WAN Managerに深刻度の高い未パッチのゼロデイ脆弱性（CVE-2026-20245）が確認された。攻撃者はこの脆弱性を悪用してルート権限昇格を実現しており、広範な企業ネットワークインフラへの影響が懸念される。現時点でパッチは未提供であり、Ciscoは緩和策の適用を強く推奨している。
 
-大手歯科・視力保険管理会社DentaQuestから、デジタル恐喝集団ShinyHuntersが2.6百万人分に影響する234GBのデータを窃取・公開したと主張している。この医療データ漏洩は2026年最大規模の事案になるとみられる。
- 
-侵害原因はサードパーティのBPO経由のサプライチェーン侵害で、フィッシングに続く特権昇格が手口とされる。
-
-
-🔗 [DentaQuest Data Breach](https://www.databreachtoday.com/)
+🔗 [AI Threats, Zero-Days, and Data Breaches Define This Week of June 2026 in Cybersecurity | eSecurity Planet](https://www.esecurityplanet.com/weekly-roundup/ai-threats-zero-days-and-data-breaches-define-this-week-of-june-2026-in-cybersecurity/)
 
 ---
 
-### 2. GitHub VSCode ゼロデイ：ワンクリックでGitHubトークン全権限を奪取
-**2026年6月3日**
+### 2. Microsoft Defenderに3件の脆弱性—うち2件は既に積極悪用
+**2026年6月上旬**
 
+MicrosoftはDefenderの3つのセキュリティ脆弱性（CVE-2026-41091、CVE-2026-45584、CVE-2026-45498）を修正した。このうち2件はすでに攻撃者によって積極的に悪用されていることが確認されており、早急なアップデートの適用が求められる。
 
-セキュリティ研究者がMicrosoft Visual Studio Code（VS Code）に対するワンクリック攻撃を公開。リンクをクリックするだけで攻撃者はすべてのリポジトリ（プライベート含む）に読み書きできるGitHubトークンを奪取できる。
- 
-認証トークンは特定のリポジトリに限定されておらず、ユーザーがアクセス権を持つ全リポジトリへのフルアクセスが可能となる。
-
-
-🔗 [VS Code One-Click GitHub Token Theft](https://thehackernews.com/)
+🔗 [Microsoft Warns of Two Actively Exploited Defender Vulnerabilities | The Hacker News](https://thehackernews.com/2026/05/microsoft-warns-of-two-actively.html)
 
 ---
 
-### 3. PCPJack、AWS・Google Cloud・Azureのサーバーを乗っ取りSMTPリレー網を構築
-**2026年6月5日**
+### 3. 「Miasma」自己増殖型サプライチェーン攻撃—Microsoft GitHubリポジトリ73件に感染
+**2026年6月上旬**
 
+自己増殖型のサプライチェーン攻撃「Miasma」がMicrosoftのGitHubリポジトリ73件（AzureやMicrosoftを含む4組織）を侵害した。ソフトウェア供給網を通じた連鎖感染のリスクが高まっており、開発者への影響が広がっている。
 
-PCPJackと呼ばれる脅威アクターが、AWS・Google Cloud・Microsoft Azureに関連するクラウドサーバーを乗っ取り、秘密裏にSMTP電子メールリレーネットワークを構築していたことが判明した。
- 
-米国・欧州・アジアにまたがる侵害済みビジネスサーバーが静かにSMTPプロキシに転用され、検知されたときもインフラは稼働し続けていた。
-
-
-🔗 [PCPJack Cloud SMTP Hijacking](https://thehackernews.com/)
+🔗 [2026 Data Breaches: Cybersecurity Incidents | PKWARE](https://www.pkware.com/blog/2026-data-breaches)
 
 ---
 
-### 4. Cisco SD-WAN ゼロデイ（CVE-2026-20182）：2026年に入り6件目の悪用済み脆弱性
-**2026年5月下旬〜6月**
+### 4. ShinyHuntersが歯科医療給付管理会社から234GBのデータを流出
+**2026年6月上旬**
 
+脅威アクターShinyHuntersが、歯科給付管理会社から盗み出した約234GBのデータを公開した。医療系の個人情報が大規模に漏洩しており、患者および関連企業への影響が懸念される。
 
-CiscoがSD-WANの別の重大なゼロデイ脆弱性にパッチを公開した。2026年に悪用が明らかになった6件目のSD-WAN欠陥であり、精巧な脅威アクターUAT-8616による標的型攻撃に利用されていた。
- 
-CVE-2026-20182は認証バイパス脆弱性で、特別に細工されたパケットによりリモートの攻撃者が対象システムの管理者権限を取得できる。
+🔗 [Cybersecurity News, Insights and Analysis | SecurityWeek](https://www.securityweek.com/)
 
+---
 
-🔗 [Cisco SD-WAN Zero-Day CVE-2026-20182](https://www.securityweek.com/cisco-patches-another-sd-wan-zero-day-the-sixth-exploited-in-2026/)
+### 5. WordPress「Everest Forms Pro」にCVSS 9.8の重大RCE脆弱性（CVE-2026-3300）
+**2026年6月上旬**
+
+約4,000件のアクティブインストールを持つWordPressプラグイン「Everest Forms Pro」に、リモートコード実行（RCE）の重大脆弱性（CVE-2026-3300、CVSSスコア9.8）が確認された。バージョン1.9.12以前の全バージョンが影響を受けており、攻撃者による任意コード実行が可能な状態だ。
+
+🔗 [The Hacker News | #1 Trusted Source for Cybersecurity News](https://thehackernews.com/)
 
 ---
 
 ## 🟠 AI Risk
 
-### 5. トランプ大統領、AIセキュリティ大統領令に署名：フロンティアモデルの事前審査を義務化
-**2026年6月2日**
+### 6. 世界初「LLMエージェントによる自律サイバー攻撃」をSysdigが記録—1時間以内にAWS DBを侵害
+**2026年6月上旬**
 
+セキュリティ企業Sysdigが、LLMエージェントが人間の関与なしに後続攻撃を自律実行し、1時間以内にAWSデータベースを外部流出させた世界初の事例を記録した。悪用されたのはStarletteの認証バイパス（CVE-2026-48710）で、FastAPI・vLLM・LiteLLM・MCP Serverなど数百万のAIアプリケーションに影響する。
 
-トランプ政権の最新AIに関する大統領令は、連邦機関にAIモデルのサイバー能力を評価するベンチマーク整備を指示し、脆弱性情報を集約・共有する「AIサイバーセキュリティクリアリングハウス」の創設を命じている。
- 
-この大統領令は、特にAnthropic Claude Mythosモデルが人間をはるかに上回る速度で新たなサイバー脆弱性を発見・悪用できることを示したことを受けて策定された。
-
-
-🔗 [Trump AI Executive Order](https://www.npr.org/2026/06/02/nx-s1-5844347/ai-safety-trump-executive-order)
+🔗 [AI Threats, Zero-Days, and Data Breaches Define This Week of June 2026 in Cybersecurity | eSecurity Planet](https://www.esecurityplanet.com/weekly-roundup/ai-threats-zero-days-and-data-breaches-define-this-week-of-june-2026-in-cybersecurity/)
 
 ---
 
-### 6. MIT研究：AIリスク24分野中18分野で「壊滅的被害」の確率が10%超
-**2026年6月3日**
+### 7. トランプ大統領がAI安全保障に関する大統領令に署名—公開前30日レビューを要求
+**2026年6月2日**
 
+トランプ大統領が「先進AI革新・安全促進」大統領令に署名。最強クラスのAIモデルを公開30日前に政府がテストできる任意レビュー体制の構築、サイバー能力評価ベンチマークの策定、「AIサイバーセキュリティ情報共有センター」の設置などを指示した。AIの国家安全保障上のリスクへの政府関与が本格化している。
 
-37カ国272名の国際AI専門家が24のAIリスクカテゴリを調査。現状のまま対策を施さない場合、18のリスクが死者100万人超・経済損失1,000億ドル超に相当する壊滅的な結果を引き起こす確率が10%を超えると判断された。
- 
-専門家らは、情報・金融・国家安全保障の各分野が全リスクにわたって最も脆弱なセクターであると評価した。
-
-
-🔗 [MIT FutureTech AI Risk Report](https://www.globenewswire.com/news-release/2026/06/03/3305947/0/en/International-AI-experts-warn-of-potentially-catastrophic-risks-from-AI.html)
+🔗 [Trump's new AI safety order seeks voluntary review of new models | NPR](https://www.npr.org/2026/06/02/nx-s1-5844347/ai-safety-trump-executive-order)
 
 ---
 
 ## 🟡 Data & Privacy
 
-### 7. マサチューセッツ州下院、データプライバシー法案を146対0で可決
-**2026年6月5日**
-
-
-マサチューセッツ州下院議員は146対0で法案を可決。同法案は、機密情報の販売・共有前に明示的な同意を義務付け、精密な位置情報データの販売を禁止し、未成年者への特別な保護措置を設ける内容となっている。
- 
-同法委員長は「データプライバシーはすべての将来的なテクノロジー法案の根幹であり、まずデータプライバシーを整備しなければならない」と述べた。
-
-
-🔗 [Massachusetts Data Privacy Bill](https://www.wbur.org/news/2026/06/05/massachusetts-beacon-hill-data-privacy-sale-consent)
-
----
-
-### 8. 米連邦データプライバシー統一法案「SECURE Data Act」、下院公聴会で賛否が対立
+### 8. 米SECURE Data Act、議会で初公聴会—州・市民団体が連邦プライバシー法案に反発
 **2026年6月3日**
 
+米国の連邦プライバシー法案「SECURE Data Act」の初公聴会が下院で開催された。カリフォルニア州プライバシー保護局が18の州司法長官連合を率いて反対声明を発表。批判者は「データミニマイゼーション規制を後退させ、企業がプライバシーポリシーで開示さえすれば自由にデータ収集・利用できる」と指摘。カリフォルニア州によるGM和解（CCPA史上最高額12.75百万ドル）も注目を集めた。
 
-下院共和党が提出したデータプライバシー法案が公聴会に付された。共和党側は、企業に明確性を提供し全国で統一した消費者保護を実現すると主張している。
- 
-一方、電子プライバシー情報センター（EPIC）はデータ最小化規定が不十分と批判。同法案はプライバシーポリシーへの開示さえあれば企業が自由にデータを収集・利用し続けられる仕組みになっていると指摘した。
-
-
-🔗 [SECURE Data Act Hearing](https://rollcall.com/2026/06/03/consent-questions-raised-at-data-privacy-bill-hearing/)
+🔗 [US SECURE Data Act faces criticism during first hearing in Congress | IAPP](https://iapp.org/news/a/us-secure-data-act-faces-criticism-during-first-hearing-in-Congress)
 
 ---
 
 ## 🟢 Security Governance
 
-### 9. EU、NIS2・DORA・AI Actが重複するコンプライアンス圧力でEU組織が悲鳴
-**2026年6月1日**
+### 9. AI規制の二重波：コロラド州AI法（6月30日）・EU AI法（8月）が企業に迫る
+**2026年6月**
 
+コロラド州のAI Act（高リスクAIシステムへの義務規定）が6月30日に施行され、EU AI Actの完全なペナルティ体制が8月2日から適用開始される。SECの2026年審査優先事項ではAI・サイバーセキュリティへの懸念が暗号資産を抑えてトップに浮上。企業は複数の規制デッドラインへの対応を同時並行で迫られている。
 
-EUのサイバーセキュリティガバナンスはNIS2・DORAなど拡大するフレームワークの下で変容しており、AIがセキュリティチームに新たな問題提起を行っている。将来の見通しが立てにくい中、各組織は対処法を模索しなければならない。
- 
-EU内の企業は増大する規制の波に直面しており、フレームワークが一部で重複しつつも互いに異なる点が混乱を招いている。「GDPRとNIS2は異なる種類のデータに適用されるが、相互補完し合うべきものだ」との声も上がっている。
-
-
-🔗 [EU Organizations Under Compliance Pressure](https://www.helpnetsecurity.com/2026/06/01/antonija-vojnovic-span-cybersecurity-governance-challenges/)
+🔗 [2026 Operational Guide to Cybersecurity, AI Governance & Emerging Risks | Corporate Compliance Insights](https://www.corporatecomplianceinsights.com/2026-operational-guide-cybersecurity-ai-governance-emerging-risks/)
 
 ---
 
 ## 🟣 Crypto Currency
 
-### 10. 国際合同作戦「Disruption Week」：276人逮捕・9拠点閉鎖・7億1百万ドル押収
-**2026年6月4日**
-
-
-米国・中国当局らによる国際合同捜査で276人が逮捕、東南アジアを中心に運営されていた仮想通貨投資詐欺スキームに利用された9つの詐欺拠点が閉鎖された。ドバイ警察、FBI、中国公安省が連携して摘発を主導した。
- 
-また今回の作戦では、仮想通貨詐欺によるマネーロンダリングに関連するとされる7億1百万ドル超の仮想通貨が差し押さえられた。
- 
-詐欺の手口は、偽の仮想通貨投資への誘導を目的とした「ピッグ・ブッチャリング（豚の屠殺）」と呼ばれるロマンス詐欺が主体となっていた。
-
-
-🔗 [Global Crackdown Arrests 276](https://thehackernews.com/2026/05/global-crackdown-arrests-276-shuts-9.html)
-
----
-
-### （追加）DeFiクロスチェーンブリッジ攻撃が急増：2026年年初から累計7億5千万ドル超の被害
+### 10. 2026年のDeFiブリッジ攻撃が14件・3億4000万ドル超—KelpDAO 2.92億ドル被害が最大
 **2026年6月1日（PeckShieldアラート）**
 
+ブロックチェーンセキュリティ企業PeckShieldが、2026年のクロスチェーンブリッジへの攻撃が14件・累計3億4000万ドル超に達したと報告。最大単一被害はKelpDAOの2.92億ドルで、2026年最大のDeFiハックとなった。攻撃者はスマートコントラクトのバグ単体ではなく、ソーシャルエンジニアリング・鍵の漏洩・プロトコルの継承脆弱性を組み合わせた複合攻撃手法に移行している。
 
-ブロックチェーンセキュリティ企業PeckShieldが6月1日に深刻なアラートを発出。データによると、ハッカーは今年これまでに14件の主要エクスプロイトを通じてクロスチェーンブリッジプロトコルから累計3億4,070万ドルを流出させた。
- 
-最大の単一事案は4月18日のKelpDAO/LayerZeroエクスプロイトで、2億9,200万ドルが流出した。LayerZeroがデフォルトで危険なほど低い1対1のRPCクォーラムを設定していたことが原因で、単一の侵害ノードが不正なクロスチェーンメッセージを承認できた。
+🔗 [$340M Lost: 14 Crypto Hacks 2026 Targeting Bridges | CoinGabbar](https://www.coingabbar.com/en/crypto-currency-news/crypto-hacks-2026-14-bridge-attacks-security-concerns)
 
-
-🔗 [Crypto Hacks 2026: Bridge Attacks](https://www.coingabbar.com/en/crypto-currency-news/crypto-hacks-2026-14-bridge-attacks-security-concerns)
+🔗 [The KelpDAO $292M crypto hack: What IT execs must know | TechTarget](https://www.techtarget.com/searchcio/feature/The-KelpDAO-crypto-hack-What-IT-execs-must-know)
 
 ---
 
 ## 📊 今日のカテゴリ別注目度
 
 | カテゴリ | 注目度 | 主なキーワード |
-|-------
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴🔴 | ゼロデイ、サプライチェーン、RCE、データ流出 |
+| AI Risk | 🟠🟠🟠🟠 | LLM自律攻撃、AI大統領令、MCP脆弱性 |
+| Data & Privacy | 🟡🟡🟡 | SECURE Data Act、CCPA、データミニマイゼーション |
+| Security Governance | 🟢🟢🟢 | コロラドAI法、EU AI Act、SEC審査優先事項 |
+| Crypto Currency | 🟣🟣🟣🟣 | DeFiブリッジ、KelpDAO、クロスチェーン攻撃 |
+
+---
+
+*次回配信予定：2026年6月7日（日） | 収集ソース：The Hacker News, SecurityWeek, eSecurity Planet, NPR, IAPP, CoinGabbar, TechTarget, Corporate Compliance Insights, BleepingComputer, CISA*
