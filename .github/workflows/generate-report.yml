@@ -65,3 +65,14 @@ jobs:
           git commit -m "Add report: ${{ steps.check.outputs.today }} [cloud-generated]"
           git push
           echo "🚀 レポートをプッシュしました → process-report.yml が起動します"
+
+      # ── Step 4: 失敗時にLINE通知 ────────────────────────────────────
+      - name: Notify LINE on failure
+        if: failure()
+        run: |
+          TODAY=$(TZ='Asia/Tokyo' date '+%Y-%m-%d %H:%M')
+          MSG="❌ SecurityTrend クラウド生成 失敗\n${TODAY} JST\n\nMacが停止中のためクラウドで代替生成を試みましたが失敗しました。\nAnthropicのAPIキーやネットワーク状況を確認してください。\n\n🔍 ログを確認:\nhttps://github.com/${{ github.repository }}/actions"
+          curl -s -X POST https://api.line.me/v2/bot/message/push \
+            -H "Authorization: Bearer ${{ secrets.LINE_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"to\":\"${{ secrets.LINE_USER_ID }}\",\"messages\":[{\"type\":\"text\",\"text\":\"$(echo -e $MSG)\"}]}"

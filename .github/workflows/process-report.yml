@@ -36,3 +36,14 @@ jobs:
           git add reports/*.html index.html
           git diff --staged --quiet || git commit -m "Generate HTML [skip ci]: $(date +%Y-%m-%d)"
           git push
+
+      # ── 失敗時にLINE通知 ─────────────────────────────────────────────
+      - name: Notify LINE on failure
+        if: failure()
+        run: |
+          TODAY=$(TZ='Asia/Tokyo' date '+%Y-%m-%d %H:%M')
+          MSG="❌ SecurityTrend HTML生成/LINE通知 失敗\n${TODAY} JST\n\nレポートのMD→HTML変換またはLINE送信に失敗しました。\nLINEトークンやGitHub Pagesの設定を確認してください。\n\n🔍 ログを確認:\nhttps://github.com/${{ github.repository }}/actions"
+          curl -s -X POST https://api.line.me/v2/bot/message/push \
+            -H "Authorization: Bearer ${{ secrets.LINE_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"to\":\"${{ secrets.LINE_USER_ID }}\",\"messages\":[{\"type\":\"text\",\"text\":\"$(echo -e $MSG)\"}]}"
