@@ -1,0 +1,122 @@
+# セキュリティトレンド Top 10 ニュース
+**配信日：2026年6月18日（木）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **ゼロデイ脆弱性** | Microsoftの6月Patch Tuesdayは200件超の脆弱性・6件のゼロデイを修正する歴代最大規模。攻撃側のパッチ前悪用速度が加速している。 |
+| 2 | **AIモデルの安全保障リスク** | AnthropicがFable 5/Mythos 5への外国籍ユーザーアクセスを米政府指令で停止。AIの脆弱性発見能力（ジェイルブレイク）が国家安全保障の論点に。 |
+| 3 | **クロスチェーンブリッジ攻撃** | KelpDAO/LayerZeroの2.92億ドル流出事件が2026年最大のDeFiハックに。ブリッジのRPC・DVN設定の脆弱性が引き続き標的。 |
+| 4 | **サプライチェーン型ランサムウェア** | Foxconn北米拠点がNitrogenグループの攻撃を受け、Apple・Dell・Google・Nvidia関連データを含む8TBが流出した可能性。 |
+| 5 | **AI APIキー窃取** | JetBrains Marketplaceの悪意あるプラグイン15件が、開発者のAI APIキー（OpenAI/DeepSeek等）を平文で外部送信していたことが判明。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. Microsoft、史上最大規模のPatch Tuesdayで200件超の脆弱性・6件のゼロデイを修正
+**2026年6月**
+2026年6月のPatch Tuesdayは過去最大規模となり、200件以上の脆弱性（うちCritical 33件）を修正。ゼロデイは6件で、Windows CTFMONによるSYSTEM権限昇格や、Exchange Serverのなりすまし（クリック不要でOWAセッション内でJavaScriptが実行される）などが含まれる。パッチ公開後すぐにDefenderの新たな悪用手法「RoguePlanet」が公開された。
+
+🔗 [Microsoft June 2026 Patch Tuesday fixes 6 zero-days, 200 flaws](https://www.bleepingcomputer.com/news/microsoft/microsoft-june-2026-patch-tuesday-fixes-6-zero-days-200-flaws/)
+
+---
+
+### 2. ServiceNow、未認証APIエンドポイントの悪用で顧客データが流出
+**2026年6月5日（修正適用）/ 悪用は6月2〜3日**
+ServiceNowのScripted REST Resourceで認証要件（requires_authentication）が誤ってfalseに設定されており、未認証のままIT支援チケットや従業員情報、資産インベントリ等の顧客テナントデータが照会可能な状態になっていた。4月22日に類似の脆弱性報告を受けていたにもかかわらず修正が6月5日まで遅れたことが問題視されている。
+
+🔗 [ServiceNow discloses security incident exposing customer data](https://www.bleepingcomputer.com/news/security/servicenow-discloses-security-incident-exposing-customer-data/)
+
+---
+
+### 3. Foxconn、Nitrogenランサムウェアの攻撃を確認。Apple/Dell/Google/Nvidia関連データ流出か
+**2026年5月12日**
+電子機器受託製造大手Foxconnの北米工場がサイバー攻撃を受け、一部でWi-Fi・ネットワーク障害が発生。二重恐喝型ランサムウェアグループ「Nitrogen」は、Apple・Dell・Google・Nvidiaに関連する設計図・顧客文書を含む8TB（1100万ファイル超）を窃取したと主張している。
+
+🔗 [Foxconn confirms cyberattack claimed by Nitrogen ransomware gang](https://www.bleepingcomputer.com/news/security/electronics-giant-foxconn-confirms-cyberattack-on-north-american-factories/)
+
+---
+
+### 4. JetBrains Marketplaceの悪意あるプラグイン15件、AI APIキーを窃取
+**2026年6月（直近の公開は6月10日）**
+AIコーディングアシスタントやGitツールを装った悪意あるプラグイン15件がJetBrains Marketplaceで確認され、累計約7万件インストールされていた。ユーザーがOpenAI/DeepSeek等のAPIキーを設定すると、平文HTTPで攻撃者のC2サーバーに送信される仕組みだった。一部は有料プランで窃取済みキーを再販していた可能性もある。
+
+🔗 [Malicious JetBrains Marketplace plugins steal AI API keys from developers](https://www.bleepingcomputer.com/news/security/malicious-jetbrains-marketplace-plugins-steal-ai-api-keys-from-developers/)
+
+---
+
+### 5. CISA、JoomlaとFortinet FortiSandboxの悪用中の脆弱性を既知悪用カタログに追加
+**2026年6月**
+CVSS満点（10.0）のJoomla Widget Factory Content Editorの脆弱性（CVE-2026-48907）がCISAの既知悪用脆弱性（KEV）カタログに追加され、実際の悪用が確認された。同時期にFortinet FortiSandboxの複数の脆弱性（CVE-2026-39813、CVE-2026-39808、CVE-2026-25089）も悪用が急増している。
+
+🔗 [The Hacker News](https://thehackernews.com/)
+
+---
+
+## 🟠 AI Risk
+
+### 6. Anthropic、米政府指令によりClaude Fable 5・Mythos 5の外国籍ユーザー向けアクセスを停止
+**2026年6月12〜13日**
+米政府は国家安全保障上の理由から、AnthropicのFable 5・Mythos 5モデルについて、米国内外を問わず外国籍ユーザー（Anthropic従業員含む）へのアクセス停止を指令。背景には、これらのモデルの「ジェイルブレイク」手法が既知の脆弱性発見に使われた実証があったとされる。Anthropicはこの基準が業界全体に適用されれば新モデルの展開が事実上止まると反論している。
+
+🔗 [Anthropic disables access to Fable 5 and Mythos 5 to comply with government directive](https://www.cnbc.com/2026/06/12/anthropic-disables-access-to-fable-5-and-mythos-5-to-comply-with-government-directive.html)
+
+---
+
+### 7. 米政府、フロンティアAIモデルのサイバーリスク評価制度とCISA指令を打ち出す
+**2026年6月**
+トランプ大統領のAI関連大統領令により、先進フロンティアAIモデルの公開前にサイバーセキュリティリスクを評価する自主的な仕組みを官民で構築するよう指示。これと連動し、CISAは新型AIモデルが脆弱性発見・悪用を高速化させているとの認識のもと、高リスク脆弱性のパッチ優先順位付けに関する拘束力のある指令を発表した。
+
+🔗 [AI directive focuses patching efforts on 'highest risk' vulnerabilities](https://federalnewsnetwork.com/cybersecurity/2026/06/ai-directive-focuses-patching-efforts-on-highest-risk-vulnerabilities/)
+
+---
+
+## 🟡 Data & Privacy
+
+### 8. 米国州レベルのプライバシー法、2026年も拡大続く。EU AI Actは8月に全面適用へ
+**2026年（年初〜）**
+インディアナ・ケンタッキー・ロードアイランド州で新たな包括的プライバシー法が施行され、カリフォルニア・コネチカット・オレゴン・ユタ州では既存法の改定が発効。ユニバーサルオプトアウト機構の対応義務も州を超えて拡大している。国際的にはEU AI Actが2026年8月2日に（一部高リスク用途を除き）全面適用となる予定。
+
+🔗 [2026 U.S. Data Privacy Developments: New and Amended Laws](https://www.pearlcohen.com/new-privacy-data-protection-and-ai-laws-in-2026/)
+
+---
+
+## 🟢 Security Governance
+
+### 9. トランプ大統領、国家安全保障システムのサイバーガバナンスに関する覚書を発出
+**2026年6月12日**
+連邦政府機関が使用する国家安全保障システム（NSS）のサイバーセキュリティガバナンスに関する覚書が発出され、国家安全保障システム委員会（CNSS）の体制を再構築。NSAの長官が同委員会のナショナルマネージャーを務める構造が明確化された。
+
+🔗 [Administration releases memo on cybersecurity governance for national security systems](https://www.aha.org/news/headline/2026-06-15-administration-releases-memo-cybersecurity-governance-national-security-systems)
+
+---
+
+## 🟣 Crypto Currency
+
+### 10. KelpDAO/LayerZeroブリッジから2.92億ドル流出、2026年最大のDeFiハックに
+**2026年4月18日（発覚後も責任論争が継続）**
+KelpDAOのLayerZeroブリッジアダプターから116,500 rsETH（約2.92億ドル相当）が流出。攻撃者はLayerZero Labsの開発者をソーシャルエンジニアリングで侵害し、内部RPCノードを汚染して「1-of-1」DVN構成の検証網を欺き、偽の資産バーンを認証させた。北朝鮮Lazarus Groupの関与が指摘されている。LayerZeroは後に自社のデフォルト設定の誤りを認めた。
+
+🔗 [Kelp DAO exploited for $292 million with wrapped ether stranded across 20 chains](https://www.coindesk.com/tech/2026/04/19/2026-s-biggest-crypto-exploit-kelp-dao-hit-for-usd292-million-with-wrapped-ether-stranded-across-20-chains)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴🔴 | Patch Tuesday, ServiceNow, Nitrogenランサムウェア, JetBrainsプラグイン, KEVカタログ |
+| AI Risk | 🟠🟠 | Claude Fable/Mythos停止, フロンティアAI評価制度, CISA指令 |
+| Data & Privacy | 🟡 | 州プライバシー法, EU AI Act |
+| Security Governance | 🟢 | NSS, CNSS, 大統領覚書 |
+| Crypto Currency | 🟣 | LayerZero, KelpDAO, ブリッジ攻撃, Lazarus Group |
+
+---
+
+*次回配信予定：2026年6月19日（金） | 収集ソース：BleepingComputer, The Hacker News, CNBC, CoinDesk, Federal News Network, AHA News, Pearl Cohen 他*
