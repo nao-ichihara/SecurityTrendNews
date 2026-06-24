@@ -1,0 +1,129 @@
+# セキュリティトレンド Top 10 ニュース
+**配信日：2026年6月25日（木）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **CVE-2026-20230（Cisco Unified CM）** | Cisco Unified CM/CM SMEのSSRF脆弱性。WebDialer経由でWebシェルを設置する攻撃が実際に確認され、Tor経由の自動スキャンも進行中。 |
+| 2 | **Operation Endgame（Amadey/StealC摘発）** | Microsoft・Europol・Bitdefender等が連携し、感染端末14万台超に関わるインフォスティーラー基盤を摘発。約27百万件の認証情報を回収。 |
+| 3 | **AI関連大統領令（米国）** | AIの先端モデルを公開前にサイバーリスク評価する自主的枠組みを含む大統領令が署名され、CISAも脆弱性対応の優先順位付け指令を発表。 |
+| 4 | **CTDPA改正（コネチカット州）** | 州データプライバシー法の適用基準を緩和する改正法（SB1295）が7月1日に施行予定。米国内の州別プライバシー規制がさらに細分化。 |
+| 5 | **ウォレット生成ソフトの脆弱性（暗号資産）** | Cardanoウォレット「SecondFi」で自社開発のウォレット生成ソフトの欠陥が悪用され、約240万ドル相当が流出。被害は2,000万ドル規模に拡大する可能性。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. Cisco Unified CMの脆弱性が積極的に悪用、Webシェル設置を確認
+**2026年6月24日**
+Cisco Unified Communications Manager（Unified CM）およびUnified CM SMEに存在するSSRF脆弱性CVE-2026-20230（CVSS 8.6）が実際に悪用されていることが判明した。攻撃者はWebDialer機能のSSRFを悪用してApache Axisサービスを不正設置し、2段階のJSPシェルを展開してルート権限への昇格を試みている。Ciscoは6月3日にパッチを公開済みだが、悪用はTor経由の自動スキャンに拡大している。
+
+🔗 [Cisco Unified CM flaw CVE-2026-20230 now exploited in attacks](https://www.bleepingcomputer.com/news/security/cisco-unified-cm-sme-flaw-cve-2026-20230-now-exploited-in-attacks/)
+🔗 [Cisco Unified CM flaw actively exploited to drop webshells](https://www.helpnetsecurity.com/2026/06/24/cisco-unified-cm-flaw-exploited-to-drop-webshells-cve-2026-20230/)
+
+---
+
+### 2. Microsoft主導の国際摘発でAmadey・StealCマルウェア基盤を停止
+**2026年6月24日**
+Microsoft Digital Crimes UnitはEuropol、Bitdefender、Bitsight、ESETと連携し、インフォスティーラー「StealC」とローダー「Amadey」のC2基盤200以上のドメイン・IPを摘発した。両マルウェアは同一基盤を共有していたことが判明し、Microsoftは法的にRICO（恐喝による腐敗組織防止法）を適用し5名の被告に対し民事訴訟を提起。摘発により約4,650万ドル相当の暗号資産凍結、2,700万件の認証情報回収が報告された。
+
+🔗 [Amadey and StealC Malware Network Disrupted, 27M Stolen Credentials Recovered](https://thehackernews.com/2026/06/amadey-and-stealc-malware-network.html)
+🔗 [StealC and Amadey: Breaking down infostealers](https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/)
+
+---
+
+### 3. 6月23日に複数組織で新たなランサムウェア被害が発覚
+**2026年6月23日**
+航空宇宙関連企業のAerospace & Advanced Composites GmbH（Aur0ra）、Belpointe Asset Management（INC_RANSOM）、BITS Pilani（DragonForce）、Canada Wide Media（TheGentlemen）、中央アフリカの金融機関Central Bank of Libya（Qilin）など、複数の業界・地域にわたる組織が新たにランサムウェア被害の対象としてリークサイトに掲載された。多様なランサムウェアグループが同時並行で活動している実態が改めて浮かび上がっている。
+
+🔗 [Data Breach News | Recent Data Breaches in 2026](https://www.breachsense.com/breaches/)
+🔗 [Hacked, leaked, and held for ransom: The worst breaches of 2026 so far](https://techcrunch.com/2026/06/07/the-worst-hacks-and-breaches-of-2026-so-far/)
+
+---
+
+## 🟠 AI Risk
+
+### 4. 米大統領がAI革新・セキュリティに関する大統領令に署名
+**2026年6月**
+先端AIモデルがサイバー脆弱性の発見・悪用能力で人間を上回り得るとの懸念を背景に、米政府は先端AIモデルの公開前にサイバーリスクを評価する自主的な枠組みの構築や、官民連携によるシステム強化を指示する大統領令を発表した。Anthropic「Claude Mythos」のプレビューモデルが脆弱性発見で示した能力が背景の一つとされる。
+
+🔗 [Promoting Advanced Artificial Intelligence Innovation and Security – The White House](https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/)
+🔗 [AI executive order sets stage for new cybersecurity directives](https://federalnewsnetwork.com/cybersecurity/2026/06/ai-executive-order-sets-stage-for-new-cybersecurity-directives/)
+
+---
+
+### 5. CISAがAI時代を見据えた脆弱性パッチ優先指令を発表
+**2026年6月**
+米CISAは、AIモデルの能力向上により攻撃者が脆弱性をより迅速に発見・悪用できるようになっていることを踏まえ、政府機関に対し「最高リスク」の脆弱性への対応を優先する拘束力のある運用指令（Binding Operational Directive）を発表した。AIによる脆弱性発見の高速化が、防御側の対応速度にも変化を求めている。
+
+🔗 [AI directive focuses patching efforts on 'highest risk' vulnerabilities](https://federalnewsnetwork.com/cybersecurity/2026/06/ai-directive-focuses-patching-efforts-on-highest-risk-vulnerabilities/)
+
+---
+
+## 🟡 Data & Privacy
+
+### 6. コネチカット州、データプライバシー法（CTDPA）を改正・適用範囲を拡大
+**2025年6月25日（7月1日施行）**
+コネチカット州知事はSB1295に署名し、州データプライバシー法（CTDPA）を改正した。データ管理者が法適用対象となる消費者データ処理件数のしきい値を2.5万人から3.5万人に引き上げる一方、「収入の25%が個人データ販売由来」という適用要件は撤廃され、より多くの事業者が対象となる可能性がある。改正は2026年7月1日に施行予定。
+
+🔗 [Privacy Laws 2026: Global Changes, Enforcement & Compliance Guide](https://secureprivacy.ai/blog/privacy-laws-2026)
+🔗 [Data privacy laws: what to expect for 2026 - Ketch](https://www.ketch.com/blog/posts/us-privacy-laws-2026)
+
+---
+
+## 🟢 Security Governance
+
+### 7. Asana Gov、FedRAMP Moderate認証を取得
+**2026年6月24日**
+コラボレーションツールAsanaの政府向け版「Asana Gov」が、連邦政府機関向けセキュリティ基準であるFedRAMP Moderateの認証を取得した。これにより公共部門の組織がAsana Govを利用して連邦のセキュリティ・コンプライアンス要件を満たせるようになる。GRC（ガバナンス・リスク・コンプライアンス）人材不足が27%の組織で課題とされる中、SaaS側の認証取得が進んでいる。
+
+🔗 [List Of Recent Compliance News in 2026](https://www.brightdefense.com/resources/recent-compliance-news/)
+
+---
+
+### 8. AIガバナンスが金融機関の中核的な運用リスク領域に
+**2026年6月**
+わずか2年前は新興フィンテック領域とみなされていたAIが、2026年にはサイバーセキュリティ・情報開示・内部利用に直結する明確な運用リスク領域として位置づけられるようになった。金融サービス企業の62%がAIエージェントを導入し、そのうち93%が一定の自律性を許可しているが、多くの企業がセキュリティリスク管理に苦慮している実態も報告されている。
+
+🔗 [2026 Operational Guide to Cybersecurity, AI Governance & Emerging Risks](https://www.corporatecomplianceinsights.com/2026-operational-guide-cybersecurity-ai-governance-emerging-risks/)
+🔗 [Agentic AI surges in financial sector even as many firms fail to manage security risks](https://www.cybersecuritydive.com/news/ai-agents-financial-services-payments-security-risks/822800/)
+
+---
+
+## 🟣 Crypto Currency
+
+### 9. CardanoウォレットSecondFiで240万ドル相当の流出、最大2,000万ドルの被害懸念
+**2026年6月24日**
+Cardano向けウォレット「SecondFi」（旧Yoroi）で、独自のウォレット生成ソフトウェアの欠陥が悪用され、3件の攻撃により374件のユーザーウォレットから約1,600万ADA（約240万ドル）が流出した。脆弱性はシードフレーズの移行では防げず、トランザクション署名時にアドレスレベルで発火するため、被害規模はセキュリティ企業SlowMistの推計で最大2,000万ドルに達する可能性がある。運営側は1.29億ADAを第三者カストディアンへ緊急移送し被害拡大を防いだ。
+
+🔗 [SecondFi loses $2.4 million in Cardano wallet exploit](https://www.coindesk.com/business/2026/06/24/secondfi-loses-usd2-4-million-in-cardano-wallet-exploit-with-up-to-usd20-million-at-risk)
+🔗 [SecondFi wallet vulnerability drains $2.4M in Cardano assets from 178 users](https://cryptobriefing.com/secondfi-wallet-vulnerability-cardano-drain/)
+
+---
+
+### 10. ESMAが無許可の暗号資産業者にEU事業撤退を要求、Binanceにも猶予期限
+**2026年6月**
+欧州証券市場監督機構（ESMA）は、無許可の暗号資産事業者に対しEU域内での事業を即時縮小するよう警告した。Binanceについても現行の運営許可が6月30日に失効するため、それまでに代替ライセンスを確保する必要があるとされ、欧州における暗号資産規制の執行が一段と強化されている。
+
+🔗 [Crypto Market Update](https://investingnews.com/cryptocurrency-market-recap/)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴 | Cisco CVE-2026-20230, Operation Endgame, ランサムウェア |
+| AI Risk | 🟠🟠 | AI大統領令, CISA指令, 脆弱性悪用の高速化 |
+| Data & Privacy | 🟡 | CTDPA改正, 州別プライバシー法 |
+| Security Governance | 🟢🟢 | FedRAMP, AIガバナンス, GRC人材不足 |
+| Crypto Currency | 🟣🟣 | SecondFi流出, ESMA規制強化 |
+
+---
+
+*次回配信予定：2026年6月26日（金） | 収集ソース：The Hacker News, BleepingComputer, Help Net Security, Microsoft Security Blog, Federal News Network, The White House, CoinDesk, Cybersecurity Dive, Corporate Compliance Insights, SecurePrivacy, Ketch, BrightDefense*
