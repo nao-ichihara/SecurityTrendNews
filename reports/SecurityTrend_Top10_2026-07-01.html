@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecurityTrend Top10 - 2026-07-01</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f1117; --surface: #1a1d27; --border: #2d3148;
+      --text: #e2e8f0; --muted: #8892a4; --accent: #6366f1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; }
+    .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .header { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+    .header-logo { font-size: 2rem; }
+    .header-title { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+    .header-date { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+    .badge { display: inline-block; background: rgba(99,102,241,0.15); border: 1px solid var(--accent); color: var(--accent); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 20px; margin-top: 0.5rem; }
+    #content h1 { display: none; }
+    #content h2 { font-size: 1.1rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    #content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.5rem 0 0.5rem; }
+    #content p { color: #c8d3e0; margin-bottom: 0.75rem; }
+    #content a { color: var(--accent); text-decoration: none; }
+    #content a:hover { text-decoration: underline; }
+    #content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+    #content blockquote { border-left: 3px solid var(--accent); padding: 0.75rem 1rem; background: rgba(99,102,241,0.08); border-radius: 0 8px 8px 0; margin: 1rem 0; color: var(--muted); font-size: 0.9rem; }
+    #content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    #content th { background: var(--surface); padding: 0.6rem 1rem; text-align: left; border: 1px solid var(--border); color: var(--muted); font-weight: 600; }
+    #content td { padding: 0.6rem 1rem; border: 1px solid var(--border); }
+    #content tr:hover td { background: rgba(99,102,241,0.05); }
+    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+    .back-link { display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-logo">🔐</div>
+      <div>
+        <div class="header-title">SecurityTrend Top10</div>
+        <div class="header-date">2026-07-01</div>
+        <div class="badge">AI Generated Report</div>
+      </div>
+    </div>
+    <div id="content"></div>
+    <div class="footer">
+      <p>このレポートはClaudeのAIが独自に収集・編集したものです</p>
+      <a class="back-link" href="../index.html">← 過去レポート一覧へ</a>
+    </div>
+  </div>
+  <script>
+    const md = `# セキュリティトレンド Top 10 ニュース
+**配信日：2026年7月1日（水）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **DirtyClone** | Linuxカーネルの新たな特権昇格脆弱性（CVE-2026-43503）。Dirty Fragの亜種で、クローンパケットを悪用してローカルユーザーがroot権限を取得できる。Debian/Ubuntu/Fedoraのデフォルト構成が対象。 |
+| 2 | **Supply Chain Attack** | npmおよびGoパッケージのハイジャックが続発。正規パッケージに見せかけた悪意あるコードが情報窃取ツールを展開する手口が主流となっており、開発エコシステム全体への脅威が拡大。 |
+| 3 | **EU AI Act Enforcement** | 8月2日にEU AI Act高リスクAI規定が全面施行。最大年商7%・3,500万ユーロの制裁金を伴い、AIシステムの透明性・ヒューマンオーバーサイト・リスク管理の義務化が完全適用される。 |
+| 4 | **Cross-Chain Bridge Exploit** | Q2 2026だけで14件・3億4,070万ドルのブリッジ攻撃が発生。クロスチェーンブリッジはDeFiで最も損失の大きい攻撃ベクトルとなっており、業界全体の構造的脆弱性として注目。 |
+| 5 | **LLM Training Data Disclosure** | コネチカット州が7月1日施行の改正CTDPAで、個人データをChatGPTやGeminiなどのLLMのトレーニングに使用する場合のプライバシーポリシー開示を義務化。AI時代のデータ利用透明性の新基準。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. ServiceNow API認証バイパス脆弱性 - 顧客インスタンスへの不正アクセス
+**2026年6月**
+
+ServiceNowは6月に発生したセキュリティインシデントを開示した。攻撃者はホスト型顧客インスタンスが使用するAPIエンドポイントの非認証アクセス欠陥を悪用し、特定の条件下でServiceNowのインスタンステーブルからデータをクエリできた。エンタープライズ向けSaaSプラットフォームの脆弱性は影響範囲が広く、早急なパッチ適用が求められる。
+
+🔗 [June 2026 Data Breaches: List Major Incidents & Latest Updates](https://sharkstriker.com/blog/june-2026-data-breaches/)
+
+---
+
+### 2. ShinyHunters、Oracle PeopleSoft経由で100大学以上のデータ侵害
+**2026年6月**
+
+サイバー犯罪グループShinyHuntersが、Oracle PeopleSoftサーバーへの侵入により100以上の大学・教育機関から数十万件の学生レコードを窃取したと主張。氏名・住所・電話番号・メール・生年月日・民族・GPA・専攻・学籍IDなどの機微情報が含まれる。教育機関を標的とした大規模な侵害として重大性が高い。
+
+🔗 [List of Recent Data Breaches in 2026](https://www.brightdefense.com/resources/recent-data-breaches/)
+
+---
+
+### 3. DirtyClone（CVE-2026-43503）- Linuxカーネル特権昇格ゼロデイ
+**2026年6月〜7月**
+
+セキュリティ研究者が、Linuxカーネルのフラグメンテーション処理に存在する新たな脆弱性「DirtyClone」を詳述。クローンパケットを介したローカルユーザーによるroot権限取得が可能で、Dirty Fragの亜種として識別された（CVE-2026-43503）。Debian・Ubuntu・Fedoraのデフォルトネームスペース構成で攻撃が成功することが確認されており、カーネルアップデートの即時適用が必要。
+
+🔗 [The Hacker News - Cybersecurity News](https://thehackernews.com/)
+
+---
+
+### 4. npmおよびGoパッケージのハイジャック - マルチプラットフォームに情報窃取ツール展開
+**2026年6月〜7月**
+
+研究者が、乗っ取られた2つのnpmパッケージとGoパッケージクラスターを発見。これらはWindows・Linux・macOSに対してPythonベースの情報窃取ツールを展開するよう設計されている。オープンソースのサプライチェーンを悪用した攻撃手法が高度化しており、開発者はパッケージの依存関係を継続的に監視する必要がある。
+
+🔗 [The Hacker News - Cybersecurity News](https://thehackernews.com/)
+
+---
+
+### 5. Tata Electronics、World Leaksランサムウェアが20万件超のファイルを公開
+**2026年6月**
+
+Tata Electronicsは6月のサイバーセキュリティインシデントを確認。新興のランサムウェアグループ「World Leaks」が20万件以上とされる同社ファイルをオンラインで公開した。製造・エレクトロニクス業界への攻撃が続いており、重要インフラのランサムウェア対策強化が求められる。
+
+🔗 [Biggest Cyber Attacks, Data Breaches, Ransomware Attacks of May 2026](https://www.cm-alliance.com/cybersecurity-blog/biggest-cyber-attacks-data-breaches-ransomware-attacks-of-may-2026/)
+
+---
+
+### 6. ロシア情報機関によるウクライナ・欧米官僚のメッセージング侵害キャンペーン
+**2026年6月**
+
+ウクライナ保安局（SSU）とFBIが共同で、ロシア情報機関によるサイバーキャンペーンを暴露。ウクライナ・欧州・米国の政府関係者、軍人、政治家、活動家のメッセージングアカウントへの継続的な侵入と機密情報窃取が確認された。国家支援型のサイバースパイ活動が欧米の政治・安全保障体制へ直接的な脅威をもたらしている。
+
+🔗 [SWK Cybersecurity News Recap June 2026](https://www.swktech.com/swk-cybersecurity-news-recap-june-2026/)
+
+---
+
+## 🟠 AI Risk
+
+### 7. EU AI Act 8月2日全面施行 - 高リスクAIと汎用AIに最大年商7%の制裁金
+**2026年6月29日〜8月2日**
+
+EU理事会が6月29日にAI Act簡素化パッケージを最終承認し、8月2日に高リスクAIシステム規定と汎用AI（GPAI）への執行権限が完全適用される。リスク管理・データガバナンス・ヒューマンオーバーサイト・透明性・サイバーセキュリティ要件が義務化。違反には最大3,500万ユーロまたは年間世界売上高の7%の制裁金が課される。AI開発企業は即時のコンプライアンス対応が不可欠。
+
+🔗 [EU AI Act 2026 Updates: Compliance Requirements and Business Risks](https://www.legalnodes.com/article/eu-ai-act-2026-updates-compliance-requirements-and-business-risks/)
+
+---
+
+### 8. AIエージェント普及がセキュリティガバナンスを圧迫 - 組織の78%が導入・試験運用中
+**2026年上半期**
+
+CSAの調査によると、組織の78%がAIエージェントシステムを展開・試験運用しており、92%のセキュリティリーダーが組織全体でのAIエージェント利用と影響について懸念を示している。AIの急速な拡大はセキュリティチーム・ガバナンスフレームワーク・従来のツールの対応能力を根本的に超えており、AIセキュリティの体制整備が急務となっている。
+
+🔗 [AI Cybersecurity 2026: Insights from 1,500 Leaders](https://cloudsecurityalliance.org/articles/the-state-of-ai-cybersecurity-2026-unveiling-insights-from-over-1-500-security-leaders/)
+
+---
+
+## 🟡 Data & Privacy
+
+### 9. コネチカット州CTDPA改正が7月1日施行 - 神経データ保護とLLMトレーニング開示義務化
+**2026年7月1日**
+
+コネチカット州のCTDPA改正が本日施行。神経データが「センシティブデータ」に追加され、オプトイン同意が必要になった。さらにデータ管理者は、個人データをChatGPT・Gemini・DeepSeek・Grokなど主要LLMのトレーニングに使用・収集・販売する場合、プライバシーポリシーへの明確な開示が義務付けられる。AI時代のデータ利用透明性を定める画期的な規制として注目される。
+
+🔗 [2026 U.S. Data Privacy Developments: New and Amended Laws](https://www.gunster.com/newsroom/publications/2026-data-privacy-laws-state-changes-universal-opt-out-compliance/)
+
+---
+
+## 🟣 Crypto Currency
+
+### 10. Q2 2026 過去最多70件のクリプトハック - 総損失7億4,600万ドル
+**2026年4〜6月**
+
+2026年第2四半期に70件の暗号資産エクスプロイトが発生し、四半期ベースで史上最多を記録、総損失は約7億4,600万ドルに達した。特にクロスチェーンブリッジが最大の攻撃対象で、14件の攻撃で3億4,070万ドルが流出。最大の単独事件はKelpDAOへの\$2億9,370万ドルのブリッジコントラクト攻撃（2026年最大のハック）。DeFiエコシステム全体でセキュリティ審査とブリッジ設計の抜本的見直しが急がれる。
+
+🔗 [Record 70 Crypto Hacks in Q2 2026, But Less Value Stolen](https://cryptocurrencyhelp.com/news/q2-2026-saw-70-crypto-hacks-highest-in-history/)
+🔗 [The Biggest Hack of 2026: What We Know About the \$294M KelpDAO Exploit](https://cryptopotato.com/the-biggest-hack-of-2026-what-we-know-about-the-294m-kelpdao-exploit/)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴🔴 | DirtyClone, ServiceNow, ShinyHunters, ランサムウェア, サプライチェーン |
+| AI Risk | 🟠🟠🟠🟠 | EU AI Act, AIエージェント, ガバナンスギャップ, 制裁金 |
+| Data & Privacy | 🟡🟡🟡 | CTDPA, 神経データ, LLMトレーニング開示 |
+| Security Governance | 🟢🟢🟢🟢 | EU AI Act施行, DORA, CMMC, マルチ管轄コンプライアンス |
+| Crypto Currency | 🟣🟣🟣🟣 | ブリッジエクスプロイト, KelpDAO, Q2最多ハック記録 |
+
+---
+
+*次回配信予定：2026年7月2日（木） | 収集ソース：The Hacker News, TechCrunch, SharkStriker, CSA, IAPP, CryptoPotato, CryptoHelp, LegalNodes, Gunster Law, SWK Technologies*
+`;
+    document.getElementById('content').innerHTML = marked.parse(md);
+  </script>
+</body>
+</html>
