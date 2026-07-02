@@ -1,0 +1,122 @@
+# セキュリティトレンド Top 10 ニュース
+**配信日：2026年7月3日（金）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **Agentic AI Attack** | 自律的に行動するAIエージェントが攻撃ツールとして悪用されるリスクが急浮上。ウェブ閲覧・コード実行・他エージェントとの連携を通じ、プロンプトインジェクションやサプライチェーン攻撃の新経路となっている。 |
+| 2 | **Zero-Day Exploitation** | CVE-2026-8037（CVSS 9.6）など重大な脆弱性がパッチ公開直後から積極的に悪用されており、防御側の対応速度を大きく上回るペースで攻撃が展開されている。 |
+| 3 | **NIS2 Enforcement** | EU全土でNIS2コンプライアンス監査が本格化。2026年6月30日が初回監査期限で、EU27か国中22か国が国内法化を完了し、違反企業への制裁が現実のものとなった。 |
+| 4 | **Credential Leak** | 7月2日に240億件のユーザー名・パスワードが一度に流出する大規模リークが発覚。フィルセキュリティモデルが機能しない旧来型の認証管理の危険性が改めて露呈した。 |
+| 5 | **Crypto Key Compromise** | 2026年上半期の暗号資産被害の75%超が、スマートコントラクトバグではなく秘密鍵・カストディ・署名インフラの侵害に起因。運用セキュリティの弱さが最大のリスク要因となっている。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. 240億件の認証情報が一夜にして流出——史上最大規模のデータリーク
+**2026年7月2日**
+ユーザー名とパスワードを含む240億件超のレコードが7月2日に一斉公開され、史上最大規模のクレデンシャルリークとなった。LockBit・INC_RANSOM など複数のランサムウェアグループが同日にスペイン・ベトナムほか複数国の企業への侵害を宣言しており、組織的な脅威活動の活発化が浮き彫りとなった。
+
+🔗 [Data Breach Tracker 2026 — Latest Incidents & Statistics (BitSight)](https://www.bitsight.com/underground/data-breaches)
+
+---
+
+### 2. Progress Kemp LoadMaster の深刻な脆弱性が積極悪用——CVSS 9.6
+**2026年7月1日〜**
+OS コマンドインジェクション脆弱性 CVE-2026-8037（CVSS 9.6）が Progress Kemp LoadMaster に発見され、6月29日から悪用が始まったと eSentire TRU が警告。任意コード実行が可能で、パッチ適用が急務となっている。
+
+🔗 [BlueHammer Vulnerability Exploited in Ransomware Attacks (SecurityWeek)](https://www.securityweek.com/bluehammer-vulnerability-exploited-in-ransomware-attacks/)
+
+---
+
+### 3. Adobe ColdFusion／Campaign Classic に最大深刻度の脆弱性——任意コード実行の恐れ
+**2026年7月1日**
+Adobe が ColdFusion および Campaign Classic の緊急パッチを公開。任意コード実行・権限昇格・任意ファイル読み取り・セキュリティ機能バイパスなど複数の深刻な脆弱性を修正した。広く使われているエンタープライズ製品であり、迅速な適用が求められる。
+
+🔗 [july 2026 Data Breaches: List Major Incidents & Latest Updates (SharkStriker)](https://sharkstriker.com/blog/july-2026-data-breaches/)
+
+---
+
+### 4. AI コードエディタ「Cursor」に CVSS 9.8 のゼロデイ——プロンプト1つでシェルを奪取
+**2026年7月初旬**
+Cato AI Labs が Cursor に「DuneSlide」と命名した2件のゼロデイ（CVE-2026-50548/50549, CVSS 9.8）を発見。通常のプロンプト一行でサンドボックスを突破し、開発者のマシン上で任意のコマンドを実行できる。開発ツールを標的とする攻撃の新潮流として注目を集めている。
+
+🔗 [The Hacker News | #1 Trusted Source for Cybersecurity News](https://thehackernews.com/)
+
+---
+
+### 5. Microsoft Defender の BlueHammer 脆弱性がランサムウェア攻撃に悪用——CISA が KEV 更新
+**2026年6月〜7月**
+CISA が CVE-2026-33825（BlueHammer）の既知悪用脆弱性カタログ（KEV）エントリを更新し、実際のランサムウェアキャンペーンで使われていることを確認。Windows の標準セキュリティツールそのものが攻撃対象となる事態に、多くの組織が対応を迫られている。
+
+🔗 [BlueHammer Vulnerability Exploited in Ransomware Attacks (SecurityWeek)](https://www.securityweek.com/bluehammer-vulnerability-exploited-in-ransomware-attacks/)
+
+---
+
+## 🟠 AI Risk
+
+### 6. Five Eyes が緊急警告：AIによる大規模サイバー攻撃は「数か月以内」に現実化
+**2026年6月23日**
+米英加豪NZの Five Eyes 情報同盟が共同声明を発表。政府・企業のシステムを突破できるレベルの AI 攻撃能力が「数年先」ではなく「数か月以内」に利用可能になると警告した。特にアジェンティック AI が自律的に脆弱性を探索・悪用するシナリオへの懸念が示されている。
+
+🔗 [AI could breach government and business defenses in months, US and its intelligence partners warn (CNN)](https://www.cnn.com/2026/06/23/world/ai-five-eyes-warning-cyber-threat-intl-hnk)
+
+---
+
+### 7. IMF 報告：AI 活用サイバー攻撃が金融システムの安定性を脅かす
+**2026年5〜7月**
+IMF が「AI は攻撃者の脆弱性発見コストと時間を劇的に削減する」と警告するブログ記事を公開。金融機関を対象とした AI 活用型サイバー攻撃が急増しており、防御側の能力を攻撃側が上回るリスクが高まっているとした。
+
+🔗 [Financial Stability Risks Mount as Artificial Intelligence Fuels Cyberattacks (IMF)](https://www.imf.org/en/blogs/articles/2026/05/07/financial-stability-risks-mount-as-artificial-intelligence-fuels-cyberattacks)
+
+---
+
+## 🟡 Data & Privacy
+
+### 8. GDPR 制裁金が €71 億に到達——2026 年は「消去権」の執行強化フェーズへ
+**2026年7月（累積）**
+欧州データ保護委員会（EDPB）が2026年の執行優先事項に「忘れられる権利（第17条）」を指定。GDPR 施行以来の累積制裁金は €71 億を超え、アイルランドが €40 億超と最大規模。デジタルオムニバス提案による中小企業向けの義務緩和も議論されているが、個人の権利保護は不変とされている。
+
+🔗 [GDPR Fines Hit €7.1 Billion: Data Privacy Enforcement Trends in 2026 (Kiteworks)](https://www.kiteworks.com/gdpr-compliance/gdpr-fines-data-privacy-enforcement-2026/)
+
+---
+
+## 🟢 Security Governance
+
+### 9. NIS2 コンプライアンス監査が本格始動——EU 22か国が国内法化完了、初回期限は6月30日
+**2026年6〜7月**
+EU サイバーセキュリティ指令 NIS2 の初回コンプライアンス監査期限（6月30日）が過ぎ、各国当局が本格的な執行フェーズに入った。18の重要インフラセクターが対象で、欧州委員会は NIS2 を改正する新提案も公表。ランサムウェアの新たな開示義務など規制強化が続く。また CISA は米国 CIRCIA（サイバーインシデント報告法）の最終規則を 2026年5月に公表し、重大インシデントの72時間以内報告が義務化された。
+
+🔗 [NIS2 Enforcement Begins in 2026. What Organisations Must Prove (Diamatix)](https://diamatix.com/nis2-enforcement-2026-eu-cybersecurity-readiness/)
+
+---
+
+## 🟣 Crypto Currency
+
+### 10. 暗号資産ハッキング H1 2026 が過去最多——207 件、被害の 75% は鍵管理の不備
+**2026年上半期**
+TRM Labs によると 2026年上半期の暗号資産ハッキングは207件と過去最多を記録。6月はイスラエル系ハクティビストグループ Predatory Sparrow が Nobitex 取引所から約 9,000 万ドルを奪取。被害額の 75% 超が秘密鍵・カストディ・署名インフラの侵害に起因しており、スマートコントラクト監査が進む一方で運用セキュリティの遅れが鮮明になっている。
+
+🔗 [Crypto hacks hit record high in H1 2026 - What's fueling the surge? (AMBCrypto)](https://ambcrypto.com/crypto-hacks-hit-record-high-in-h1-2026-whats-fueling-the-surge/)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴🔴 | Credential Leak, Zero-Day, Ransomware, Adobe Patch |
+| AI Risk | 🟠🟠🟠🟠 | Agentic AI, Five Eyes Warning, IMF Alert |
+| Data & Privacy | 🟡🟡🟡 | GDPR €7.1B Fines, Erasure Right, Digital Omnibus |
+| Security Governance | 🟢🟢🟢🟢 | NIS2 Enforcement, CIRCIA, CISA KEV |
+| Crypto Currency | 🟣🟣🟣 | Record Hacks H1 2026, Key Compromise, Nobitex |
+
+---
+
+*次回配信予定：2026年7月4日（土） | 収集ソース：SecurityWeek, The Hacker News, TRM Labs, AMBCrypto, CNN, IMF, Kiteworks, Diamatix, SharkStriker, BitSight*
