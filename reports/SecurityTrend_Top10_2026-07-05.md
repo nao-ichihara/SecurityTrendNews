@@ -1,0 +1,122 @@
+# セキュリティトレンド Top 10 ニュース
+**配信日：2026年7月5日（日）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **Avalon / CrownX** | 認証情報窃取・横展開・バックアップ破壊・ランサムウェア実行を一体化した新型モジュラー型マルウェア。AI支援開発の痕跡が指摘されている。 |
+| 2 | **Bad Epoll（CVE-2026-46242）** | Linuxカーネルのuse-after-free脆弱性で、一般ユーザー権限からroot奪取が可能。パッチ以外の回避策がなく緊急性が高い。 |
+| 3 | **Pre-Auth RCE（未認証リモートコード実行）** | SharePoint（CVE-2026-45659）やKemp LoadMaster（CVE-2026-8037）など、認証不要で悪用可能な重大脆弱性が相次いで実悪用確認。 |
+| 4 | **AIガバナンス** | 企業内AI利用リスクが一部の「パワーユーザー」に集中している実態や、Connecticut州のAI透明性規制発効など、AI利用の統制が焦点に。 |
+| 5 | **暗号資産セキュリティ被害** | 2026年6月だけで約7,587万ドルの損失。秘密鍵管理や内部者攻撃など運用面の弱点が引き続き主要因。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. SharePoint RCE（CVE-2026-45659）がCISA KEVに追加、実悪用を確認
+**2026年7月上旬**
+Microsoft SharePoint Serverの未認証データのデシリアライズに起因するリモートコード実行脆弱性（CVSS 8.8）が、CISAの既知悪用脆弱性（KEV）カタログに追加された。連邦機関には7月4日までのパッチ適用が求められている。
+
+🔗 [SharePoint RCE CVE-2026-45659 Added to CISA KEV After Active Exploitation](https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html)
+
+---
+
+### 2. Progress Kemp LoadMaster、未認証RCE脆弱性（CVE-2026-8037）が実悪用開始
+**2026年6月29日〜**
+CVSS 9.6の重大なOSコマンドインジェクション脆弱性。`escape_quotes()`関数の入力サニタイズ不備に起因し、`/accessv2`エンドポイントへの細工リクエストでコマンド実行が可能。PoC公開と同日に実悪用が確認された。
+
+🔗 [Progress Kemp LoadMaster Pre-Auth RCE Flaw Faces Active Exploitation Attempts](https://thehackernews.com/2026/07/latest-progress-kemp-loadmaster-pre.html)
+
+---
+
+### 3. 「Bad Epoll」Linuxカーネル脆弱性、Androidにも影響
+**2026年7月3〜4日**
+epoll機能に潜むuse-after-freeバグ（CVE-2026-46242）により、一般ユーザーが約99%の確率でroot権限を奪取可能。epollは無効化できず回避策がないため、ディストリビューションとデバイスベンダーによる緊急パッチ適用が必要。
+
+🔗 [New "Bad Epoll" Linux Kernel Flaw Lets Unprivileged Users Gain Root, Hits Android](https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html)
+
+---
+
+### 4. 新型マルウェア「Avalon」、CrownXランサムウェア機能を搭載
+**2026年7月3日**
+偽の法的文書を装ったフィッシングで配布される多段階マルウェア。ブラウザ・暗号資産ウォレット認証情報の窃取、VPN/SSH/RDP情報の収集、バックアップ破壊、ランサムウェア実行までを一つのフレームワークに統合。AI支援開発の兆候が見られる。
+
+🔗 [New Avalon Malware Framework Packs CrownX Ransomware Capabilities](https://thehackernews.com/2026/07/new-avalon-malware-framework-packs.html)
+
+---
+
+### 5. フォード・デ・メキシコ、Krybitランサムウェアの被害に
+**2026年6月28日**
+新興RaaSグループ「Krybit」がFord Motor Company (Mexico)を標的に。sso/loginエンドポイントの顧客認証情報が流出したとみられ、アカウント乗っ取りやサプライヤーリスクが懸念される。
+
+🔗 [Ford Motor Company SA de CV Data Breach](https://socradar.io/blog/data-breach/ford-motor-company-sa-de-cv-krybit-ransomware-2026/)
+
+---
+
+## 🟠 AI Risk
+
+### 6. 企業内AIリスクは少数の「パワーユーザー」に集中
+**2026年5月（継続的に注目）**
+新レポートによると、企業のAI利用リスクは全ユーザーに均等に分布しておらず、一部のパワーユーザーと少数の主要AIプラットフォームが、機密データ露出を含むAI活動の大半を占めている。
+
+🔗 [New AI Usage Report: Enterprise AI Risk Is Heavily Concentrated Among a Small Group of AI "Power users"](https://thehackernews.com/2026/05/new-ai-usage-report-enterprise-ai-risk.html)
+
+---
+
+### 7. IMF、AI活用型サイバー攻撃が金融システム安定性に及ぼすリスクを警告
+**2026年5月（継続的に注目）**
+高度なAIモデルが脆弱性の発見・悪用にかかる時間とコストを大幅に削減しており、広く使われるシステムの脆弱性が同時に発見・攻撃される「相関的障害」のリスクが金融仲介機能を混乱させかねないと指摘。
+
+🔗 [Financial Stability Risks Mount as Artificial Intelligence Fuels Cyberattacks](https://www.imf.org/en/blogs/articles/2026/05/07/financial-stability-risks-mount-as-artificial-intelligence-fuels-cyberattacks)
+
+---
+
+## 🟡 Data & Privacy
+
+### 8. コネチカット州CTDPA、AI透明性ルールが7月1日発効
+**2026年7月1日**
+CTDPAの対象事業者は、個人データがChatGPT・Gemini・DeepSeek・Grokなど大規模言語モデルの学習に利用・収集・販売されているかを、プライバシー通知に明確に開示することが義務化された。
+
+🔗 [2026 Data Security and Privacy Compliance Checklist: Key US State Law Updates, AI Rules, COPPA Changes, and Global Data Protection Risks](https://www.omm.com/insights/alerts-publications/2026-data-security-and-privacy-compliance-checklist-key-us-state-law-updates-ai-rules-coppa-changes-and-global-data-protection-risks/)
+
+---
+
+## 🟢 Security Governance
+
+### 9. Rapid7、サイバーGRCハブを早期アクセス公開
+**2026年7月上旬**
+Rapid7 Command Platform上に構築された新Cyber GRC（ガバナンス・リスク・コンプライアンス）プログラムを開始。リアルタイムのエクスポージャーデータを基盤に、セキュリティ運用とガバナンス・コンプライアンスのワークフローを統合する。
+
+🔗 [Rapid7's new Cyber GRC hub links live threats to compliance work](https://www.stocktitan.net/news/RPD/rapid7-launches-cyber-governance-risk-and-compliance-grc-early-48rt055sk3vi.html)
+
+---
+
+## 🟣 Crypto Currency
+
+### 10. 2026年6月、暗号資産セキュリティ侵害で約7,587万ドルの損失
+**2026年7月1日**
+6月だけで40件の主要セキュリティ侵害が発生。最大の被害はHumanity Protocolへのハッキングで約3,100万ドル相当が流出し、犯人はBitcoin・Solana・Hyperliquid・BNB Chainを跨いで資金を分散・洗浄した。
+
+🔗 [Crypto Security Breaches: June 2026 $75.87M Losses Report](https://en.cryptonomist.ch/2026/07/01/crypto-security-breaches-june-2026/)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴🔴 | SharePoint RCE、Kemp LoadMaster、Bad Epoll、Avalon/CrownX、Krybitランサムウェア |
+| AI Risk | 🟠🟠 | AIパワーユーザー、AI活用型サイバー攻撃、金融システムリスク |
+| Data & Privacy | 🟡 | CTDPA、AI透明性、プライバシー通知義務 |
+| Security Governance | 🟢 | Cyber GRC、コンプライアンス統合、リスク可視化 |
+| Crypto Currency | 🟣 | Humanity Protocolハッキング、秘密鍵管理、資金洗浄 |
+
+---
+
+*次回配信予定：2026年7月6日（月） | 収集ソース：The Hacker News、SOCRadar、IMF Blog、O'Melveny、StockTitan、Cryptonomist*
