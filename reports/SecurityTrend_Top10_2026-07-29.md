@@ -1,0 +1,128 @@
+# セキュリティトレンド Top 10 ニュース
+**配信日：2026年7月29日（水）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **ゼロデイ脆弱性** | Arista VeloCloud OrchestratorやZimbraなど、パッチ公開前後を問わず悪用が続くゼロデイ・エヌデイ脆弱性が相次いで報告された。 |
+| 2 | **AIエージェントの脆弱性** | ChatGPT「AgentForger」やCursor/Codex等のサンドボックス回避など、自律型AIエージェントを悪用・侵害する手法が急速に多様化している。 |
+| 3 | **ブリッジハッキング** | Verus、AFX Trade、Wanchainなどクロスチェーンブリッジへの攻撃が週内だけで4700万ドル超の被害を出した。 |
+| 4 | **大規模顧客情報漏洩** | Aflac Japan（438万件）やAssuranceAmerica（690万件）など、大量の個人情報が流出する事案が続いている。 |
+| 5 | **EU AI Act本格適用** | 8月2日にEU AI Actが本格適用開始となり、高リスクAIシステムへの規制対応が企業に迫られている。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. Arista VeloCloud Orchestratorにゼロデイ、CVSS10.0の最重要脆弱性が悪用される
+**2026年7月28日**
+Arista Networksは、VeloCloud Orchestrator（VCO）オンプレミス版に存在するOSコマンドインジェクションの脆弱性（CVE-2026-16812、CVSSスコア10.0）に対するパッチを公開した。同脆弱性は既にゼロデイとして悪用されており、CISAはKEV（既知の悪用済み脆弱性）カタログに追加し、連邦機関に3日以内のパッチ適用を求めている。
+
+🔗 [Attackers Exploit Arista VeloCloud Orchestrator Command Injection Flaw](https://thehackernews.com/2026/07/attackers-exploit-arista-velocloud.html)
+🔗 [Critical Arista VeloCloud Orchestrator Vulnerability Exploited as Zero-Day](https://www.securityweek.com/critical-arista-velocloud-orchestrator-vulnerability-exploited-as-zero-day/)
+
+---
+
+### 2. Aflac Japan、438万件の顧客情報流出を確認
+**2026年6月30日発表**
+Aflac Japanは6月15日から25日にかけて不正アクセスを受け、顧客・代理店約438万件の氏名・住所・生年月日・保険契約情報などが流出したと発表した。うち約23万件では保険料引落口座情報も含まれていた。日本国内の運営に限定され、米国事業への影響はないとしている。
+
+🔗 [Aflac Japan Data Breach Impacts 4.38 Million](https://www.securityweek.com/aflac-japan-data-breach-impacts-4-38-million/)
+🔗 [Aflac Japan reports data breach affecting over 4 million customers](https://www.japantimes.co.jp/business/2026/06/30/aflac-hack-4-million/)
+
+---
+
+### 3. AssuranceAmerica、従業員アカウント侵害で690万件のデータ流出
+**2026年7月**
+保険会社AssuranceAmericaで、従業員アカウントを標的とした攻撃により690万件以上のレコードが不正アクセスを受けたことが判明した。詳細な被害範囲は調査継続中。
+
+🔗 [Cyberattacks & Data Breaches recent news](https://www.darkreading.com/cyberattacks-data-breaches)
+
+---
+
+### 4. ロシア系ハッカー集団「Laundry Bear」、Zimbraのゼロクリック脆弱性を悪用しNATO関連機関等へスパイ活動
+**2026年7月23日**
+CISAとオーストラリアCyber.gov.auは、ロシア国家支援ハッカー集団Laundry Bear（別名Void Blizzard）がZimbra Collaboration SuiteのXSS脆弱性（CVE-2025-66376）を悪用し、政府・国防産業・エネルギー等の組織からメールやパスワード、二要素認証コードを窃取していると共同勧告を発表した。パッチ公開後も未適用サーバーへの攻撃が続いている。
+
+🔗 [Russian Espionage Group Exploited Zimbra Zero-Day to Steal Mail and 2FA Codes](https://thehackernews.com/2026/07/russian-espionage-group-exploited.html)
+🔗 [CISA Advisory AA26-204A](https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-204a)
+
+---
+
+## 🟠 AI Risk
+
+### 5. ChatGPT Workspace Agentsの重大欠陥「AgentForger」、1クリックで乗っ取り可能に
+**2026年7月23日**
+セキュリティ企業Zenity Labsは、OpenAIのChatGPT Workspace Agentsに存在した脆弱性「AgentForger」を公表した。フィッシングリンクを1回クリックさせるだけで、被害者になりすました自律型AIエージェントを組織内に密かに構築・展開でき、メールやSlack、Teamsなど連携済みアプリへのアクセスや認証情報の窃取が可能だった。OpenAIは報告から3日以内に修正済み。
+
+🔗 [One Click, One Attacker-Controlled Agentic Insider: Zenity Labs Uncovers 'AgentForger'](https://www.businesswire.com/news/home/20260723680415/en/One-Click-One-Attacker-Controlled-Agentic-Insider-Zenity-Labs-Uncovers-AgentForger-a-ChatGPT-Vulnerability)
+🔗 [OpenAI Fixes ChatGPT Agent Flaw That Could Let Attackers Forge an AI Insider](https://www.securityweek.com/openai-fixes-chatgpt-agent-flaw-that-could-let-attackers-forge-an-ai-insider/)
+
+---
+
+### 6. AIコーディングエージェントでサンドボックス回避が相次いで発覚
+**2026年7月**
+Cursor、Codex、Gemini CLIなど主要なAIコーディングエージェントで、サンドボックスを回避し特権コンテナを起動できる脆弱性（CVE-2026-50548、CVE-2026-50549等）が相次いで報告された。Adversa AIの調査では、オープンソースのコーディングエージェント11製品中10製品でシェルクォート回避によるコマンドガード突破が可能だったと指摘。業界ではAnthropicやGoogle DeepMindが提唱する「エージェント・ゼロトラスト」への移行が進んでいる。
+
+🔗 [Sandbox bypass flaws in Cursor IDE highlight prompt injection as an RCE vector](https://www.csoonline.com/article/4191923/sandbox-bypass-flaws-in-cursor-ide-highlight-prompt-injection-as-an-rce-vector.html)
+🔗 [Security Risks from AI Coding Agents Expand Beyond the Sandbox](https://devops.com/security-risks-from-ai-coding-agents-expand-beyond-the-sandbox-pillar/)
+
+---
+
+## 🟡 Data & Privacy
+
+### 7. EU AI Act、8月2日に本格適用開始
+**2026年7月（適用開始8月2日予定）**
+EU AI Actは2026年8月2日に一部を除き本格適用となる。高リスクAI製品への一部規定は2027年まで猶予されるものの、企業は透明性義務やリスク管理体制の整備を急ぐ必要に迫られている。
+
+🔗 [Privacy and Cybersecurity 2025–2026: Insights, challenges, and trends ahead](https://www.whitecase.com/insight-alert/privacy-and-cybersecurity-2025-2026-insights-challenges-and-trends-ahead)
+
+---
+
+### 8. 米国州データプライバシー法、2026年も拡大続く
+**2026年7月**
+インディアナ、ケンタッキー、ネブラスカ、ロードアイランドで新たな包括的データプライバシー法が施行されるほか、カリフォルニア、コロラド、コネチカット、オレゴン、ユタでも既存法の改正が進む。アーカンソー州でも7月に新法が発効。未成年者データ、自動意思決定、データブローカーの透明性への規制強化が主な焦点となっている。
+
+🔗 [2026 U.S. Data Privacy Developments: New and Amended Laws](https://www.gunster.com/newsroom/publications/2026-data-privacy-laws-state-changes-universal-opt-out-compliance)
+
+---
+
+## 🟢 Security Governance
+
+### 9. 侵害の透明性、依然としてガバナンス最大の課題に
+**2026年7月**
+Bitdefenderの2026年サイバーセキュリティ評価レポートによると、多くの組織がインシデント発生時の報告義務を認識しつつも、情報開示を控える社内圧力に直面していることが判明。サプライチェーンの第三者・第四者リスクも契約上のガバナンス不備により見過ごされやすく、透明性と説明責任の欠如が引き続き大きなガバナンス課題として指摘されている。
+
+🔗 [Breach Transparency Remains Cybersecurity's Toughest Governance Problem](https://thehackernews.com/expert-insights/2026/07/breach-transparency-remains.html)
+
+---
+
+## 🟣 Crypto Currency
+
+### 10. Verus Ethereumブリッジ、2カ月で2度目のハッキングで754万ドル被害
+**2026年7月23日**
+Verus Ethereumブリッジが、5月の攻撃と同一の脆弱性クラス（submitImports関数の悪用）により再度ハッキングを受け、ETH・tBTC・USDCなど7種の資産、約754万ドル相当が流出した。攻撃者は盗んだ資産をDEX経由でETHに集約後、Tornado Cashを通じて資金洗浄を開始している。同週には他にもAFX Trade（2415万ドル）やWanchain（1000万ドル）などブリッジ関連のハッキングが相次ぎ、週間被害総額は4700万ドルを超えた。
+
+🔗 [Verus Ethereum Bridge Exploited Again for $7.54M in Repeat Attack](https://www.cryptotimes.io/2026/07/23/verus-ethereum-bridge-exploited-again-for-7-54m-in-repeat-attack/)
+🔗 [Crypto Loses Over $47M in a Week as AFX Trade, Wanchain, Verus Get Hacked](https://www.cryptotimes.io/2026/07/26/crypto-loses-over-47m-in-a-week-as-afx-trade-wanchain-verus-get-hacked/)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴 | ゼロデイ, 情報漏洩, KEV, 国家支援ハッカー |
+| AI Risk | 🟠🟠 | AIエージェント, サンドボックス回避, プロンプトインジェクション |
+| Data & Privacy | 🟡🟡 | EU AI Act, 州プライバシー法, 未成年者データ |
+| Security Governance | 🟢 | 透明性, サプライチェーンリスク, 説明責任 |
+| Crypto Currency | 🟣 | ブリッジハッキング, DeFi, 資金洗浄 |
+
+---
+
+*次回配信予定：2026年7月30日（木） | 収集ソース：The Hacker News, SecurityWeek, BleepingComputer, CISA, Dark Reading, CSO Online, DevOps.com, CryptoTimes, White & Case, Gunster, Japan Times, CPO Magazine*
