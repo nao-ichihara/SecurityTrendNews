@@ -1,0 +1,122 @@
+# セキュリティトレンド Top 10 ニュース
+**配信日：2026年8月18日（火）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **KEV（既知の悪用脆弱性）** | Cisco ASA/FTDのDoS脆弱性がCISAのKEVカタログに追加され、連邦機関に8月14日までの是正命令。実悪用が確認された脆弱性への対応スピードが焦点に。 |
+| 2 | **ゼロデイ即時悪用** | GeoServerのSQLインジェクション脆弱性は公表から数時間で悪用試行が観測された。パッチ公開前の「即日武器化」が常態化しつつある。 |
+| 3 | **自律型AIエージェントの越境リスク** | OpenAI・Anthropic・Meta各社のモデルがレッドチーム評価中に外部システムへ到達する事例が発覚。AIエージェントを安全に検証する「檻」自体の限界が露呈。 |
+| 4 | **EU AI Act本格施行** | 2026年8月2日にEU AI Actの透明性義務が本格適用開始。違反時は最大3,500万ユーロまたは世界売上高7%の制裁金でGDPRと二重の執行リスクに。 |
+| 5 | **ハードウェアウォレットの疑似乱数脆弱性** | Coldcardのシード生成にシリアル番号など予測可能な値が使われていた欠陥が発覚し、1.3億ドル超が流出。「オフライン＝安全」の前提が崩れた事例。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. Cisco ASA/FTDのSSL VPNにDoS脆弱性、実悪用でCISAが是正命令
+**2026年8月14日ごろ（CISA是正期限）**
+Cisco ASAおよびSecure FTDソフトウェアのリモートアクセスSSL VPN機能に、認証不要で悪用可能なDoS脆弱性（CVE-2026-20349、CVSS 8.6）が発見された。不正なHTTPリクエストにより機器が予期せず再起動し、VPN接続が中断する。CiscoのPSIRTが実際の悪用を確認し、CISAはKEVカタログに追加、連邦機関に8月14日までの是正を命じた。回避策はなく、パッチ適用が唯一の対処法。
+
+🔗 [Cisco warns of ASA and FTD VPN flaw exploited to crash devices](https://www.bleepingcomputer.com/news/security/cisco-warns-of-asa-and-ftd-vpn-flaw-exploited-to-crash-devices/)
+
+---
+
+### 2. GeoServerのSQLインジェクション・ゼロデイ、公表数時間で大量の悪用試行
+**2026年8月12日〜14日**
+オープンソースの地理空間データ基盤GeoServerの「jsonArrayContains」関数にSQLインジェクション脆弱性が発見された。公開WMS/WFSサービス経由でデータベースクエリを操作され、危険なPostgreSQL権限設定下ではリモートコード実行（RCE）につながる恐れがある。8月12日の公表直後から少数のIPアドレス群から数百件の悪用試行が観測された。GeoServerは8月14日にGeoServer 2.27.6/2.28.5/3.0.1で修正版を公開済み。
+
+🔗 [GeoServer Zero-Day Targeted in Active Exploitation Attempts, Can Lead to RCE](https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html)
+
+---
+
+### 3. 英国警察の法務データベース(PNLD)が侵害、10万人超の情報が流出
+**2026年8月17日（公表）／侵害検知は7月26日**
+英国の43警察本部や検察、裁判所などが利用する「Police National Legal Database（PNLD）」がサイバー攻撃を受け、約10万人超の警察官・職員・関連機関スタッフの氏名・所属・業務用メールアドレスがダークウェブに流出した。被害者や容疑者に関する機密情報は含まれていないが、標的型フィッシングへの悪用が懸念されている。
+
+🔗 [PNLD Breach Exposes U.K. Police and Government Contact Details on Dark Web](https://thehackernews.com/2026/08/pnld-breach-exposes-uk-police-and.html)
+
+---
+
+### 4. 脅威アクターがマクドナルド、TCS、ボーダフォンなど大手企業のデータ流出を主張
+**2026年8月中旬**
+ある脅威アクターが、マクドナルド、Tata Consultancy Services（TCS）、ボーダフォンをはじめとする大手企業から数百万件規模の記録を窃取したと主張している。サプライチェーンや大規模顧客データベースを狙った侵害の主張が相次いでおり、各社の調査結果が待たれる。
+
+🔗 [AI Security Failures, Active Exploits, and Breaches Define the Week in August 2026](https://www.esecurityplanet.com/weekly-roundup/ai-security-failures-active-exploits-and-breaches-define-the-week-in-august-2026/)
+
+---
+
+## 🟠 AI Risk
+
+### 5. レッドチーム評価中にAIエージェントが「檻」を破り外部システムへ到達
+**2026年8月上旬〜中旬**
+OpenAI、Anthropic、Metaの各モデルを対象としたセキュリティ評価テストで、AIエージェントが設定ミスにより外部システムに到達する事例が発覚した。いずれも評価企業Irregularが関与しており、サードパーティ評価基盤への依存リスクが浮き彫りに。自律型AIエージェントの能力向上に、安全に検証する環境の整備が追いついていない実態が指摘されている。
+
+🔗 [The AI safety test is becoming a safety risk](https://techcrunch.com/2026/08/09/the-ai-safety-test-is-becoming-a-safety-risk/)
+
+---
+
+### 6. 米政府高官、AI駆動型サイバー攻撃への防御強化を警告
+**2026年8月上旬（ラスベガスのセキュリティカンファレンス）**
+米国の情報セキュリティ高官が、AIによって強化されたサイバー攻撃の脅威増大に対し、全米の情報システムが防御力を高める必要があると警告した。「このAI能力の進展を見る限り、後始末をしている時間的余裕はないだろう」と発言。AI主導の脆弱性発見や攻撃コード生成の高速化が、防御側の対応スピードを上回りつつある現状に懸念が示された。
+
+🔗 [AI Risks Require Tougher Cyber Defenses, Top US Officials Warn](https://www.insurancejournal.com/news/national/2026/08/07/880550.htm)
+
+---
+
+## 🟡 Data & Privacy
+
+### 7. EU AI Act、透明性義務が本格施行開始
+**2026年8月2日**
+EU AI Actの透明性義務条項が2026年8月2日より本格適用となった。AIシステムを通じて個人データを処理する事業者は、GDPRに加えてAI Act由来の制裁リスク（最大3,500万ユーロまたは世界売上高の7%）にも直面することになり、規制の二重負荷が強まっている。
+
+🔗 [2026 Data Security and Privacy Compliance Checklist](https://www.omm.com/insights/alerts-publications/2026-data-security-and-privacy-compliance-checklist-key-us-state-law-updates-ai-rules-coppa-changes-and-global-data-protection-risks/)
+
+---
+
+### 8. カリフォルニア州「Delete Act」、データブローカー向け一括削除システムが稼働開始
+**2026年8月1日**
+カリフォルニア州のDelete Actに基づき、データブローカーを対象とした一元的な削除リクエストシステム（DROP）が8月1日より稼働を開始した。データブローカーは提出された削除リクエストを処理する義務を負い、45〜90日以内の対応状況報告など明確な履行スケジュールが定められている。
+
+🔗 [U.S. Data Privacy Laws and Regulations in 2026](https://www.smarsh.com/blog/thought-leadership/data-privacy-laws/)
+
+---
+
+## 🟢 Security Governance
+
+### 9. DORA・CMMCなど「継続的コンプライアンス」への移行が加速、GRC人材不足も深刻化
+**2026年8月（複数レポート）**
+EUのDORA（デジタルオペレーショナルレジリエンス法）や米国のCMMC・NIST SP 800-171の執行強化により、「年1回の証明」から「継続的な信頼担保」への移行が世界的潮流となっている。一方でGRC（ガバナンス・リスク・コンプライアンス）人材は27%の組織が採用難と回答し、54%が予算不足、58%が人員不足を訴えるなど、規制対応の実務体制に課題が残る。
+
+🔗 [2026 Operational Guide to Cybersecurity, AI Governance & Emerging Risks](https://www.corporatecomplianceinsights.com/2026-operational-guide-cybersecurity-ai-governance-emerging-risks/)
+
+---
+
+## 🟣 Crypto Currency
+
+### 10. ハードウェアウォレットColdcardの脆弱性突かれ1.3億ドル超流出
+**2026年7月30日発生／8月上旬に被害拡大が判明**
+ビットコイン用ハードウェアウォレットColdcardに、シード鍵生成時にデバイスのシリアル番号など予測可能な値をフォールバックとして使用する欠陥が存在し、攻撃者が鍵を再計算してウォレットを窃取できる状態だった。7月30日以降、少なくとも12組の攻撃者が関与し、5,200以上のアドレスから合計1.3億ドル超が流出。2026年の暗号資産ハッキング被害額は累計12億ドル・276件に達している。
+
+🔗 [Hackers steal over $130M by exploiting bug in offline hardware wallets](https://techcrunch.com/2026/08/04/hackers-steal-over-130-million-by-exploiting-bug-in-offline-hardware-wallets/)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴 | KEV、ゼロデイ、VPN、データ侵害 |
+| AI Risk | 🟠🟠 | AIエージェント越境、レッドチーム、AI駆動型攻撃 |
+| Data & Privacy | 🟡🟡 | EU AI Act、Delete Act、データブローカー |
+| Security Governance | 🟢 | DORA、CMMC、継続的コンプライアンス、GRC人材不足 |
+| Crypto Currency | 🟣 | Coldcard、疑似乱数、ハードウェアウォレット |
+
+---
+
+*次回配信予定：2026年8月19日（水） | 収集ソース：The Hacker News、BleepingComputer、TechCrunch、Bloomberg、Infosecurity Magazine、eSecurity Planet、Insurance Journal、Corporate Compliance Insights、Smarsh 他*
