@@ -1,0 +1,122 @@
+# セキュリティトレンド Top 10 ニュース
+**配信日：2026年8月28日（金）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **CISA KEV緊急パッチ命令** | NetScalerやCisco ASA/FTDなど、実際に悪用が確認された脆弱性に対しCISAが連邦機関へ即時パッチを命令。民間企業にも波及効果。 |
+| 2 | **AIが発見する脆弱性** | AIによる自動バグ報告がBitcoin Core Lightningなど重要インフラで実際の脆弱性を大量に発見し、緊急対応を誘発する事例が急増。 |
+| 3 | **ShinyHunters型ソーシャルエンジニアリング** | なりすまし電話とフィッシングでSSO認証を突破する手口が、セキュリティ企業自身（ReliaQuest）を含め広範囲で成功。 |
+| 4 | **サプライチェーン第三者被害** | 出荷代行業者（ShipMonk）経由のTrezor顧客情報流出など、自社ではなく委託先経由の情報漏えいが目立つ。 |
+| 5 | **州別プライバシー規制の強化** | 米国で20州が包括的プライバシー法を施行、若年層データやジオロケーション規制など適用範囲が拡大し執行も厳格化。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. Citrix NetScalerの脆弱性、実際の悪用でCISAが緊急パッチ命令
+**2026年8月27日**
+CVE-2026-8452（メモリオーバーフロー、RCEに悪用可能）がKEVカタログに追加され、CISAは連邦機関に8月29日までのパッチ適用を命令。watchTowr Labsが8月14日に技術詳細とPoCを公開した直後から実際の攻撃が急増した。
+
+🔗 [CISA orders feds to patch Citrix NetScaler RCE flaw by Saturday](https://www.bleepingcomputer.com/news/security/cisa-hackers-now-exploiting-citrix-netscaler-rce-flaw-in-attacks/)
+
+---
+
+### 2. Cisco ASA/FTDのSSL VPNにDoS脆弱性、実悪用を確認
+**2026年8月**
+CVE-2026-20349（CVSS 8.6）はリモート認証なしでHTTPリクエストを送るだけで機器を強制再起動させられる欠陥。CiscoとCISAが実悪用を確認し、KEVカタログに追加。回避策はなく、修正版へのアップグレードが必須。
+
+🔗 [Cisco warns of ASA and FTD VPN flaw exploited to crash devices](https://www.bleepingcomputer.com/news/security/cisco-warns-of-asa-and-ftd-vpn-flaw-exploited-to-crash-devices/)
+
+---
+
+### 3. Boston Scientific、サイバー攻撃で受注・出荷業務がグローバルに停止
+**2026年8月25日発生**
+医療機器大手Boston Scientificが8月25日にITシステム障害を検知。受注・出荷を含む基幹業務が世界規模で影響を受け、復旧時期は未定。攻撃者やランサムウェアの関与は現時点で未確認。
+
+🔗 [Boston Scientific says cyberattack disrupted operations globally](https://www.bleepingcomputer.com/news/security/boston-scientific-says-cyberattack-disrupted-operations-globally/)
+
+---
+
+### 4. ReliaQuest、ShinyHunters関連のソーシャルエンジニアリング攻撃を確認
+**2026年8月23日〜25日**
+攻撃者は偽SSOポータルを用意し、ReliaQuestのセキュリティ担当者を名乗って電話でなりすまし。従業員1名がパスワードとMFAプッシュを承認してしまい、Oktaダッシュボードへの閲覧のみのアクセスを許した。顧客データや本番システムへの侵入は防がれたと同社は説明。
+
+🔗 [ReliaQuest Confirms ShinyHunters Hack, but Says Impact Was Limited](https://www.securityweek.com/reliaquest-confirms-shinyhunters-hack-but-says-impact-was-limited/)
+
+---
+
+### 5. オープンソース供給網侵害「TeamPCP」、豪州で2容疑者を起訴
+**2026年8月**
+オーストラリア連邦警察が、TrivyやCheckmarx KICS、LiteLLMを侵害したサイバー犯罪グループ「TeamPCP」の関与を疑われる西オーストラリア州の男性2人を計14の容疑で起訴。3月に発生したOSSセキュリティスキャナーへの侵害事件の摘発が進展。
+
+🔗 [SWK Cybersecurity News Recap August 2026](https://www.swktech.com/swk-cybersecurity-news-recap-august-2026/)
+
+---
+
+## 🟠 AI Risk
+
+### 6. OpenAI・Anthropic・Meta、AIレッドチーム演習で外部システムへの意図せぬ到達が発覆
+**2026年8月**
+セキュリティ検査企業Irregularが実施したテストで、3社のAIモデルが設定不備により意図せず外部の実システムに到達する事象が判明。単一の検査ベンダーに起因する集中リスクとして注目を集めている。あわせて、GenAIプロンプトのうち高リスクなものが直近1年で2%から4%に倍増し、Business Services業種では5.91%に達するなど、企業のシャドーAI利用によるデータ漏えいリスクも拡大している。
+
+🔗 [AI Security Failures, Active Exploits, and Breaches Define the Week in August 2026](https://www.esecurityplanet.com/weekly-roundup/ai-security-failures-active-exploits-and-breaches-define-the-week-in-august-2026/)
+
+---
+
+## 🟡 Data & Privacy
+
+### 7. 米国のプライバシー規制、2026年は20州体制へ拡大・執行も最も厳格に
+**2026年1月時点**
+インディアナ・ケンタッキー・ロードアイランドの新法施行により、包括的消費者プライバシー法を持つ州は20に到達。機微データの定義拡大、神経データ規制、若年層保護、位置情報規制、ユニバーサルオプトアウト義務化などが2026年の主要な変化点。企業への執行も過去最も厳しい水準に。
+
+🔗 [U.S. Data Privacy Laws and Regulations in 2026](https://www.smarsh.com/blog/thought-leadership/data-privacy-laws/)
+
+---
+
+## 🟢 Security Governance
+
+### 8. コンプライアンスが経営の戦略事項に、DORA・CMMC執行強化が加速
+**2026年**
+EUのDORA（デジタルオペレーショナルレジリエンス法）や米国のCMMC、NIST SP 800-171の執行拡大により、コンプライアンスはAI導入やベンダーリスク管理にまで影響する経営マターへと変化。標準契約に組み込まれたガバナンスの不備がサプライチェーン経由のサイバーリスクを増幅させているとの指摘も。
+
+🔗 [Cybersecurity & Privacy 2026: Enforcement & Regulatory Trends](https://www.morganlewis.com/pubs/2026/03/cybersecurity-privacy-2026-enforcement-regulatory-trends)
+
+---
+
+## 🟣 Crypto Currency
+
+### 9. Trezor、出荷代行業者ShipMonk経由で約1万3,700人分の顧客情報が流出
+**2026年8月10日発覚**
+5月10日〜8月8日の注文者のうち、約1万1,742人が氏名・メール・電話番号・住所を含む完全露出、約1,947人が部分的露出。Trezor自体のシステムは無事だったが、フィッシング悪用のリスクが高まるとして注意喚起。
+
+🔗 [Trezor discloses data breach affecting nearly 14,000 customers](https://www.bleepingcomputer.com/news/security/trezor-discloses-data-breach-affecting-nearly-14-000-customers/)
+
+---
+
+### 10. Bitcoin Core Lightning、AI生成の脆弱性報告を受け緊急警告
+**2026年8月27日**
+少人数の開発チームに8月上旬からAI生成の脆弱性報告が大量に届き、10日間かけて精査した結果、複数の実在する脆弱性を確認。修正の詳細を2週間伏せたまま署名済みバイナリを配布し、ノード運営者には強制終了ではなく「--offline」モードでの待機を推奨。今月2件目のLightningセキュリティ緊急事態となった。
+
+🔗 [Bitcoin Lightning nodes told to disconnect after AI-generated bug reports prove real](https://www.coindesk.com/tech/2026/08/27/ai-bug-reports-trigger-emergency-warning-for-bitcoin-lightning-node-operators)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴🔴 | NetScaler, Cisco ASA/FTD, ランサムウェア, KEV, サプライチェーン |
+| AI Risk | 🟠🟠🟠 | レッドチーム, シャドーAI, データ漏えいリスク |
+| Data & Privacy | 🟡🟡 | 州法, ユニバーサルオプトアウト, 執行強化 |
+| Security Governance | 🟢🟢 | DORA, CMMC, NIST 800-171, サプライチェーン |
+| Crypto Currency | 🟣🟣🟣 | 第三者委託先漏えい, AI脆弱性発見, Lightning Network |
+
+---
+
+*次回配信予定：2026年8月29日（土） | 収集ソース：BleepingComputer, SecurityWeek, Help Net Security, eSecurity Planet, Smarsh, Morgan Lewis, CoinDesk, SWK Technologies*
