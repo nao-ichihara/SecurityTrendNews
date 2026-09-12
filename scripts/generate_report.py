@@ -21,7 +21,9 @@ JST = timezone(timedelta(hours=9))
 
 # ── 設定 ──────────────────────────────────────────────────────────
 MODEL = "claude-sonnet-4-6"   # コスト重視なら "claude-haiku-4-5-20251001" に変更可
-MAX_TOKENS = 4096
+# web_search中の検索経過の説明文・検索結果の要約もすべて同じ出力トークン予算を消費するため、
+# 4096では最終レポート本文を書き切る前に打ち切られる（truncate）ことがある。余裕を持って設定する。
+MAX_TOKENS = 8192
 
 # xAI Grok連携（任意）: XAI_API_KEY が設定されていない場合は自動的にスキップされ、
 # 従来どおりClaude単独のweb_searchでレポートを生成する（フォールバック）。
@@ -285,7 +287,12 @@ def generate_report(report_date: str) -> str:
             messages.append({"role": "user", "content": tool_results})
             continue
 
-        # その他の stop_reason は終了
+        # max_tokens など、その他の stop_reason は出力が途中で打ち切られている可能性が高い
+        if response.stop_reason == "max_tokens":
+            raise ValueError(
+                f"レポートの生成に失敗しました（MAX_TOKENS={MAX_TOKENS}に到達し出力が途中で打ち切られました。"
+                "MAX_TOKENSを増やすか、プロンプトを短縮してください）"
+            )
         break
 
     if not md_content.strip():
@@ -295,6 +302,18 @@ def generate_report(report_date: str) -> str:
     heading_pos = md_content.find("# セキュリティトレンド")
     if heading_pos > 0:
         md_content = md_content[heading_pos:]
+
+    # サニティチェック: 5カテゴリの見出しが揃っていない・極端に短い場合は
+    # 生成が壊れている（途中で切れた等）とみなし、ここで失敗させる。
+    # これにより、build_and_notify.py が壊れたレポートをLINEにそのまま配信してしまう事態を防ぐ
+    # （generate-report.yml側の失敗時LINE通知が代わりに送られる）。
+    required_headers = ["## 🔴", "## 🟠", "## 🟡", "## 🟢", "## 🟣"]
+    missing = [h for h in required_headers if h not in md_content]
+    if missing or len(md_content) < 1500:
+        raise ValueError(
+            f"レポートの内容が不完全です（不足カテゴリ見出し: {missing}, 文字数: {len(md_content)}）。"
+            "生成が途中で打ち切られた可能性があります。"
+        )
 
     return md_content
 
