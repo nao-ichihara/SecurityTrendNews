@@ -24,6 +24,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # デフォルトのGITHUB_TOKENでpushすると、そのpushはGitHub Actionsの仕様上
+          # 他のワークフロー（process-report.yml）の起動トリガーにならない。
+          # PAT（個人アクセストークン）でcheckoutしておくことで、後段のgit pushが
+          # 通常のユーザーpush扱いになり、process-report.ymlが正しく起動する。
+          token: ${{ secrets.GH_PAT }}
 
       # ── Step 1: 今日のレポートが既に存在するか確認 ──────────────
       - name: Check if today's report already exists
