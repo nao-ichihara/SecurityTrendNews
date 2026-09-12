@@ -258,9 +258,13 @@ def generate_report(report_date: str) -> str:
         )
 
         # テキストブロックを収集
+        # web_search中はClaudeが「検索します」等の前置きを複数回はさむことがあり、
+        # response.content内に複数のtextブロックが混在する（例:「検索します」→検索結果→「レポートを生成します」→本文）。
+        # 途中の独り言がレポートに混入しないよう、各レスポンスの「最後のtextブロック」のみを採用する
+        # （実際の成果物は常に最後に出力されるため）。
         text_blocks = [b.text for b in response.content if b.type == "text"]
         if text_blocks:
-            md_content = "\n".join(text_blocks)
+            md_content = text_blocks[-1]
 
         # 終了条件: end_turn になったら完了
         if response.stop_reason == "end_turn":
@@ -286,6 +290,11 @@ def generate_report(report_date: str) -> str:
 
     if not md_content.strip():
         raise ValueError("レポートの生成に失敗しました（空のレスポンス）")
+
+    # 保険: 万一「# セキュリティトレンド」より前に前置き文が残っていた場合は切り落とす
+    heading_pos = md_content.find("# セキュリティトレンド")
+    if heading_pos > 0:
+        md_content = md_content[heading_pos:]
 
     return md_content
 
