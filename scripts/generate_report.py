@@ -251,7 +251,8 @@ def generate_report(report_date: str) -> str:
     messages = [{"role": "user", "content": prompt}]
     md_content = ""
 
-    while True:
+    max_rounds = 15
+    for round_num in range(1, max_rounds + 1):
         response = client.messages.create(
             model=MODEL,
             max_tokens=MAX_TOKENS,
@@ -267,6 +268,8 @@ def generate_report(report_date: str) -> str:
         text_blocks = [b.text for b in response.content if b.type == "text" and b.text.strip()]
         if text_blocks:
             md_content = text_blocks[-1]
+
+        print(f"   [round {round_num}] stop_reason={response.stop_reason}, text_len={len(text_blocks[-1]) if text_blocks else 0}")
 
         # 終了条件: end_turn になったら完了
         if response.stop_reason == "end_turn":
@@ -285,6 +288,12 @@ def generate_report(report_date: str) -> str:
                         "content": ""
                     })
             messages.append({"role": "user", "content": tool_results})
+            continue
+
+        # pause_turn: 長時間のサーバーサイドツール利用時に、まだ応答が完了していないことを示す。
+        # 同じ会話に続きを生成させれば良いので、そのまま次のラウンドに進む。
+        if response.stop_reason == "pause_turn":
+            messages.append({"role": "assistant", "content": response.content})
             continue
 
         # max_tokens など、その他の stop_reason は出力が途中で打ち切られている可能性が高い
