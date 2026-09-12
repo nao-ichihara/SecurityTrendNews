@@ -260,9 +260,9 @@ def generate_report(report_date: str) -> str:
         # テキストブロックを収集
         # web_search中はClaudeが「検索します」等の前置きを複数回はさむことがあり、
         # response.content内に複数のtextブロックが混在する（例:「検索します」→検索結果→「レポートを生成します」→本文）。
-        # 途中の独り言がレポートに混入しないよう、各レスポンスの「最後のtextブロック」のみを採用する
-        # （実際の成果物は常に最後に出力されるため）。
-        text_blocks = [b.text for b in response.content if b.type == "text"]
+        # 途中の独り言がレポートに混入しないよう、各レスポンスの「最後の“空でない”textブロック」のみを採用する
+        # （実際の成果物は常に最後に出力されるが、末尾に空文字のtextブロックが付くケースがあるため空文字は無視する）。
+        text_blocks = [b.text for b in response.content if b.type == "text" and b.text.strip()]
         if text_blocks:
             md_content = text_blocks[-1]
 
