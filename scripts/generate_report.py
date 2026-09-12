@@ -11,14 +11,109 @@ GitHub Actions上でClaude APIを呼び出してセキュリティトレンド�
 """
 
 import os
+import json
+import urllib.request
 import anthropic
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+
+JST = timezone(timedelta(hours=9))
 
 
 # ── 設定 ──────────────────────────────────────────────────────────
 MODEL = "claude-sonnet-4-6"   # コスト重視なら "claude-haiku-4-5-20251001" に変更可
 MAX_TOKENS = 4096
+
+# xAI Grok連携（任意）: XAI_API_KEY が設定されていない場合は自動的にスキップされ、
+# 従来どおりClaude単独のweb_searchでレポートを生成する（フォールバック）。
+XAI_API_KEY = os.environ.get("XAI_API_KEY")
+XAI_MODEL = "grok-4.6"
+XAI_ENDPOINT = "https://api.x.ai/v1/responses"
 # ─────────────────────────────────────────────────────────────────
+
+
+def fetch_grok_trending_topics(report_date: str) -> str | None:
+    """xAI Grok API（x_search + web_search）で、直近7日間のXの投稿量・エンゲージメント
+    およびニュース報道量をもとに「話題性」の高いセキュリティ関連トピック候補を収集する。
+
+    XAI_API_KEY未設定、またはAPI呼び出し・解析に失敗した場合はNoneを返す。
+    呼び出し側はNoneの場合、Claude単独のweb_searchのみで従来どおりレポートを生成する。
+    """
+    if not XAI_API_KEY:
+        return None
+
+    dt = datetime.strptime(report_date, "%Y-%m-%d")
+    from_date = (dt - timedelta(days=7)).strftime("%Y-%m-%d")
+    to_date = report_date
+
+    # プロンプト設計はxAI (Grok) 自身の推奨テンプレートを参考に、評価基準の明示・
+    # 話題性スコアの自己評価・信頼できる情報源の指定・未確認情報のマーキングを組み込んでいる。
+    prompt = f"""あなたはサイバーセキュリティ・データプライバシー・AIリスク・暗号資産セキュリティの専門アナリストです。
+
+{from_date} 00:00〜{to_date} 09:00（JST基準、直近1週間のうち特に直近24〜48時間の動きを重視）の期間で、
+以下5つの対象領域から特に話題性の高かったトピックを、カテゴリごとに2〜4件抽出してください。
+
+【対象領域】
+- Cyber Security（脆弱性、攻撃キャンペーン、APT、ランサムウェアなど）
+- AI Risk（モデル悪用、エージェント型攻撃、安全性・アラインメント問題、蒸留攻撃など）
+- Data & Privacy（大規模漏洩、規制、個人情報侵害）
+- Security Governance（規制執行、コンプライアンス、業界標準）
+- Crypto Currency（ウォレット侵害、フィッシング、サプライチェーン攻撃、オンチェーン関連）
+
+【話題性の評価基準】（優先順位順）
+1. 報道量・複数メディアでの取り上げ頻度
+2. 実際の影響規模（被害組織数・ユーザー数・金額など）
+3. 技術的新規性・攻撃手法の進化
+4. 政策・規制・業界への波及度
+5. X（旧Twitter）での議論の活発さ・エンゲージメント（投稿数・いいね/リポスト/返信の多さ）
+
+情報源はSecurityWeek、BleepingComputer、The Hacker News、CISA、Anthropic公式など信頼できる媒体を優先してください。
+事実に基づき推測は最小限にし、確認できない情報は「未確認」と明記してください。日本語で回答してください。
+
+各トピックについて、Markdownの箇条書きで以下を出力してください（前置き・後置きの説明文は不要）:
+- タイトル（簡潔に）とカテゴリ
+- 要約（150〜200文字程度）
+- 話題性の根拠（上記評価基準のうちどれに該当するか、具体的な数値・報道状況を含めて）
+- 話題性スコア（1〜10の自己評価）
+- 参照できるURLと日付（複数可）"""
+
+    payload = {
+        "model": XAI_MODEL,
+        "input": [{"role": "user", "content": prompt}],
+        "tools": [
+            {"type": "x_search", "from_date": from_date, "to_date": to_date},
+            {"type": "web_search"},
+        ],
+    }
+
+    req = urllib.request.Request(
+        XAI_ENDPOINT,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {XAI_API_KEY}",
+        },
+        method="POST",
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except Exception as e:
+        print(f"⚠️  Grok API呼び出しに失敗しました（Claude単独のWeb検索で続行します）: {e}")
+        return None
+
+    try:
+        chunks = []
+        for item in data.get("output", []):
+            if item.get("type") == "message":
+                for c in item.get("content", []):
+                    if c.get("type") in ("output_text", "text") and c.get("text"):
+                        chunks.append(c["text"])
+        text = "\n".join(chunks).strip()
+        return text or None
+    except Exception as e:
+        print(f"⚠️  Grok APIレスポンスの解析に失敗しました（Claude単独のWeb検索で続行します）: {e}")
+        return None
 
 
 def get_japanese_date(date_str: str) -> str:
@@ -33,12 +128,27 @@ def get_next_japanese_date(date_str: str) -> str:
     return f"{dt.year}年{dt.month}月{dt.day}日（{weekdays[dt.weekday()]}）"
 
 
-def build_prompt(report_date: str, today_jp: str, tomorrow_jp: str) -> str:
+def build_prompt(report_date: str, today_jp: str, tomorrow_jp: str, grok_topics: str | None = None) -> str:
+    grok_section = ""
+    if grok_topics:
+        grok_section = f"""
+## 話題性分析の参考情報（xAI Grok APIによる事前収集）
+以下は、xAI Grok API（X Search + Web Search）が直近7日間のX投稿量・エンゲージメントおよび
+ニュース報道量をもとに抽出した「話題性の高いトピック候補」です。
+Top10選定にあたっては、このリストにあるトピックを優先的に検討してください。
+ただし内容が古い・裏付けが取れない場合は採用せず、自分のweb_searchで最新情報の確認・補完を行ってください。
+このリストにない重要な速報がある場合は、そちらを優先して構いません。
+
+---Grok話題性分析 開始---
+{grok_topics}
+---Grok話題性分析 終了---
+"""
+
     return f"""あなたはセキュリティトレンド情報収集エージェントです。
 
 今日の日付: {report_date}（{today_jp}）
 翌日の日付: {tomorrow_jp}
-
+{grok_section}
 以下の5カテゴリで最新ニュースをweb_searchツールを使って検索してください:
 1. cyber security news {report_date} latest breach vulnerability
 2. AI risk security news {report_date}
@@ -46,7 +156,8 @@ def build_prompt(report_date: str, today_jp: str, tomorrow_jp: str) -> str:
 4. security governance compliance news {report_date}
 5. cryptocurrency crypto security hack fraud regulation news {report_date}
 
-収集した記事の中から重要度・新規性・影響範囲を基準にTop10を選定し（Crypto Currencyを必ず1〜2件含めること）、
+収集した記事の中から重要度・新規性・影響範囲（Grok話題性分析がある場合はそれも加味）を基準にTop10を選定し
+（Crypto Currencyを必ず1〜2件含めること）、
 以下のフォーマットに厳密に従ってMarkdownレポートを生成してください。
 Markdownテキストのみを出力し、前置き・後置きの説明文は不要です。
 
@@ -118,7 +229,14 @@ def generate_report(report_date: str) -> str:
     """Claude APIを呼び出してMarkdownレポートを生成する"""
     today_jp    = get_japanese_date(report_date)
     tomorrow_jp = get_next_japanese_date(report_date)
-    prompt      = build_prompt(report_date, today_jp, tomorrow_jp)
+
+    grok_topics = fetch_grok_trending_topics(report_date)
+    if grok_topics:
+        print("✅ Grok API（X Search + Web Search）で話題性の高いトピック候補を取得しました")
+    else:
+        print("ℹ️  Grok連携なし（XAI_API_KEY未設定 or 取得失敗）→ Claude単独のWeb検索で続行します")
+
+    prompt = build_prompt(report_date, today_jp, tomorrow_jp, grok_topics)
 
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
@@ -171,8 +289,8 @@ def generate_report(report_date: str) -> str:
 
 
 def main():
-    report_date = os.environ.get("REPORT_DATE", datetime.now().strftime("%Y-%m-%d"))
-    print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M')}] generate_report.py 開始")
+    report_date = os.environ.get("REPORT_DATE", datetime.now(JST).strftime("%Y-%m-%d"))
+    print(f"[{datetime.now(JST).strftime('%Y-%m-%d %H:%M')}] generate_report.py 開始")
     print(f"📅 対象日: {report_date}")
 
     # レポート生成
