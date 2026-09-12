@@ -8,6 +8,12 @@ on:
   schedule:
     - cron: '0 0 * * *'   # 毎日 0:00 UTC = 9:00 AM JST
   workflow_dispatch:        # 手動実行も可能
+    inputs:
+      force_regenerate:
+        description: '今日のレポートが既に存在していても強制的に再生成する（Grok連携などのテスト用）'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   generate:
@@ -26,10 +32,14 @@ jobs:
           TODAY=$(TZ='Asia/Tokyo' date '+%Y-%m-%d')
           echo "today=$TODAY" >> $GITHUB_OUTPUT
 
-          if [ -f "reports/SecurityTrend_Top10_${TODAY}.md" ]; then
+          if [ -f "reports/SecurityTrend_Top10_${TODAY}.md" ] && [ "${{ github.event.inputs.force_regenerate }}" != "true" ]; then
             echo "exists=true" >> $GITHUB_OUTPUT
             echo "✅ 今日のレポートは既に存在します（Mac版が実行済み）"
             echo "   ファイル: reports/SecurityTrend_Top10_${TODAY}.md"
+          elif [ -f "reports/SecurityTrend_Top10_${TODAY}.md" ] && [ "${{ github.event.inputs.force_regenerate }}" == "true" ]; then
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "🔁 今日のレポートは存在しますが、force_regenerate=trueのため強制的に再生成します"
+            echo "   対象日: ${TODAY}"
           else
             echo "exists=false" >> $GITHUB_OUTPUT
             echo "⚠️  今日のレポートが見つかりません → クラウドで生成します"
@@ -51,6 +61,7 @@ jobs:
         if: steps.check.outputs.exists == 'false'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}   # 任意: 未設定ならGrok連携はスキップされ従来どおり動作
           REPORT_DATE: ${{ steps.check.outputs.today }}
         run: python scripts/generate_report.py
 
