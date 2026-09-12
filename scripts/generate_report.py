@@ -96,7 +96,9 @@ def fetch_grok_trending_topics(report_date: str) -> str | None:
     )
 
     try:
-        with urllib.request.urlopen(req, timeout=120) as resp:
+        # x_search + web_search を使った複数ラウンドのエージェント的検索は時間がかかりやすいため
+        # タイムアウトを長めに設定する（GitHub Actionsのジョブ制限時間は十分に余裕がある）。
+        with urllib.request.urlopen(req, timeout=280) as resp:
             data = json.loads(resp.read().decode("utf-8"))
     except Exception as e:
         print(f"⚠️  Grok API呼び出しに失敗しました（Claude単独のWeb検索で続行します）: {e}")
