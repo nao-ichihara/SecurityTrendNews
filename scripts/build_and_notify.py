@@ -29,6 +29,13 @@ PAGES_BASE_URL = os.environ.get("PAGES_BASE_URL", "").rstrip("/")
 def md_to_html(md_content: str, report_date: str) -> str:
     """MarkdownをGitHub Pages用スタイル付きHTMLに変換"""
     escaped = md_content.replace("\\", "\\\\").replace("`", "\\`").replace("$", "\\$")
+    # Grok連携（xAI Grok API）が実際に使われた日は、フッターの表記もそれを反映する。
+    # generate_report.py側で使用時は本文の「収集ソース」欄に "xAI Grok API" が入る設計になっている。
+    footer_credit = (
+        "このレポートはClaude AIとxAI Grok APIを組み合わせて収集・編集したものです"
+        if "xAI Grok API" in md_content
+        else "このレポートはClaudeのAIが独自に収集・編集したものです"
+    )
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -78,7 +85,7 @@ def md_to_html(md_content: str, report_date: str) -> str:
     </div>
     <div id="content"></div>
     <div class="footer">
-      <p>このレポートはClaudeのAIが独自に収集・編集したものです</p>
+      <p>{footer_credit}</p>
       <a class="back-link" href="../index.html">← 過去レポート一覧へ</a>
     </div>
   </div>
@@ -186,13 +193,22 @@ def md_to_line_summary(md: str, report_date_str: str, report_url: str, index_url
             if len(cells) >= 2:
                 trend_words.append(f"  {cells[0]}. {cells[1]}")
 
+    line_credit = (
+        "※ Claude AIとxAI Grok APIを組み合わせて収集・編集した情報です"
+        if "xAI Grok API" in md
+        else "※ AIが独自に収集・編集した情報です"
+    )
     parts = [
         "=" * 28,
         "🔐 SecurityTrend Top10",
         f"📅 {delivery_date}",
         "=" * 28,
-        "※ AIが独自に収集・編集した情報です",
+        line_credit,
     ]
+    # 本文が長くなり末尾が切り捨てられても詳細レポートのリンクだけは必ず届くよう、
+    # 可変長のTop10見出し一覧より前（メッセージの先頭側）に配置する。
+    if report_url:
+        parts += ["", "📰 詳細レポート（Web）", report_url]
     if trend_words:
         parts += ["", "【🔥 今日のトレンドワード】"] + trend_words[:5]
     if headlines:
@@ -211,8 +227,6 @@ def md_to_line_summary(md: str, report_date_str: str, report_url: str, index_url
     parts += ["", "─" * 28]
     if next_date_jp:
         parts.append(f"次回配信：{next_date_jp}")
-    if report_url:
-        parts += ["", "📰 詳細レポート（Web）", report_url]
     if index_url:
         parts += ["", "📚 過去レポート一覧", index_url]
 
@@ -225,7 +239,11 @@ def send_line_message(text: str) -> bool:
         print("⚠️ LINE_TOKEN / LINE_USER_ID が未設定です（GitHub Secretsを確認）")
         return False
     if len(text) > 4900:
-        text = text[:4850] + "\n…\n（詳細はWebリンクを確認）"
+        # 固定位置で切ると行やURLの途中で切れることがあるため、上限手前の「最後の改行」で切る
+        cutoff = text.rfind("\n", 0, 4850)
+        if cutoff == -1:
+            cutoff = 4850
+        text = text[:cutoff] + "\n…\n（詳細はWebリンクを確認）"
 
     payload = json.dumps({"to": LINE_USER_ID, "messages": [{"type": "text", "text": text}]}).encode()
     req = urllib.request.Request(
