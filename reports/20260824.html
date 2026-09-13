@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecurityTrend Top10 - 2026-08-24</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f1117; --surface: #1a1d27; --border: #2d3148;
+      --text: #e2e8f0; --muted: #8892a4; --accent: #6366f1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; }
+    .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .header { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+    .header-logo { font-size: 2rem; }
+    .header-title { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+    .header-date { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+    .badge { display: inline-block; background: rgba(99,102,241,0.15); border: 1px solid var(--accent); color: var(--accent); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 20px; margin-top: 0.5rem; }
+    #content h1 { display: none; }
+    #content h2 { font-size: 1.1rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    #content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.5rem 0 0.5rem; }
+    #content p { color: #c8d3e0; margin-bottom: 0.75rem; }
+    #content a { color: var(--accent); text-decoration: none; }
+    #content a:hover { text-decoration: underline; }
+    #content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+    #content blockquote { border-left: 3px solid var(--accent); padding: 0.75rem 1rem; background: rgba(99,102,241,0.08); border-radius: 0 8px 8px 0; margin: 1rem 0; color: var(--muted); font-size: 0.9rem; }
+    #content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    #content th { background: var(--surface); padding: 0.6rem 1rem; text-align: left; border: 1px solid var(--border); color: var(--muted); font-weight: 600; }
+    #content td { padding: 0.6rem 1rem; border: 1px solid var(--border); }
+    #content tr:hover td { background: rgba(99,102,241,0.05); }
+    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+    .back-link { display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-logo">🔐</div>
+      <div>
+        <div class="header-title">SecurityTrend Top10</div>
+        <div class="header-date">2026-08-24</div>
+        <div class="badge">AI Generated Report</div>
+      </div>
+    </div>
+    <div id="content"></div>
+    <div class="footer">
+      <p>このレポートはClaudeのAIが独自に収集・編集したものです</p>
+      <a class="back-link" href="../index.html">← 過去レポート一覧へ</a>
+    </div>
+  </div>
+  <script>
+    const md = `# セキュリティトレンド Top 10 ニュース
+**配信日：2026年8月24日（月）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **Agentic AI攻撃** | AIエージェントが偵察から侵入・暗号化までを人手を介さず自律実行する事例が続発。台湾政府への攻撃やJADEPUFFERランサムウェアが代表例。 |
+| 2 | **サードパーティ／サプライチェーン侵害** | Adobeの委託BPO経由の情報漏えいやTrezorの配送業者経由の顧客情報流出など、直接ではなく取引先経由の侵害が急増。 |
+| 3 | **ランサムウェアのブロックチェーン耐障害化** | DeadLockランサムウェアがPolygonのスマートコントラクトでC2プロキシを管理し、テイクダウンに対する耐性を高める新手口。 |
+| 4 | **AI支援による即日エクスプロイト開発** | 生成AIを使い数十分〜24時間未満で重大脆弱性の実証コードを完成させる事例（Zoomsday等）が研究者・攻撃者双方で常態化。 |
+| 5 | **Agentic AIガバナンス／規制対応** | CISAとFive Eyesが「Careful Adoption of Agentic AI Services」を公表するなど、自律型AIエージェントの安全な導入基準づくりが本格化。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. Zimbra Collaboration Suiteの重大RCE脆弱性、悪用が確認されCISA KEVに追加
+**2026年8月**
+CVE-2026-73570はSNMP通知処理の入力サニタイズ不備によるOSコマンドインジェクションで、未認証の攻撃者がZimbraユーザー権限で任意コマンドを実行可能。CVSS最大値10相当とされ、ポーランドのCERT Polskaが実際の悪用を確認、米CISAも既知悪用脆弱性（KEV）カタログに追加した。10.1.20で修正済みのため、未パッチ環境は緊急対応が必要。
+
+🔗 [Attackers Exploit Zimbra SNMP Flaw for Unauthenticated Remote Code Execution](https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html)
+
+---
+
+### 2. Adobe、委託先BPO経由で1,300万件超のサポートチケットが流出か
+**2026年8月**
+攻撃者「Mr. Raccoon」が、Adobeのカスタマーサポートを請け負うインドのBPO企業を標的にしたフィッシングでRAT（遠隔操作ツール）を送り込み、担当者端末からマネージャー権限へ侵入。約1,300万件のサポートチケット、1.5万件の従業員記録、HackerOneのバグ報奨プログラム記録が窃取されたと主張されている。侵害範囲はヘルプデスク領域に限定されるとみられるが、流出情報を悪用した標的型フィッシングへの悪用が懸念される。
+
+🔗 [Adobe's BPO Breach: One Phished Support Agent Extracted 13 Million Records](https://securityboulevard.com/2026/07/adobes-bpo-breach-one-phished-support-agent-extracted-13-million-records-and-unpublished-vulnerability-reports/)
+
+---
+
+### 3. 「Zoomsday」：AIが24時間未満でZoomのゼロクリックRCEを発見
+**2026年8月11日**
+研究者チームがZoomの注釈（アノテーション）機能に潜むメモリ破損の脆弱性連鎖を、市販の生成AIモデルへの20回未満のプロンプトで24時間未満のうちに実証コード化。Windows/macOS/iOS/Android版Zoomクライアント（v7.0.5）が対象で、被害者の操作なしに会議参加者を侵害できるゼロクリックRCEだった。Zoomはセキュリティ情報（ZSB-26015）を公開しパッチ済み。国家レベルの攻撃者が数ヶ月かけていた開発が、AIにより大幅短縮された点が警鐘とされている。
+
+🔗 [Zoom Zero-Click RCE: AI Helped Build an Exploit in Under 24 Hours](https://www.techrepublic.com/article/news-zoom-zero-click-rce-zoomsday-ai-exploit/)
+
+---
+
+### 4. 米AnMedヘルスケアがランサムウェア被害、100超の施設のうち83施設を一時閉鎖
+**2026年7月26日発生／8月10日に犯行声明**
+サウスカロライナ州の非営利医療システムAnMedがランサムウェア「The Gentlemen」の攻撃を受け、メール・電話・患者ポータルなど基幹システムが停止。106施設中83施設が一時閉鎖され、1週間後も10施設が閉鎖継続。攻撃グループは性暴力被害・メンタルヘルス・中絶関連記録を含む6TBのデータ窃取を主張している。
+
+🔗 [AnMed Investigating Ransomware Group's Data Theft Claims](https://www.hipaajournal.com/anmed-closes-almost-80-facilities-while-it-grapples-with-cyberattack/)
+
+---
+
+## 🟠 AI Risk
+
+### 5. 台湾政府・原子力安全機関へ「準自律型」AIエージェントによる史上初級の攻撃
+**2026年7月（8月に詳細判明）**
+中国系とみられる攻撃グループが、オープンソースのAIエージェント基盤「Hermes Agent」と「OpenClaw」を組み合わせ、最大8体のサブエージェントを並列稼働させて台湾政府・原子力安全機関・エネルギー企業7社を4日間にわたり攻撃。85以上のアカウントを侵害し2,500件超の個人情報を窃取した。両フレームワークに組み込まれた安全機構は「認可済み侵入テスト」を装うことで回避されたとみられる。
+
+🔗 [World-first autonomous 'end-to-end' AI attack against Taiwan tied to Chinese hackers](https://www.techradar.com/pro/security/world-first-autonomous-end-to-end-ai-attack-against-taiwan-tied-to-chinese-hackers-and-the-scariest-part-is-that-it-was-fully-open-source)
+
+---
+
+### 6. Sysdig、「初の完全自律型ランサムウェア攻撃」JADEPUFFERを確認
+**2026年6月末発生／7月報告**
+クラウドセキュリティ企業Sysdigが、AIエージェントが偵察・認証情報窃取・横展開・権限昇格・暗号化までを自律実行した事例「JADEPUFFER」を報告。既知の脆弱性を持つLangflowサーバーへ侵入後、1,300件超の設定情報を暗号化し、独自の身代金要求文まで生成した。バックドアのログインエラーに対しては自らコーディング手法を切り替えて31秒で再展開に成功。ただし基盤構築・標的選定・認証情報の提供は人間が担っており、完全自律ではない点には留意が必要。
+
+🔗 [Sysdig clocks first documented case of agentic ransomware](https://cyberscoop.com/sysdig-judepuffer-ai-agentic-ransomware-attack/)
+
+---
+
+## 🟡 Data & Privacy
+
+### 7. カリフォルニア州「Delete Act」施行、データブローカー一元削除の枠組みが本格稼働
+**2026年8月1日施行**
+カリフォルニア州のDelete Actにより、消費者が一度の申請で州内の登録データブローカー全社に対し自身のデータ削除を要求できる一元的な削除システムが8月1日から稼働。データブローカーにはより詳細な情報開示と削除リクエスト処理の迅速化が義務付けられる。全米では19州が包括的なプライバシー法を持つに至り、未成年データや自動意思決定、位置情報保護の強化が2026年の共通トレンドとなっている。
+
+🔗 [20 State Privacy Laws in Effect in 2026: Key Dates & Changes](https://www.multistate.us/insider/2026/2/4/all-of-the-comprehensive-privacy-laws-that-take-effect-in-2026)
+
+---
+
+## 🟢 Security Governance
+
+### 8. CISAとFive Eyes、Agentic AI導入の安全ガイドライン「Careful Adoption of Agentic AI Services」を公表
+**2026年5月公表／8月にCSAが分析レポート発行**
+米CISAとNSA、豪加新英のサイバーセキュリティ機関が共同で、企業がAgentic AI（自律型AIエージェント）を安全に導入するための初の多国間ガイダンスを策定。特権昇格・設計/構成不備・行動の逸脱・構造的脆弱性・説明責任の欠如という5つのリスクカテゴリを定義し、各エージェントへの暗号学的に検証された短期認証情報の付与、最小権限の徹底、重大・不可逆な操作への人間承認の必須化などを求めている。Cloud Security Allianceはこのガイダンスの実装方法に関する分析ノートを複数公開している。
+
+🔗 [Careful Adoption of Agentic AI Services](https://www.cisa.gov/resources-tools/resources/careful-adoption-agentic-ai-services)
+
+---
+
+## 🟣 Crypto Currency
+
+### 9. ハードウェアウォレットTrezor、配送業者経由で約1.4万件の顧客情報が流出
+**2026年8月13日公表**
+Trezorの配送委託先ShipMonkが不正アクセスを受け、氏名・メール・電話番号・配送先住所を含む顧客情報が流出。完全流出が11,742件、部分流出が1,947件で、米・英・スウェーデン・コロンビア・ブラジル・イタリア・ポルトガルの顧客が対象。Trezor自体のシステムは無事だったが、流出情報を悪用し24単語のリカバリーシードを狙うフィッシング攻撃が既に確認されている。
+
+🔗 [Trezor confirms shipping partner data breach affecting over 13,000 customers](https://www.scworld.com/brief/trezor-confirms-shipping-partner-data-breach-affecting-over-13000-customers)
+
+---
+
+### 10. DeadLockランサムウェア、Polygonのスマートコントラクトを使いC2インフラを耐障害化
+**2026年8月**
+ランサムウェア「DeadLock」が、被害者とのチャット窓口や リークブログの掲載場所をPolygonブロックチェーン上のスマートコントラクトで管理する手口を採用。6つの公開Polygon RPCサービスを切り替えながら稼働し、従来型ドメインのテイクダウンに依存しない体制を構築。7月時点で80件超の被害組織がリストに掲載されている。ブロックチェーンの非中央集権性を悪用し、法執行機関によるインフラ差し押さえへの耐性を高める新たな潮流として注目される。
+
+🔗 [DeadLock Ransomware Uses Polygon Smart Contracts to Make Extortion Infra Harder to Disrupt](https://thehackernews.com/2026/08/deadlock-ransomware-uses-polygon-smart.html)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴 | Zimbra RCE、サプライチェーン侵害、AI支援エクスプロイト、ランサムウェア |
+| AI Risk | 🟠🟠 | Agentic AI攻撃、自律型ランサムウェア、AIセーフガード回避 |
+| Data & Privacy | 🟡 | データブローカー規制、Delete Act、州法エンフォースメント |
+| Security Governance | 🟢 | Agentic AIガバナンス、CISA/Five Eyesガイダンス、ゼロトラスト |
+| Crypto Currency | 🟣🟣 | サードパーティ侵害、ブロックチェーン耐障害化C2、リカバリーシード詐欺 |
+
+---
+
+*次回配信予定：2026年8月25日（火） | 収集ソース：The Hacker News, SecurityWeek, Security Boulevard, TechRepublic, HIPAA Journal, TechRadar, CyberScoop, MultiState, CISA, SC Media（SCWorld）*
+`;
+    document.getElementById('content').innerHTML = marked.parse(md);
+  </script>
+</body>
+</html>
