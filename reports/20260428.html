@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecurityTrend Top10 - 2026-04-28</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f1117; --surface: #1a1d27; --border: #2d3148;
+      --text: #e2e8f0; --muted: #8892a4; --accent: #6366f1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; }
+    .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .header { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+    .header-logo { font-size: 2rem; }
+    .header-title { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+    .header-date { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+    .badge { display: inline-block; background: rgba(99,102,241,0.15); border: 1px solid var(--accent); color: var(--accent); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 20px; margin-top: 0.5rem; }
+    #content h1 { display: none; }
+    #content h2 { font-size: 1.1rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    #content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.5rem 0 0.5rem; }
+    #content p { color: #c8d3e0; margin-bottom: 0.75rem; }
+    #content a { color: var(--accent); text-decoration: none; }
+    #content a:hover { text-decoration: underline; }
+    #content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+    #content blockquote { border-left: 3px solid var(--accent); padding: 0.75rem 1rem; background: rgba(99,102,241,0.08); border-radius: 0 8px 8px 0; margin: 1rem 0; color: var(--muted); font-size: 0.9rem; }
+    #content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    #content th { background: var(--surface); padding: 0.6rem 1rem; text-align: left; border: 1px solid var(--border); color: var(--muted); font-weight: 600; }
+    #content td { padding: 0.6rem 1rem; border: 1px solid var(--border); }
+    #content tr:hover td { background: rgba(99,102,241,0.05); }
+    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+    .back-link { display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-logo">🔐</div>
+      <div>
+        <div class="header-title">SecurityTrend Top10</div>
+        <div class="header-date">2026-04-28</div>
+        <div class="badge">AI Generated Report</div>
+      </div>
+    </div>
+    <div id="content"></div>
+    <div class="footer">
+      <p>このレポートはClaudeのAIが独自に収集・編集したものです</p>
+      <a class="back-link" href="../index.html">← 過去レポート一覧へ</a>
+    </div>
+  </div>
+  <script>
+    const md = `# セキュリティトレンド Top 10 ニュース
+**配信日：2026年4月28日（火）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **Agentic AI Security** | AIエージェントが人間の監視なしにファイアウォール侵害や攻撃を自律実行するリスクが急拡大。2026年は「エージェント型AI」が最重要セキュリティ課題に浮上している。 |
+| 2 | **Zero-Day Exploit** | パッチ公開前に悪用される脆弱性。Microsoft Defender（CVE-2026-33825）やWindows Shell（CVE-2026-32202）など主要製品でゼロデイ悪用が相次ぎ確認された。 |
+| 3 | **Supply Chain Attack** | サードパーティや開発ツール経由での侵害手法。AIフレームワーク「OpenClaw」のマーケットプレイスに1,100件超の悪意あるスキルが混入した「ClawHavoc」が典型例。 |
+| 4 | **CISA CPG 2.0** | CISAが公開した横断的サイバーセキュリティ目標の最新版。NIST CSF 2.0と連携し、組織のリーダーシップによるガバナンス責任を新たに強調している。 |
+| 5 | **EU AI Act施行** | 高リスクAIシステムへの完全施行が2026年8月に迫り、違反時は最大€3,500万または全世界売上高の7%の制裁金が科される。コンプライアンス対応が急務となっている。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. Microsoft Defender ゼロデイ脆弱性（CVE-2026-33825）が実際に悪用される
+**2026年4月14日**
+「BlueHammer」と命名されたMicrosoft Defenderの脆弱性（CVSS 7.8）が、パッチ公開前からシステム権限奪取を目的としたゼロデイ攻撃に利用されていたことが判明。Microsoftは4月14日のPatch Tuesdayで修正を提供した。Windows Shell（CVE-2026-32202）の悪用も確認されており、早急なアップデート適用が推奨される。
+
+🔗 [Recent Microsoft Defender Vulnerability Exploited as Zero-Day](https://www.securityweek.com/recent-microsoft-defender-vulnerability-exploited-as-zero-day/)
+
+---
+
+### 2. 4月Patch Tuesday：SAP・Adobe・Microsoft・Fortinet等で67件の脆弱性を修正
+**2026年4月14日**
+4月のPatch Tuesdayでは67件の脆弱性が修正され、うち2件はゼロデイ。SAP Business Planning（CVE-2026-27681、CVSS 9.9）のSQLインジェクションや、Adobe Acrobat Reader（CVE-2026-34621、CVSS 8.6）の積極悪用中の脆弱性も含まれた。CISAはFortinet・Microsoft・Adobeの6件を既知悪用脆弱性カタログ（KEV）に追加。
+
+🔗 [April Patch Tuesday Fixes Critical Flaws Across SAP, Adobe, Microsoft, Fortinet, and More](https://thehackernews.com/2026/04/april-patch-tuesday-fixes-critical.html)
+
+---
+
+### 3. Vercelがデータ侵害を確認——環境変数の不適切処理が原因
+**2026年4月20日**
+開発者向けデプロイメントプラットフォームVercelが、セキュリティ情報として公開したデータ侵害を正式確認。サードパーティ統合における環境変数の不適切な取り扱いが原因とされており、攻撃者が内部システムへのアクセスを主張している。ソフトウェアサプライチェーンのセキュリティ管理の重要性を改めて示す事案となった。
+
+🔗 [Vercel Confirms Data Breach – Hackers Claim Access to Internal Systems](https://cyberpress.org/vercel-confirms-data-breach-hackers-claim-access-to-internal-systems/)
+
+---
+
+### 4. ShinyHuntersがMedtronicから900万件の個人情報を窃取と主張
+**2026年4月**
+著名なサイバー犯罪グループShinyHuntersが、医療機器大手Medtronicから個人情報を含む900万件のレコードを窃取したと主張。医療セクターへのサイバー攻撃が引き続き活発であり、患者データの保護強化が急務となっている。
+
+🔗 [April 2026 Data Breaches: 15+ Major Incidents & Latest Updates](https://sharkstriker.com/blog/april-2026-data-breaches/)
+
+---
+
+### 5. CPUID公式サイトが一時改ざん——STX RATを配布するサプライチェーン攻撃
+**2026年4月**
+ハードウェア監視ツールで知られるCPUIDの公式ウェブサイトが24時間未満の間に改ざんされ、正規ダウンロードの代わりに悪意あるリモートアクセストロイの木馬（STX RAT）が配布されていた。正規ソフトウェア配布サイトを利用した「ウォータリングホール型」攻撃の典型例として注目される。
+
+🔗 [Cybersecurity News, Insights and Analysis | SecurityWeek](https://www.securityweek.com/)
+
+---
+
+## 🟠 AI Risk
+
+### 6. AI起因の攻撃が前年比89%増——IBM X-Force 2026脅威インテリジェンス報告
+**2026年4月**
+IBMが発表した「2026 X-Force脅威インテリジェンスインデックス」によると、AI活用型攻撃は前年比89%増と急増。単一のAIモデルリークが市場から145億ドルを一日で消し去った事例や、AIエージェントが55カ国600台以上のファイアウォールを人間のオペレーターなしに突破した事例が報告されている。
+
+🔗 [2026 X-Force Threat Intelligence Index](https://www.ibm.com/think/x-force/threat-intelligence-index-2026-securing-identities-ai-detection-risk-management)
+
+---
+
+### 7. 「ClawHavoc」——AIエージェントフレームワークのサプライチェーンを狙った大規模マルウェアキャンペーン
+**2026年3〜4月**
+OpenClawと呼ばれるAIエージェントフレームワークのマーケットプレイス「ClawHub」に、1,100件超の悪意あるスキル（ツール）が混入していた大規模キャンペーンが発覚。多くが生産性向上・暗号資産・コーディング支援ツールに偽装していた。AIエージェントの普及が新たなサプライチェーンリスクを生んでいることを示す重大事例。
+
+🔗 [What OpenClaw reveals about agentic AI security risks](https://www.ibm.com/think/x-force/agentic-ai-growing-fast-vulnerabilities)
+
+---
+
+### 8. Ciscoの「2026 AI Security状況報告」：企業の8社に1社がエージェントAI起因の侵害を経験
+**2026年4月**
+Ciscoが発表した年次報告書によると、企業の12.5%（8社に1社）がAIエージェントシステムに起因するセキュリティ侵害を経験。さらに31%の組織が過去12ヶ月間にAIセキュリティ侵害を受けたかどうかさえ把握できていないと回答。AIガバナンスと可視性の欠如が深刻な問題として浮き彫りに。
+
+🔗 [Cisco State of AI Security 2026 Report](https://blogs.cisco.com/ai/cisco-state-of-ai-security-2026-report)
+
+---
+
+## 🟡 Data & Privacy
+
+### 9. GDPRの累計制裁金が71億ユーロを突破——2026年4月にイタリアで新たな制裁
+**2026年4月**
+CMS GDPR Enforcement Trackerの集計によると、2026年初頭時点でGDPR制裁金の累計は71億ユーロを超えた。2025年だけで12億ユーロが課されており、2026年4月にはイタリアの郵便・金融サービス事業者が不適切なデータ保持期間の超過を理由に制裁を受けた。EU AI Actの高リスクシステムへの完全施行が2026年8月に迫り、第二の制裁層（最大€3,500万）が加わる。
+
+🔗 [GDPR Fines Hit €7.1 Billion: Data Privacy Enforcement Trends in 2026](https://www.kiteworks.com/gdpr-compliance/gdpr-fines-data-privacy-enforcement-2026/)
+
+---
+
+## 🟢 Security Governance
+
+### 10. CISAがCPG 2.0を公開——NIST CSF 2.0に準拠しガバナンス強化を推進
+**2026年4月**
+CISAが横断的サイバーセキュリティ目標（CPGs）の改訂版2.0を公開。NIST Cybersecurity Framework 2.0に整合し、3年間の運用知見を反映した内容となっている。特に新設された「Govern（ガバナンス）」機能が注目点で、経営幹部のサイバーセキュリティ責任とリスク管理戦略の文書化が明示的に要求されている。また、重要インフラに対するサイバーインシデント報告規則（CIRCIA最終規則）の2026年5月公開も予告された。
+
+🔗 [CISA Unveils Enhanced Cross-Sector Cybersecurity Performance Goals](https://www.cisa.gov/news-events/news/cisa-unveils-enhanced-cross-sector-cybersecurity-performance-goals)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| 🔴 Cyber Security | ★★★★★ | Zero-Day, Patch Tuesday, Supply Chain, Data Breach |
+| 🟠 AI Risk | ★★★★☆ | Agentic AI, ClawHavoc, AI Attack +89%, Model Leak |
+| 🟡 Data & Privacy | ★★★☆☆ | GDPR €7.1B, EU AI Act, Data Retention |
+| 🟢 Security Governance | ★★★☆☆ | CISA CPG 2.0, NIST CSF 2.0, CIRCIA, Executive Accountability |
+
+---
+
+*次回配信予定：2026年4月29日（水） | 収集ソース：SecurityWeek, The Hacker News, IBM X-Force, Cisco Security, CISA, Kiteworks, CyberPress, SharkStriker*
+`;
+    document.getElementById('content').innerHTML = marked.parse(md);
+  </script>
+</body>
+</html>
