@@ -11,6 +11,7 @@ GitHub Actions上でClaude APIを呼び出してセキュリティトレンド�
 """
 
 import os
+import re
 import json
 import urllib.request
 import anthropic
@@ -153,7 +154,8 @@ Top10選定にあたっては、このリストにあるトピックを優先的
 今日の日付: {report_date}（{today_jp}）
 翌日の日付: {tomorrow_jp}
 {grok_section}
-以下の5カテゴリで最新ニュースをweb_searchツールを使って検索してください:
+以下の5カテゴリで最新ニュースをweb_searchツールを使って検索してください（Grok話題性分析が上にある場合でも、
+事実確認・最新URL取得のため必ず自分自身でもこの5つの検索を実行すること。Grok情報だけを根拠に検索を省略しないでください）:
 1. cyber security news {report_date} latest breach vulnerability
 2. AI risk security news {report_date}
 3. data privacy regulation news {report_date}
@@ -164,6 +166,11 @@ Top10選定にあたっては、このリストにあるトピックを優先的
 （Crypto Currencyを必ず1〜2件含めること）、
 以下のフォーマットに厳密に従ってMarkdownレポートを生成してください。
 Markdownテキストのみを出力し、前置き・後置きの説明文は不要です。
+
+【重要・必須】
+- 短い要約や説明文だけで終わらせず、必ず下記フォーマットの全セクション（トレンドワードTop5の表、Cyber Security〜Crypto Currencyの5カテゴリすべて、カテゴリ別注目度の表）を最後まで省略せず出力すること。
+- 出力全体で合計10件のトピックを本文付きで書き切ること。件数を減らしたり、カテゴリを省略したりしないこと。
+- 完成した完全なレポート以外は出力しないこと（「以上です」等の締めの一言だけで終わるのは不可）。
 
 ---フォーマット開始---
 # セキュリティトレンド Top 10 ニュース
@@ -319,9 +326,24 @@ def generate_report(report_date: str) -> str:
     required_headers = ["## 🔴", "## 🟠", "## 🟡", "## 🟢", "## 🟣"]
     missing = [h for h in required_headers if h not in md_content]
     if missing or len(md_content) < 1500:
+        print(f"⚠️  生成された内容のプレビュー（先頭500文字）:\n{md_content[:500]}")
         raise ValueError(
             f"レポートの内容が不完全です（不足カテゴリ見出し: {missing}, 文字数: {len(md_content)}）。"
             "生成が途中で打ち切られた可能性があります。"
+        )
+
+    # Grok連携が実際に使われた日は、注意書き・収集ソース欄をそれを反映した表記に置き換える。
+    # Claudeへの指示だけに頼ると表記ゆれ・省略が起きうるため、Python側で確実に上書きする。
+    if grok_topics:
+        md_content = md_content.replace(
+            "この記事はClaudeのAIが独自に収集・編集したものです。",
+            "この記事はClaude AIとxAI Grok API（話題性分析）を組み合わせて収集・編集したものです。",
+        )
+        md_content = re.sub(
+            r"(収集ソース：[^\n*]*)",
+            r"\1、xAI Grok API",
+            md_content,
+            count=1,
         )
 
     return md_content
