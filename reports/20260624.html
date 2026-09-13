@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecurityTrend Top10 - 2026-06-24</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f1117; --surface: #1a1d27; --border: #2d3148;
+      --text: #e2e8f0; --muted: #8892a4; --accent: #6366f1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; }
+    .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .header { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+    .header-logo { font-size: 2rem; }
+    .header-title { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+    .header-date { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+    .badge { display: inline-block; background: rgba(99,102,241,0.15); border: 1px solid var(--accent); color: var(--accent); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 20px; margin-top: 0.5rem; }
+    #content h1 { display: none; }
+    #content h2 { font-size: 1.1rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    #content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.5rem 0 0.5rem; }
+    #content p { color: #c8d3e0; margin-bottom: 0.75rem; }
+    #content a { color: var(--accent); text-decoration: none; }
+    #content a:hover { text-decoration: underline; }
+    #content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+    #content blockquote { border-left: 3px solid var(--accent); padding: 0.75rem 1rem; background: rgba(99,102,241,0.08); border-radius: 0 8px 8px 0; margin: 1rem 0; color: var(--muted); font-size: 0.9rem; }
+    #content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    #content th { background: var(--surface); padding: 0.6rem 1rem; text-align: left; border: 1px solid var(--border); color: var(--muted); font-weight: 600; }
+    #content td { padding: 0.6rem 1rem; border: 1px solid var(--border); }
+    #content tr:hover td { background: rgba(99,102,241,0.05); }
+    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+    .back-link { display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-logo">🔐</div>
+      <div>
+        <div class="header-title">SecurityTrend Top10</div>
+        <div class="header-date">2026-06-24</div>
+        <div class="badge">AI Generated Report</div>
+      </div>
+    </div>
+    <div id="content"></div>
+    <div class="footer">
+      <p>このレポートはClaudeのAIが独自に収集・編集したものです</p>
+      <a class="back-link" href="../index.html">← 過去レポート一覧へ</a>
+    </div>
+  </div>
+  <script>
+    const md = `# セキュリティトレンド Top 10 ニュース
+**配信日：2026年6月24日（水）**
+
+> ⚠️ この記事はClaudeのAIが独自に収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **AIガバナンスEO（米大統領令）** | ホワイトハウスが「先進AIのイノベーションとセキュリティ推進」を発令。フロンティアAIモデルの事前セキュリティ評価枠組みを構築。 |
+| 2 | **ゼロデイ/クリティカルRCE** | libssh2・FFmpeg・Squidなど広く使われるOSSライブラリで認証不要のリモートコード実行脆弱性が相次いで発覚。 |
+| 3 | **サプライチェーン・ランサム漏洩** | World Leaksが製造委託先（Tata Electronics）を侵害し、Apple/Teslaの機密ファイルを公開する事例が拡大。 |
+| 4 | **ポストクオンタム移行** | 米連邦機関に2030〜2031年までの耐量子暗号（PQC）移行義務が課され、企業のロードマップ策定が急務に。 |
+| 5 | **暗号資産プロトコルの監査不備** | Zcashの「Orchard」プールで4年間未発見だった重大バグが発覚し、ZECが約50%急落。AIによる脆弱性発見も話題に。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. SSHライブラリ「libssh2」に認証不要のRCE脆弱性（CVE-2026-55200）
+**2026年6月17日公表**
+広く組み込まれているクライアント側SSHライブラリlibssh2に、CVSS 9.2の重大な整数オーバーフロー脆弱性が発見された。\`ssh2_transport_read()\`内のパケット長検証不足が原因で、特権・ユーザー操作不要のリモートコード実行が可能。1.11.1以前の全バージョンが対象で、関連するDoS脆弱性（CVE-2026-55199、CVSS 8.2）も同時に公表された。
+
+🔗 [Critical flaw in popular SSH library enable hackers hijack systems remotely](https://cybernews.com/security/libssh2-critical-vulnerability-enables-rce/)
+
+---
+
+### 2. 29年前のコードに起因する「Squidbleed」、Squidプロキシから資格情報が漏洩（CVE-2026-47729）
+**2026年6月**
+1997年のFTPパース処理に起因するヒープオーバーリード脆弱性がSquid Proxyのデフォルト設定で発見された。攻撃者が制御するFTPサーバーへディレクトリ一覧を取得させることで、他ユーザーのHTTP Authorizationヘッダーやセッショントークンが漏洩する。Squid 7.6では修正が未反映だったことも判明し、正式パッチは7.7で提供予定。
+
+🔗 [29-Year-Old Squid Proxy Bug 'Squidbleed' Can Leak Cleartext HTTP Requests](https://thehackernews.com/2026/06/29-year-old-squid-proxy-bug-squidbleed.html)
+
+---
+
+### 3. Tata Electronics、ランサム集団「World Leaks」によりApple・Tesla関連ファイル20万件超が流出
+**2026年6月12日リーク掲載**
+AppleのiPhone生産の約3分の1を担うTata Electronicsがサイバーインシデントを確認。ランサムウェア集団World Leaksが製造記録・技術図面・従業員パスポートスキャンなど約63GB・20万ファイル超をダークウェブに公開したと主張。Appleは調査中、Tataには身代金要求があったと報じられている。
+
+🔗 [Tata Electronics breach exposes thousands of Apple, Tesla secret files](https://cybernews.com/security/tata-electronics-breach-apple-tesla-secret-files/)
+
+---
+
+### 4. 240億件規模の巨大データ漏洩、Fortinetログイン情報3万件のデータベースも発覚
+**2026年6月**
+ユーザー名・パスワードを含む240億件規模のレコードが流出した巨大データ漏洩が確認された。同時期に、攻撃者が3万件の有効なFortinetログイン情報を収集したデータベースの存在も報告されており、企業の認証情報管理リスクが改めて浮上している。
+
+🔗 [Data Breach News | Recent Data Breaches in 2026](https://www.breachsense.com/breaches/)
+
+---
+
+### 5. FFmpegに重大欠陥、動画再生だけでシステムが完全に乗っ取られる恐れ
+**2026年6月**
+多くのソフトウェアに組み込まれているメディア処理ライブラリFFmpegに重大な脆弱性が発見された。悪意のある動画ファイルを再生するだけでシステムが完全に侵害される可能性があり、動画処理機能を持つ広範なアプリケーションに影響が及ぶ。
+
+🔗 [Hacked, leaked, and held for ransom: The worst breaches of 2026 so far](https://techcrunch.com/2026/06/07/the-worst-hacks-and-breaches-of-2026-so-far/)
+
+---
+
+## 🟠 AI Risk
+
+### 6. ホワイトハウス、「先進AIのイノベーションとセキュリティ推進」大統領令を発令
+**2026年6月2日**
+米政権は国家安全保障上のリスクに対応しつつAIにおける米国の主導権強化を図る大統領令を発令。政府・民間のサイバー防御強化と、フロンティアAIモデルの安全な開発に向けた自主的なベンチマーク枠組みの構築を指示。複数機関に対し、公開前のフロンティアAIモデルのサイバーセキュリティリスクを評価する自主的な仕組みの確立も求めている。
+
+🔗 [Promoting Advanced Artificial Intelligence Innovation and Security – The White House](https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/)
+
+---
+
+### 7. CISA、AIによる脆弱性発見の高速化を踏まえた拘束力のあるパッチ優先指令を発表
+**2026年6月**
+米サイバーセキュリティ・インフラセキュリティ庁（CISA）が、新たなAIモデルの進化により攻撃者がソフトウェアの脆弱性をより迅速に特定・悪用できるようになっていることを踏まえ、政府機関に対し「最高リスク」の脆弱性を優先的にパッチ適用するよう義務付ける指令を発表した。
+
+🔗 [AI directive focuses patching efforts on 'highest risk' vulnerabilities | Federal News Network](https://federalnewsnetwork.com/cybersecurity/2026/06/ai-directive-focuses-patching-efforts-on-highest-risk-vulnerabilities/)
+
+---
+
+## 🟡 Data & Privacy
+
+### 8. コネチカット州、LLM学習データ利用の開示義務化法が7月1日施行
+**施行：2026年7月1日**
+コネチカット州データプライバシー法（CTDPA）の改正法（SB 1295）により、データ管理者は個人データが大規模言語モデル（LLM）の学習に利用・収集・販売されているかどうかをプライバシー通知に明記することが義務付けられる。州レベルのAI・プライバシー規制が急速に具体化している一例。
+
+🔗 [New year, new rules: US state privacy requirements coming online as 2026 begins | IAPP](https://iapp.org/news/a/new-year-new-rules-us-state-privacy-requirements-coming-online-as-2026-begins)
+
+---
+
+## 🟢 Security Governance
+
+### 9. CMMC Phase 2、国防省契約の前提条件として第三者認証を本格義務化（2026年11月10日開始）
+**開始：2026年11月10日**
+国防省（DoD）のサイバーセキュリティ成熟度モデル認証（CMMC）フェーズ2により、対象となる入札・契約においてLevel 2のC3PAO（第三者評価機関）認証取得が契約適格性の条件となる。サプライチェーン全体のセキュリティ統制強化が国防関連事業者に求められている。
+
+🔗 [2026 Operational Guide to Cybersecurity, AI Governance & Emerging Risks | Corporate Compliance Insights](https://www.corporatecomplianceinsights.com/2026-operational-guide-cybersecurity-ai-governance-emerging-risks/)
+
+---
+
+## 🟣 Crypto Currency
+
+### 10. Zcashの「Orchard」プールに4年間未発見の重大バグ、ZECが約50%急落
+**発見：2026年5月29日／緊急修正：6月1日**
+プライバシー保護機能を持つ暗号資産ZcashのシールドプールOrchardに、無制限かつ検出不可能な偽造トークン生成を可能にする重大な脆弱性が見つかった。Anthropic Opus 4.8を用いて発見されたとされ、48時間でZECは1ピーク624ドルから309ドルまで約50%下落。Shielded Labsは過去の悪用有無を暗号学的に確認できないと説明している。
+
+🔗 [Zcash plummets 38% as Shielded Labs reveals a major bug that went undetected for four years](https://www.coindesk.com/markets/2026/06/05/zcash-plummets-30-as-developer-reveals-a-major-bug-that-went-undetected-for-four-years)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴 | libssh2, Squidbleed, ランサムウェア, データ漏洩, FFmpeg |
+| AI Risk | 🟠🟠 | AI大統領令, CISA指令, フロンティアAI |
+| Data & Privacy | 🟡 | LLM開示義務, 州プライバシー法 |
+| Security Governance | 🟢 | CMMC Phase 2, サプライチェーン |
+| Crypto Currency | 🟣 | Zcash, Orchard脆弱性, ZEC急落 |
+
+---
+
+*次回配信予定：2026年6月25日（木） | 収集ソース：Cybernews, The Hacker News, TechCrunch, CoinDesk, The Block, Federal News Network, White House, IAPP, Corporate Compliance Insights*
+`;
+    document.getElementById('content').innerHTML = marked.parse(md);
+  </script>
+</body>
+</html>
