@@ -279,7 +279,10 @@ def main():
         md_content = f.read()
 
     # HTML生成・保存
-    html_filename = filename.replace(".md", ".html")
+    # 公開URLを短くするため、.md側のファイル名(SecurityTrend_Top10_YYYY-MM-DD.md)とは別に
+    # HTMLファイル名は日付のみのYYYYMMDD.html形式にする（例: reports/20260912.html）。
+    # .mdの命名はgenerate-report.yml等の既存の存在チェックが依存しているため変更しない。
+    html_filename = report_date.replace("-", "") + ".html"
     html_path = f"reports/{html_filename}"
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(md_to_html(md_content, report_date))
