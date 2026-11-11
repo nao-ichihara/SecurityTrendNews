@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecurityTrend Top10 - 2026-11-11</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f1117; --surface: #1a1d27; --border: #2d3148;
+      --text: #e2e8f0; --muted: #8892a4; --accent: #6366f1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; }
+    .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .header { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+    .header-logo { font-size: 2rem; }
+    .header-title { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+    .header-date { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+    .badge { display: inline-block; background: rgba(99,102,241,0.15); border: 1px solid var(--accent); color: var(--accent); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 20px; margin-top: 0.5rem; }
+    #content h1 { display: none; }
+    #content h2 { font-size: 1.1rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    #content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.5rem 0 0.5rem; }
+    #content p { color: #c8d3e0; margin-bottom: 0.75rem; }
+    #content a { color: var(--accent); text-decoration: none; }
+    #content a:hover { text-decoration: underline; }
+    #content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+    #content blockquote { border-left: 3px solid var(--accent); padding: 0.75rem 1rem; background: rgba(99,102,241,0.08); border-radius: 0 8px 8px 0; margin: 1rem 0; color: var(--muted); font-size: 0.9rem; }
+    #content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    #content th { background: var(--surface); padding: 0.6rem 1rem; text-align: left; border: 1px solid var(--border); color: var(--muted); font-weight: 600; }
+    #content td { padding: 0.6rem 1rem; border: 1px solid var(--border); }
+    #content tr:hover td { background: rgba(99,102,241,0.05); }
+    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+    .back-link { display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-logo">🔐</div>
+      <div>
+        <div class="header-title">SecurityTrend Top10</div>
+        <div class="header-date">2026-11-11</div>
+        <div class="badge">AI Generated Report</div>
+      </div>
+    </div>
+    <div id="content"></div>
+    <div class="footer">
+      <p>このレポートはClaude AIとxAI Grok APIを組み合わせて収集・編集したものです</p>
+      <a class="back-link" href="../index.html">← 過去レポート一覧へ</a>
+    </div>
+  </div>
+  <script>
+    const md = `# セキュリティトレンド Top 10 ニュース
+**配信日：2026年11月11日（水）**
+
+> ⚠️ この記事はClaude AIとxAI Grok API（話題性分析）を組み合わせて収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **SSHole（OpenSSH CVE-2026-123158）** | 11月6日から実攻撃が観測されたOpenSSHの脆弱性。CISAがKEVに追加し、連邦機関の期限は11月12日。ボットネットやクリプトマイナーの展開にも使われている。 |
+| 2 | **AIエージェントの攻撃転用** | 攻撃用に転用されたAntiFox、DeepSeekを脱獄させたBroadWorks攻撃、Chainalysis侵害など、エージェント型AIが実際の侵入に使われる事例が同時に複数出ている。 |
+| 3 | **LLMjacking** | 盗んだLLMアクセスを不正なルーティングゲートウェイに転売する金銭目的の攻撃。Fireworks AI侵害ではモデル重み・データセット、Notion AIのチャット記録にまで被害が及んだ。 |
+| 4 | **Shahid Kaveh（IRGC系OT攻撃）** | フランスが約700店舗の冷蔵設備攻撃をIRGC系部隊によるものと公式に断定し、イラン大使を召喚。重要インフラ・小売OTが地政学リスクの対象になっている。 |
+| 5 | **ソーシャルログイン型ウォレット** | Web3Authの欠陥でGoogle/Appleログインで作ったKeplrウォレットの鍵が露出。利便性を優先した鍵管理基盤が単一障害点になるリスクが表面化した。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. OpenSSHの「SSHole」が実攻撃で悪用、CISAがIBM Aspera・FreeSWITCH・GPUStackと合わせてKEVに追加
+**2026年11月9日〜10日**
+CISAがOpenSSHの「SSHole」（CVE-2026-123158、CVSS 8.1）に加え、IBM Aspera Faspex、SignalWire FreeSWITCH、GPUStack（いずれもCVSS 9.8）の計4件をKEVに追加した。SSHoleは11月6日から悪用が確認され、GreyNoiseは6つのIPから侵入後の活動（18の攻撃チェーン）を確認。C2エージェント、ボットネット、クリプトマイナーの展開も報告されている。連邦機関の対応期限は11月12日で、インターネットに公開しているSSHサーバーは最優先でパッチを当てる必要がある。
+
+🔗 [CISA Warns of Active Exploitation of OpenSSH, GPUStack, FreeSWITCH, and IBM Flaws（The Hacker News）](https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html)
+🔗 [Hackers exploit SSHole OpenSSH flaw to breach Linux systems（BleepingComputer）](https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems/)
+
+---
+
+### 2. Cisco BroadWorksのXXE脆弱性がKEV入り、脱獄したAIモデルを使った通信事業者攻撃の報告も
+**2026年11月10日〜11日**
+CISAがCisco BroadWorksのOCI XMLパーサーにある認証不要のXXE脆弱性（CVE-2026-20320、8月にパッチ公開済み）をKEVに追加した。BOD 26-04に基づく期限は11月24日。Malbear Labsは、中国語話者の攻撃者が脱獄させたDeepSeekモデルを使ってこの脆弱性を悪用し、欧州の通信事業者とそのデータセンターを使う13組織を攻撃して、秘密鍵やSSL認証情報を奪ったと主張している（ベンダーの主張であり、CISAは確認していない）。
+
+🔗 [CISA flags Cisco BroadWorks flaw as actively exploited in attacks（BleepingComputer）](https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/)
+🔗 [CISA Adds Six Known Exploited Vulnerabilities to Catalog（CISA）](https://www.cisa.gov/news-events/alerts/2026/11/10/cisa-adds-six-known-exploited-vulnerabilities-catalog)
+
+---
+
+### 3. N-able、N-centralの大量ゼロデイ公開を受けてセキュリティホットフィックスを公開（続報）
+**2026年11月9日〜11日**
+研究者がRMMプラットフォームN-centralの30件超のゼロデイを一斉に公開した問題で、N-ableはホスト環境をオフラインにしたうえでホットフィックスをリリースした。RMMはMSPを経由して多数の顧客環境に直結するため、オンプレミス利用者はホットフィックスの適用と、不審な管理者アカウントやログの監査を急ぐ必要がある。
+
+🔗 [N-able releases security hotfixes for zero-day vulnerabilities（BleepingComputer）](https://www.bleepingcomputer.com/news/security/n-able-releases-security-hotfixes-for-zero-day-vulnerabilities/)
+🔗 [N-able takes cloud platform offline after 30 zero-days published（BleepingComputer）](https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-zero-days-published/)
+
+---
+
+## 🟠 AI Risk
+
+### 4. オープンソースのAIペンテストエージェント「AntiFox」が実攻撃に転用、AWSのシークレットを窃取
+**2026年11月11日**
+Arctic Wolfによると、攻撃者はARTEX 0.1.1をフォークした中国語UIのエージェント型ペンテストツール「AntiFox」をAlibaba Cloud上で自前運用し、エクスプロイト、Webシェル設置、認証情報の検証、AWSシークレットの収集に使っていた。ある侵入では、有効なIAMユーザーとEC2ロールを使い、約30分で数百件のAPIリクエストを実行して本番環境のシークレットに到達した。別の事例ではS3オブジェクトの読み取り・コピー・削除も確認されている。
+
+🔗 [Hackers use AntiFox AI agents in AWS credential-theft attacks（BleepingComputer）](https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/)
+🔗 [AntiFox AI pentesting platform linked to attacks（The Hacker News）](https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html)
+
+---
+
+### 5. Fireworks AIの侵害が拡大、モデル重み・データセットにも被害 ― LLMjackingグループの犯行と判断
+**2026年11月10日**
+AI推論基盤のFireworks AIが、10月に公表したインシデントの追加調査結果を公表した。攻撃者は10月23〜24日にサードパーティのクラウド上にある開発用マシンへ侵入し、課金情報、リソースのメタデータ、一部アカウントの未完成のモデル重みやデータセットにアクセスした。カード番号は保存されていなかった。犯行は、盗んだLLMアクセスを不正ゲートウェイに転売する金銭目的のLLMjackingグループによるものとみられる。AIサプライチェーン上の推論事業者が攻撃の標的になるリスクを示す事例だ。
+
+🔗 [Fireworks AI Confirms Wider Breach Affecting Customer Datasets, Model Weights and Notion AI Chats（The Hacker News）](https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html)
+🔗 [AI company Fireworks says hackers stole data, billing info during October breaches（The Record）](https://therecord.media/ai-company-fireworks-says-hackers-stole-data-in-oct-attacks)
+
+---
+
+## 🟡 Data & Privacy
+
+### 6. Maerskが買収先のレガシーシステムからのデータ流出を確認、WhiteArmorが500万ドルを要求
+**2026年11月11日**
+海運大手Maerskが、買収した企業のレガシーシステムへの不正アクセスとデータの持ち出しを確認した。ランサムウェアグループWhiteArmorは約100GBを窃取したと主張し、500万ドルを要求しているが、Maersk側は機密データ流出の規模について強く否定している。M&Aで引き継いだシステムの資産管理と統合の遅れが攻撃の入り口になりやすいことを改めて示した。
+
+🔗 [Maersk confirms data breach as WhiteArmor ransomware demands \$5 million（BleepingComputer）](https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/)
+
+---
+
+### 7. Notion、Fireworks侵害で一部ワークスペースのAIチャット記録が露出したと公表
+**2026年11月10日〜11日**
+NotionのAI機能を支えるFireworks AIの侵害により、Notionワークスペースの1%未満で、Insights機能に使われていたNotion AIのチャット記録が露出した。ゼロリテンションを前提としていたAIプロバイダー側にデータが残っていた点が問題視されており、AI委託先でのデータ保持・削除契約が実際に守られているかを確認・監査する必要性が浮き彫りになった。
+
+🔗 [Notion says Fireworks breach exposed customer AI chat transcripts（BleepingComputer）](https://www.bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts/)
+
+---
+
+## 🟢 Security Governance
+
+### 8. フランスが約700店舗の冷蔵設備攻撃をIRGC系「Shahid Kaveh」によるものと断定、イラン大使を召喚
+**2026年11月9日〜10日**
+フランス外務省は、10月11〜12日に起きたDanfoss製冷蔵コントローラーへの攻撃を、イラン革命防衛隊（IRGC）系部隊「Shahid Kaveh」によるものと公式に断定した。約700の小売店舗が狙われ、少なくとも15件の火災が発生し、食品損失は数千万ユーロにのぼる。カルフールやルクレールなど大手チェーンが被害を受け、小規模水力発電施設のSchneider製システムも攻撃された。フランスはイラン大使を召喚し、制裁を検討している。11月の第2波（欧州6カ国、115店舗超）の攻撃者はまだ特定されていない。
+
+🔗 [France blames Iranian hackers for supermarket attacks that sparked fires（BleepingComputer）](https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires/)
+🔗 [France blames Iran for a cyberattack that heated supermarket refrigerators（SecurityWeek）](https://www.securityweek.com/france-blames-iran-for-a-cyberattack-that-heated-supermarket-refrigerators/)
+
+---
+
+## 🟣 Crypto Currency
+
+### 9. Web3Authの欠陥でKeplrウォレットの秘密鍵が露出、4.4万超のウォレットから約600万ドルを「救出」
+**2026年11月8日〜9日**
+Web3Authの基盤の欠陥により、Google/Appleログインで作成したKeplrウォレットの秘密鍵が露出した。Web3Authは同じ経路を使って、危険にさらされたウォレットの資産を回収用ウォレットへ先回りして移した。Bitquery の分析では、4万4,000超のウォレットから少なくとも601万ドルが移されたが、これは窃取ではなく救出とみなされている。一方、GoPlusは少なくとも約100万ドルが盗まれたとしている。Keplrはソーシャルログインを停止した。MetaMaskへの影響は確認されていない。
+
+🔗 [Web3Auth Flaw Exploited to Steal Keplr Crypto（The Hacker News）](https://thehackernews.com/2026/11/web3auth-flaw-exploited-to-steal-keplr.html)
+🔗 [Web3Auth says it frontran hackers by moving \$5.6 million out of exposed Keplr wallets（The Block）](https://www.theblock.co/news/defi/2026-11-08-web3auth-says-it-frontran-hackers-by-moving-5-6-million-out-of-exposed-keplr-wallets-436029)
+
+---
+
+### 10. ブロックチェーン分析大手Chainalysisがデータ侵害を公表、「攻撃的エージェント技術」が使われたと説明
+**2026年11月**
+暗号資産の追跡・捜査支援を担うChainalysisが、攻撃的なエージェント型AI技術を使った侵入によるデータ侵害を公表した。法執行機関や取引所が利用する分析基盤の事業者が狙われた点で、暗号資産エコシステムへの波及が懸念される。詳細な被害範囲は続報を確認したい（本項は一次記事の詳細を完全には確認できていない）。
+
+🔗 [Chainalysis discloses data breach from "offensive agentic techniques"（BleepingComputer）](https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴 | SSHole、CISA KEV、Cisco BroadWorks、N-central |
+| AI Risk | 🟠🟠 | AntiFox、エージェント型攻撃、LLMjacking、Fireworks AI |
+| Data & Privacy | 🟡🟡 | Maersk/WhiteArmor、Notion AIチャット記録、AI委託先 |
+| Security Governance | 🟢 | IRGC・Shahid Kaveh、OT攻撃の公式断定、外交的対応 |
+| Crypto Currency | 🟣🟣 | Web3Auth/Keplr、ソーシャルログイン、Chainalysis |
+
+---
+
+*次回配信予定：2026年11月12日（木） | 収集ソース：The Hacker News、BleepingComputer、CISA、SecurityWeek、The Record、The Block、xAI Grok API*
+`;
+    document.getElementById('content').innerHTML = marked.parse(md);
+  </script>
+</body>
+</html>
