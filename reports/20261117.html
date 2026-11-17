@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecurityTrend Top10 - 2026-11-17</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f1117; --surface: #1a1d27; --border: #2d3148;
+      --text: #e2e8f0; --muted: #8892a4; --accent: #6366f1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; }
+    .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .header { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+    .header-logo { font-size: 2rem; }
+    .header-title { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+    .header-date { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+    .badge { display: inline-block; background: rgba(99,102,241,0.15); border: 1px solid var(--accent); color: var(--accent); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 20px; margin-top: 0.5rem; }
+    #content h1 { display: none; }
+    #content h2 { font-size: 1.1rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    #content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.5rem 0 0.5rem; }
+    #content p { color: #c8d3e0; margin-bottom: 0.75rem; }
+    #content a { color: var(--accent); text-decoration: none; }
+    #content a:hover { text-decoration: underline; }
+    #content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+    #content blockquote { border-left: 3px solid var(--accent); padding: 0.75rem 1rem; background: rgba(99,102,241,0.08); border-radius: 0 8px 8px 0; margin: 1rem 0; color: var(--muted); font-size: 0.9rem; }
+    #content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    #content th { background: var(--surface); padding: 0.6rem 1rem; text-align: left; border: 1px solid var(--border); color: var(--muted); font-weight: 600; }
+    #content td { padding: 0.6rem 1rem; border: 1px solid var(--border); }
+    #content tr:hover td { background: rgba(99,102,241,0.05); }
+    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+    .back-link { display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-logo">🔐</div>
+      <div>
+        <div class="header-title">SecurityTrend Top10</div>
+        <div class="header-date">2026-11-17</div>
+        <div class="badge">AI Generated Report</div>
+      </div>
+    </div>
+    <div id="content"></div>
+    <div class="footer">
+      <p>このレポートはClaude AIとxAI Grok APIを組み合わせて収集・編集したものです</p>
+      <a class="back-link" href="../index.html">← 過去レポート一覧へ</a>
+    </div>
+  </div>
+  <script>
+    const md = `# セキュリティトレンド Top 10 ニュース
+**配信日：2026年11月17日（火）**
+
+> ⚠️ この記事はClaude AIとxAI Grok API（話題性分析）を組み合わせて収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **Optimizely改ざん（Webサプライチェーン攻撃）** | A/Bテスト基盤Optimizelyの脆弱性を突き、BBC・HSBC・Ledgerなど178組織のサイトにクリプトクリッパーやカードスキマーを注入。信頼済みサードパーティ・スクリプトが一斉に攻撃経路になった。 |
+| 2 | **自律型マルチエージェント攻撃** | Google脅威インテリジェンスが、人手を介さず脆弱性を武器化するAIエージェント攻撃基盤の実戦投入を警告。ARTEXに続き「機械速度の侵入」が現実化している。 |
+| 3 | **富岳侵害** | 理研のスパコン「富岳」が公開ダッシュボード経由で不正アクセスを受けオフラインに。研究インフラのアカウント・鍵管理が問われる。 |
+| 4 | **AIベンダー経由の漏洩** | Fireworks AIの侵害でUberドライバーの免許情報などが流出。AI推論基盤など新しいサードパーティがデータ漏洩の起点になっている。 |
+| 5 | **重要インフラ「硬化」協議** | CISAが経済・安全保障上重要な約100社と防御強化の協議を開始。新戦略「Defend, Harden, Prevail」の具体化が始まった。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. Optimizelyの脆弱性悪用で178組織のWebサイトにマルウェア　BBC・HSBC・Ledgerなどが被害
+**2026年11月17日**
+攻撃者がWeb最適化プラットフォームOptimizelyの脆弱性を悪用し、顧客がサイトに埋め込むカスタムJavaScriptに不正コードを注入した。信頼済みCDN経由で、BBC、HSBC、Ledgerなど178組織のサイト訪問者に暗号資産アドレスのすり替え（クリッパー）、カードスキマー、iOS向けエクスプロイトキットが配信されたと報じられている。Optimizelyはパッチと除去を実施済みだが、サードパーティ・スクリプトの改ざん監視（CSP、SRI等）の重要性を改めて示す事案となった。
+
+🔗 [Optimizely Vulnerability Exploited to Serve Malware on Major Websites（SecurityWeek）](https://www.securityweek.com/optimizely-vulnerability-exploited-to-serve-malware-on-major-websites/)
+🔗 [Hackers planted crypto-stealing code on 178 organizations' sites（CoinDesk）](https://www.coindesk.com/tech/2026/11/17/hackers-planted-crypto-stealing-code-on-178-organizations-sites-including-hsbc-bbc-and-ledger)
+🔗 [World's Largest Brands Infected With Malware Via Optimizely（Report URI）](https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/)
+
+---
+
+### 2. 理研のスパコン「富岳」が不正アクセスを受けオフラインに
+**2026年11月17日**
+理化学研究所は、スーパーコンピュータ「富岳」で不正アクセスを確認し、システムを停止したと発表した。公開ダッシュボードを起点とした侵入とされ、最大約4,600人の利用者情報やSSH秘密鍵が流出した可能性が指摘されている。国家級の研究インフラが停止したことで共同研究への影響が懸念されており、研究機関の認証・鍵管理のあり方が問われている。
+
+🔗 [Japan takes Fugaku supercomputer offline after cyberattack（BleepingComputer）](https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/)
+🔗 [Japan's Fugaku supercomputer has decidedly un-super security（The Register）](https://www.theregister.com/security/2026/11/17/japans-fugaku-supercomputer-has-decidedly-un-super-security/5310333)
+
+---
+
+### 3. ConnectWise ScreenConnectの重大脆弱性悪用が拡大　ワーム型「SCKit」がMSPを横断
+**2026年11月17日**
+MSP向けリモート管理ツールScreenConnectの重大脆弱性（CVSS 9.9とされる）を狙う攻撃が続いている。Huntressは多数のMSPサーバーへの大量の自動悪用試行や、不正なScreenConnectクライアントを自己拡散的に設置するワーム型マルウェア「SCKit」を報告。サーバー側の更新だけでは不十分で、クライアント側の更新と不審セッションの確認が求められている。
+
+🔗 [SCKit Worm Installs Rogue ScreenConnect Clients（Huntress）](https://www.huntress.com/blog/sckit-worm-rogue-screenconnect?setlocale=en)
+🔗 [New worm-like SCKit malware targets MSPs in ScreenConnect attacks（BleepingComputer）](https://bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks)
+
+---
+
+## 🟠 AI Risk
+
+### 4. Google、自律型マルチエージェント攻撃フレームワークの実戦使用を警告
+**2026年11月17日**
+Google Threat Intelligence Groupは最新のAI脅威レポートで、攻撃者がARTEXなどのエージェント型フレームワークを使い、偵察から脆弱性の武器化までを自律的に実行していると警告した。人間の介在をほぼ必要としない攻撃が短期間で一般化する可能性を指摘しており、防御側にもAIによる検知・対応の自動化が迫られている。
+
+🔗 [Google warns hackers are deploying AI agents in autonomous attacks（CyberInsider）](https://cyberinsider.com/google-warns-hackers-are-deploying-ai-agents-in-autonomous-attacks/)
+🔗 [Google says threat actors abuse ARTEX agentic pentesting frameworks（Let's Data Science）](https://letsdatascience.com/news/google-says-threat-actors-abuse-artex-agentic-pentesting-fra-871f1f6e)
+
+---
+
+### 5. 米国土安全保障長官、AIアップグレードが技術障害を引き起こしている可能性に言及
+**2026年11月17日**
+米国土安全保障省（DHS）のマークウェイン・マリン長官は、システムへのAI導入・アップグレードが近年の大規模な技術障害の一因になっている可能性があると警告した。AIエージェントの暴走をめぐるOpenAI提訴など、AIの「制御」をめぐる議論が政府中枢にも広がっており、運用リスクとしてのAI管理が焦点になりつつある。
+
+🔗 [Homeland Security secretary warns AI upgrades could be driving tech outages（Washington Times）](https://www.washingtontimes.com/news/2026/nov/17/homeland-security-secretary-markwayne-mullin-warns-ai-upgrades-could/)
+
+---
+
+## 🟡 Data & Privacy
+
+### 6. 仏La Poste子会社Maileva、2,200万人の氏名・住所が流出
+**2026年11月14〜16日**
+郵便物の印刷・発送サービスを提供するMailevaが9月に攻撃を受け、フランス人口の約3分の1にあたる2,200万人の氏名・住所が盗まれたと公表した。一部の郵便物の内容（請求額など）が閲覧された可能性もあり、CNILへの通知と司法調査が進められている。銀行情報は含まれないとされるが、フィッシングや暗号資産保有者を狙う物理的脅迫への悪用も懸念されている。
+
+🔗 [Data Breach at La Poste Subsidiary Maileva Affects 22 Million People（Security Affairs）](https://securityaffairs.com/?p=203126)
+🔗 [Cyberattaque sur Maileva : 22 millions de personnes touchées（Euronews）](https://fr.euronews.com/2026/11/15/cyberattaque-sur-maileva-filiale-de-la-poste-22-millions-de-personnes-touchees-par-des-vol)
+
+---
+
+### 7. Uber、AIベンダーFireworks AI経由でドライバーの免許情報など流出
+**2026年11月17日**
+UberはAI推論基盤を提供するFireworks AIへの侵害を通じて、ドライバーの氏名・住所・運転免許番号などが盗まれたことを認め、通知を開始した。影響は約15万人と報じられている。AIベンダーへのデータ連携がサプライチェーン上の新たな漏洩経路となっており、委託先のデータ最小化とアクセス管理の見直しが求められる。
+
+🔗 [Hackers stole thousands of Uber drivers' data through an AI startup（Gizmodo）](https://gizmodo.com/hackers-stole-thousands-of-uber-drivers-data-through-an-ai-startup-2000839947)
+🔗 [Uber drivers' licence data stolen in Fireworks AI hack（The Next Web）](https://thenextweb.com/news/uber-drivers-licence-data-stolen-in-fireworks-ai-hack)
+
+---
+
+## 🟢 Security Governance
+
+### 8. CISA、重要インフラ約100社と防御強化の協議を開始
+**2026年11月17日**
+CISAのニック・アンダーセン氏は、経済・国家安全保障上重要な約100社と、中核サービスの「硬化（hardening）」に向けた協議を開始すると明らかにした。10月に公表した新戦略「Defend, Harden, Prevail」の具体化で、60日以内のコアサービス見直しも打ち出している。官民連携の対象を絞り込んだ実務的な施策として注目される。
+
+🔗 [CISA to hold talks with 100 critical infrastructure companies（CyberScoop）](https://cyberscoop.com/cisa-100-critical-infrastructure-companies-fed-talks/)
+🔗 [CISA Unveils New Strategy to Strengthen National Cyber Defense（CISA）](https://www.cisa.gov/news-events/news/cisa-unveils-new-strategy-strengthen-national-cyber-defense-and-critical-infrastructure-security)
+
+---
+
+### 9. CISA、Puppet Enterpriseの脆弱性をKEVに追加　BOD 26-04で優先パッチを要求
+**2026年11月17日**
+CISAはPuppet Enterpriseの脆弱性を既知の悪用脆弱性（KEV）カタログに追加した。連邦機関は拘束力のある運用指令BOD 26-04に基づき、高リスク脆弱性の優先的なパッチ適用と、適用前の侵害有無の確認が求められる。構成管理ツールは侵害時の影響範囲が広く、民間企業にとっても優先対応の目安となる。
+
+🔗 [CISA Adds One Known Exploited Vulnerability to Catalog（CISA）](https://www.cisa.gov/news-events/alerts/2026/11/17/cisa-adds-one-known-exploited-vulnerability-catalog)
+
+---
+
+## 🟣 Crypto Currency
+
+### 10. 史上最大のBinanceハッキング関連ウォレットが2週間ぶりに資金移動　約7.5万ETHを動かしBTCへの交換も
+**2026年11月17日**
+10月のBinance大規模ハッキング（北朝鮮系とされる）に関連するウォレットが、2週間の沈黙を破り約7万5,000ETH（約1.37億ドル相当）を新たなウォレットへ移動し、一部をBTCへ交換し始めた。米司法省による押収が進む中での動きで、換金・資金洗浄ルートの追跡が焦点となる。同日にはOptimizely改ざんでLedgerサイトなどにアドレスすり替えコードが仕込まれた事案（#1）も発覚しており、暗号資産利用者を狙う攻撃が重なった。
+
+🔗 [Hackers behind record Binance breach move \$63 million in ether following DOJ seizures（CoinDesk）](https://www.coindesk.com/business/2026/11/17/binance-hacker-moves-usd63-million-in-stolen-ether-after-two-weeks-of-silence)
+🔗 [Binance Hacker-Linked Wallets Move Nearly 75,000 ETH（The Defiant）](https://thedefiant.io/news/hacks/binance-hacker-linked-wallets-move-nearly-75-000-eth)
+🔗 [Optimizely Hack Hijacked Ledger, BBC and 176 Other Sites to Swap Crypto Wallet Addresses（Decrypt）](https://decrypt.co/383414/optimizely-hack-hijacked-ledger-bbc-and-176-other-sites-to-swap-crypto-wallet-addresses)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴 | Optimizely、富岳、ScreenConnect、SCKit |
+| AI Risk | 🟠🟠 | 自律型AIエージェント攻撃、ARTEX、AI起因の障害 |
+| Data & Privacy | 🟡🟡 | Maileva、2,200万人、Uber、Fireworks AI |
+| Security Governance | 🟢🟢 | CISA新戦略、重要インフラ100社、KEV、BOD 26-04 |
+| Crypto Currency | 🟣 | Binanceハッキング資金移動、アドレスすり替え |
+
+---
+
+*次回配信予定：2026年11月18日（水） | 収集ソース：SecurityWeek、BleepingComputer、The Register、CoinDesk、Decrypt、The Defiant、Huntress、CyberInsider、Washington Times、Security Affairs、Euronews、Gizmodo、The Next Web、CyberScoop、CISA、Report URI、xAI Grok API*
+`;
+    document.getElementById('content').innerHTML = marked.parse(md);
+  </script>
+</body>
+</html>
