@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecurityTrend Top10 - 2026-11-19</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f1117; --surface: #1a1d27; --border: #2d3148;
+      --text: #e2e8f0; --muted: #8892a4; --accent: #6366f1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; }
+    .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .header { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+    .header-logo { font-size: 2rem; }
+    .header-title { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+    .header-date { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+    .badge { display: inline-block; background: rgba(99,102,241,0.15); border: 1px solid var(--accent); color: var(--accent); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 20px; margin-top: 0.5rem; }
+    #content h1 { display: none; }
+    #content h2 { font-size: 1.1rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    #content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.5rem 0 0.5rem; }
+    #content p { color: #c8d3e0; margin-bottom: 0.75rem; }
+    #content a { color: var(--accent); text-decoration: none; }
+    #content a:hover { text-decoration: underline; }
+    #content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+    #content blockquote { border-left: 3px solid var(--accent); padding: 0.75rem 1rem; background: rgba(99,102,241,0.08); border-radius: 0 8px 8px 0; margin: 1rem 0; color: var(--muted); font-size: 0.9rem; }
+    #content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    #content th { background: var(--surface); padding: 0.6rem 1rem; text-align: left; border: 1px solid var(--border); color: var(--muted); font-weight: 600; }
+    #content td { padding: 0.6rem 1rem; border: 1px solid var(--border); }
+    #content tr:hover td { background: rgba(99,102,241,0.05); }
+    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+    .back-link { display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-logo">🔐</div>
+      <div>
+        <div class="header-title">SecurityTrend Top10</div>
+        <div class="header-date">2026-11-19</div>
+        <div class="badge">AI Generated Report</div>
+      </div>
+    </div>
+    <div id="content"></div>
+    <div class="footer">
+      <p>このレポートはClaude AIとxAI Grok APIを組み合わせて収集・編集したものです</p>
+      <a class="back-link" href="../index.html">← 過去レポート一覧へ</a>
+    </div>
+  </div>
+  <script>
+    const md = `# セキュリティトレンド Top 10 ニュース
+**配信日：2026年11月19日（木）**
+
+> ⚠️ この記事はClaude AIとxAI Grok API（話題性分析）を組み合わせて収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **エージェント型AI攻撃** | オープンソースのAIペンテスト基盤「ARTEX」が欧州委員会攻撃に使われ、JadePufferはAIモデルデータを暗号化・破壊。AIエージェントの実戦投入が急拡大。 |
+| 2 | **ゼロデイ連鎖（vCenter）** | 中国系APTがBeyondTrustの0-dayで侵入後、vCenterの認証バイパス（CVSS 9.8）を連鎖悪用。仮想化基盤の管理プレーンが標的に。 |
+| 3 | **NGINX2Root** | NGINXの未認証RCE5件（HTTP/2の長年のバグ含む）がパッチ公開と同時にPoCも公開。世界最大級のWebサーバーで緊急パッチが必要。 |
+| 4 | **LLMjacking** | 盗んだAI推論キーやLLMゲートウェイの脆弱性を悪用して管理者権限を奪う手口。CISAがLiteLLMの脆弱性をKEVに追加。 |
+| 5 | **委託先経由の大規模漏洩** | PLAID「KARTE」侵害でDHC・三菱UFJ銀行・シャープなどの委託データが流出。マーケティングSaaSのサードパーティリスクが焦点に。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. VMware vCenterの認証バイパス（CVE-2026-123890）、中国系APTが9月からゼロデイ悪用
+**2026年11月19日**
+Broadcomが11月19日にパッチを公開したvCenterのCVSS 9.8認証バイパス脆弱性について、Mandiantは中国系APT「Armory Castle」（旧UNC5221）が9月以降ゼロデイとして悪用していたと報告した。BeyondTrustの0-dayで侵入した後、BONESAWツールで管理者セッションを取得し、SAML署名情報を盗み出していた。仮想化基盤を運用する組織は、至急パッチを当て、侵害の痕跡を調べる必要がある。
+
+🔗 [Newly Patched VMware vCenter Flaw Exploited as Zero-Day by Chinese APT（SecurityWeek）](https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/)
+🔗 [CVE-2026-123890 vCenter Zero-Day Exploited（Cyber Kendra）](https://www.cyberkendra.com/2026/11/cve-2026-123890-vcenter-zero-day-exploited.html)
+
+---
+
+### 2. F5が「NGINX2Root」5件の重大RCEをパッチ、PoCも公開
+**2026年11月18〜19日**
+F5はNGINXに見つかった5件の未認証リモートコード実行脆弱性（CVSS 9.2、CVE-2026-123007ほか）を修正した。HTTP/2フロー制御の整数アンダーフローなど、10年以上潜んでいたバグが含まれる。PoCが既に公開されているため、悪用が確認される前でも即時の更新が推奨される。
+
+🔗 [F5 Patches Critical NGINX2Root Flaws as PoC Exploits Go Public（SecurityWeek）](https://www.securityweek.com/f5-patches-critical-nginx2root-flaws-as-poc-exploits-go-public/)
+🔗 [NGINX2Root NGINX vulnerabilities（Help Net Security）](https://www.helpnetsecurity.com/2026/11/19/nginx2root-nginx-vulnerabilities/)
+
+---
+
+### 3. 欧州委員会へのサイバー攻撃にAIレッドチームツール「ARTEX」使用か、HRシステムが10日以上停止
+**2026年11月19日**
+欧州委員会が10月下旬に検知した攻撃で、オープンソースのAIペネトレーションテスト基盤「ARTEX」が使われた可能性が高いと報じられた。給与・休暇管理のSysperなどHRシステムが10日以上停止し、CERT-EUは同様のAI駆動型攻撃に警戒を呼びかけている。広範なデータ流出の証拠は現時点で確認されていない。
+
+🔗 [AI red team tool Artex likely behind cyber attack on EU body（Computer Weekly）](https://www.computerweekly.com/news/366654974/AI-red-team-tool-Artex-likely-behind-cyber-attack-on-EU-body)
+🔗 [European Commission confirms cyberattack using AI（The Record）](https://therecord.media/european-commission-confirms-cyberattack-using-ai)
+
+---
+
+## 🟠 AI Risk
+
+### 4. Anthropic、IPO直前にResponsible Scaling Policyの閾値到達を開示、安全性をめぐる批判も
+**2026年11月19日**
+AnthropicはS-1の更新で、METRの評価をもとに「AI研究開発の加速」に関するRSPの閾値に達したとして、追加の安全措置を発動したと開示した。上場を控えるなか、ノーベル賞受賞者らが「安全なAI企業ではない」とする声明を出し、AI企業の自主ガバナンスと投資家向けリスク開示のあり方が議論になっている。
+
+🔗 [Anthropic RSP / IPO coverage（Financial Times）](https://www.ft.com/content/d8be4655-211c-49a8-bfe4-18a00b8e8619)
+🔗 [Anthropic's IPO Filing Now Says It Met Its AI R&D Threshold（FourWeekMBA）](https://fourweekmba.com/ai-anthropics-ipo-filing-now-says-it-met-its-ai-rd-threshold/)
+🔗 [Nobel laureates accuse Claude maker ahead of IPO（Mint）](https://www.livemint.com/companies/news/anthropic-is-not-a-safe-ai-company-nobel-laureates-accuse-claude-maker-of-abandoning-promises-ahead-of-ipo-11795091158478.html)
+
+---
+
+### 5. エージェント型AI攻撃が拡大：ARTEX悪用の広がりとJadePufferによるAIモデル破壊
+**2026年11月18〜19日**
+ARTEXは欧州委員会のほか、Barracuda侵害やPHP RCEの自動化にも使われ、中国系アクターも採用していると報じられた。BleepingComputerは、エージェント型攻撃者「JadePuffer」がAIモデルの学習データや重みをランサムウェアで暗号化・破壊する方向へ手口を広げたと伝えている。AIの開発資産そのものが攻撃対象になりつつある。
+
+🔗 [JadePuffer agentic attacks now target AI model data with ransomware（BleepingComputer）](https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-attacks-now-target-ai-model-data-with-ransomware/)
+🔗 [Agentic hacker using ransomware to destroy AI models（The Stack）](https://www.thestack.technology/agentic-hacker-using-ransomware-to-destroy-ai-models/)
+
+---
+
+## 🟡 Data & Privacy
+
+### 6. PLAID「KARTE」侵害、DHC・三菱UFJ銀行・シャープなど数千万件規模の委託データが流出
+**2026年11月18日（続報）**
+11月13日にPLAIDのCX基盤「KARTE」が不正アクセスを受け、DHC（約1,911万件）、三菱UFJ銀行（650万件）、シャープ（326万件超）、日経など多くの導入企業の顧客データ（氏名・メール・生年月日など）が漏洩した。サービスは停止が続き、各社が個人情報保護委員会への報告を進めている。国内でも最大級のサードパーティ経由の漏洩となった。
+
+🔗 [PLAID 重要なお知らせ（PLAID）](https://plaid.co.jp/notice/)
+🔗 [KARTE不正アクセスに関するお知らせ（日本経済新聞社）](https://www.nikkei.co.jp/nikkeiinfo/news/information/1574.html)
+
+---
+
+### 7. ロンドン交通局（TfL）のOysterフォトカードサイトで約26.5万人のデータ侵害
+**2026年11月18〜19日**
+TfLは11月16日にフォトカード申請サイトで不審な活動を検知した。約26.5万人の氏名・住所・電話番号・生年月日・秘密の質問が漏洩したとされる。サイトはオフラインにされ、ICOに報告済み。パスワードや決済情報への影響はないという。（※2024年のTfL侵害とは別件。Grok報告ベースのため公式発表もご確認ください）
+
+🔗 [TfL Oyster photocard breach（BBC）](https://www.bbc.co.uk/news/articles/c6n4kz3lgdz5o)
+🔗 [Transport for London breach exposes 265,000 Oyster card users' data（BleepingComputer）](https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265000-oyster-card-users-data/)
+
+---
+
+## 🟢 Security Governance
+
+### 8. CISAがKEVに4件追加、LiteLLMのLLMjacking脆弱性も対象に
+**2026年11月18日**
+CISAはSynology DSM（ランサムウェアで悪用）、BerriAI LiteLLM（CVE-2026-40217、LLMjacking）、Apache Axis、REDCapの4件を既知の悪用された脆弱性カタログ（KEV）に加えた。連邦機関には11月21日または12月2日までの修正が義務付けられた。AIゲートウェイの脆弱性がKEVに入ったことで、AI基盤も通常の脆弱性管理の対象として扱う必要がはっきりした。
+
+🔗 [CISA Adds Four Known Exploited Vulnerabilities to Catalog（CISA）](https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog)
+🔗 [CISA adds Synology, LiteLLM, Axis and REDCap flaws to KEV（Daily Security Review）](https://dailysecurityreview.com/resources/cisa-adds-synology-litellm-axis-and-redcap-flaws-to-kev-catalog/)
+
+---
+
+### 9. ウクライナ当局とFBI、28社から4,050万ドル超を恐喝したランサムウェア集団のメンバーを逮捕
+**2026年11月18〜19日**
+ウクライナ当局がFBIと協力し、国際的なランサムウェア組織のメンバー4人を逮捕した。少なくとも28社から4,050万ドル超を恐喝したとされ、Conti系との関連も指摘されている。国境をまたぐ法執行協力の成果として注目される。
+
+🔗 [Ukraine, FBI arrest ransomware gang members tied to \$40M in ransoms（BleepingComputer）](https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/)
+
+---
+
+## 🟣 Crypto Currency
+
+### 10. Binance 63億ドル窃取事件、北朝鮮は自前発行トークンとブリッジ連鎖で資金洗浄
+**2026年11月18〜19日**
+TRM Labsは、史上最大となったBinanceハッキング（約63億ドル）の続報として、北朝鮮系の攻撃者が自ら発行したトークンと複数ブリッジを連鎖させて追跡を逃れていると分析した。前日には関連ウォレットから約1.37億ドル相当のETHが移動しており、各国当局による押収・回収と資金洗浄側の攻防が続いている。
+
+🔗 [Binance Hack Update: North Korea Launders Proceeds Through Self-Minted Tokens and Chained Bridges（TRM Labs）](https://www.trmlabs.com/resources/blog/binance-hack-update-north-korea-launders-proceeds-through-self-minted-tokens-and-chained-bridges)
+🔗 [Cryptohack Roundup: Binance Hackers Launder Funds（BankInfoSecurity）](https://www.bankinfosecurity.com/cryptohack-roundup-binance-hackers-launder-funds-cfo-exits-a-33372)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴 | vCenterゼロデイ、NGINX2Root、ARTEX |
+| AI Risk | 🟠🟠 | Anthropic RSP、エージェント型攻撃、JadePuffer |
+| Data & Privacy | 🟡🟡 | KARTE、TfL Oyster |
+| Security Governance | 🟢🟢 | CISA KEV、LLMjacking、ランサムウェア摘発 |
+| Crypto Currency | 🟣 | Binance、北朝鮮、資金洗浄 |
+
+---
+
+*次回配信予定：2026年11月20日（金） | 収集ソース：SecurityWeek、Help Net Security、Computer Weekly、The Record、Financial Times、FourWeekMBA、Mint、BleepingComputer、The Stack、PLAID、日本経済新聞社、BBC、CISA、Daily Security Review、TRM Labs、BankInfoSecurity、Cyber Kendra、xAI Grok API*
+`;
+    document.getElementById('content').innerHTML = marked.parse(md);
+  </script>
+</body>
+</html>
