@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecurityTrend Top10 - 2026-11-26</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f1117; --surface: #1a1d27; --border: #2d3148;
+      --text: #e2e8f0; --muted: #8892a4; --accent: #6366f1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; }
+    .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .header { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+    .header-logo { font-size: 2rem; }
+    .header-title { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+    .header-date { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+    .badge { display: inline-block; background: rgba(99,102,241,0.15); border: 1px solid var(--accent); color: var(--accent); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 20px; margin-top: 0.5rem; }
+    #content h1 { display: none; }
+    #content h2 { font-size: 1.1rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    #content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.5rem 0 0.5rem; }
+    #content p { color: #c8d3e0; margin-bottom: 0.75rem; }
+    #content a { color: var(--accent); text-decoration: none; }
+    #content a:hover { text-decoration: underline; }
+    #content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+    #content blockquote { border-left: 3px solid var(--accent); padding: 0.75rem 1rem; background: rgba(99,102,241,0.08); border-radius: 0 8px 8px 0; margin: 1rem 0; color: var(--muted); font-size: 0.9rem; }
+    #content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    #content th { background: var(--surface); padding: 0.6rem 1rem; text-align: left; border: 1px solid var(--border); color: var(--muted); font-weight: 600; }
+    #content td { padding: 0.6rem 1rem; border: 1px solid var(--border); }
+    #content tr:hover td { background: rgba(99,102,241,0.05); }
+    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+    .back-link { display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-logo">🔐</div>
+      <div>
+        <div class="header-title">SecurityTrend Top10</div>
+        <div class="header-date">2026-11-26</div>
+        <div class="badge">AI Generated Report</div>
+      </div>
+    </div>
+    <div id="content"></div>
+    <div class="footer">
+      <p>このレポートはClaude AIとxAI Grok APIを組み合わせて収集・編集したものです</p>
+      <a class="back-link" href="../index.html">← 過去レポート一覧へ</a>
+    </div>
+  </div>
+  <script>
+    const md = `# セキュリティトレンド Top 10 ニュース
+**配信日：2026年11月26日（木）**
+
+> ⚠️ この記事はClaude AIとxAI Grok API（話題性分析）を組み合わせて収集・編集したものです。情報の正確性については各ソースをご確認ください。
+
+---
+
+## 🔥 今日のトレンドワード Top 5
+
+| # | トレンドワード | 解説 |
+|---|--------------|------|
+| 1 | **ARTEX（エージェント型AI攻撃フレームワーク）** | FBIの警告に続き、イタリアとスイスの当局も自律型AIエージェントによる実攻撃を確認。侵入から大規模侵害までが数時間に縮まっている。 |
+| 2 | **米政府機関への連鎖的侵害** | FinCENがシステムを切り離し、CIAの非機密システムでも侵害が報じられた。国家安全保障と金融犯罪対策の基盤が同時に揺らいでいる。 |
+| 3 | **開発基盤を狙うサプライチェーン攻撃** | Hex.pmのCVSS 10.0の脆弱性が悪用され、1Passwordでは従業員のGitHubアカウント経由で顧客データが流出した。開発者の認証情報とレジストリが集中的に狙われている。 |
+| 4 | **エクスプロイトチェーン** | PAN-OSのPHP2ShellとLinuxカーネルのFragnesia、GeoServerの新旧の脆弱性など、複数の脆弱性を連鎖させてroot権限や未認証RCEを得る攻撃が相次ぐ。 |
+| 5 | **AIによる防御の自動化** | Cisco・OpenAIの「Shirudo」やNCSCのガイダンスなど、AIによる攻撃の高速化に対し、防御側もAIで一時防御やパッチ対応を高速化する動きが出ている。 |
+
+---
+
+## 🔴 Cyber Security
+
+### 1. 米財務省FinCENがサイバーインシデントでシステムを切り離し、CIAの非機密システムでも侵害
+**2026年11月24〜25日**
+米財務省の金融犯罪取締ネットワーク（FinCEN）は、一部システムへの不正アクセスを受けてシステムをネットワークから切り離した。同時期に、CIAの非機密のOSINT分析系システムが侵害されたとAP通信が関係者の話として報じた。FBIのネットワーク侵害が「重大インシデント」に指定されたばかりで、米政府機関への侵害が連鎖している。データ流出の範囲は明らかになっていない。
+
+🔗 [US Treasury's FinCEN Disconnects Systems Following Cyber Incident（SecurityWeek）](https://www.securityweek.com/us-treasurys-fincen-disconnects-systems-following-cyber-incident/)
+🔗 [An Unclassified CIA System Was Breached in a Cyberattack, AP Source Says（SecurityWeek）](https://www.securityweek.com/an-unclassified-cia-system-was-breached-in-a-cyberattack-ap-source-says/)
+🔗 [FBI Classifies Breach of Its Networks as Major Incident（PYMNTS）](https://www.pymnts.com/cybersecurity/2026/fbi-classifies-breach-of-its-networks-as-major-incident/)
+
+---
+
+### 2. Elixir/Erlangのパッケージレジストリ「Hex.pm」、CVSS 10.0のRCEが悪用され本番サーバー6台が侵害
+**2026年11月25日**
+報道によると、Hex.pmで2016年から残っていたOSコマンド実行の脆弱性（CVSS 10.0）が悪用され、本番サーバー6台でコマンドが実行された。攻撃は13分間に69件のリクエストで行われ、運営側は約15分でパッチを適用した。利用者のメールアドレス、パスワードハッシュ、2FAのシークレットが漏れた可能性があり、パッケージ公開者にはトークンの再発行などが求められる。
+
+🔗 [The Hacker News](https://thehackernews.com/)
+🔗 [Cyware Daily Threat Intelligence, November 25, 2026（Cyware）](https://www.cyware.com/resources/threat-briefings/daily-threat-briefing/cyware-daily-threat-intelligence-november-25-2026)
+
+---
+
+### 3. Palo Alto、ファイアウォールのroot奪取に使われたLinuxカーネルの欠陥「Fragnesia」を修正
+**2026年11月25日**
+中国系とみられるグループが、PAN-OSの管理インターフェースの脆弱性「PHP2Shell」とLinuxカーネルの権限昇格バグ「Fragnesia」を組み合わせ、管理画面がインターネットに公開されたファイアウォール約25台でroot権限を取得した。CISAはこの欠陥をKEVに追加し、連邦機関に短期間での対応を命じた。管理インターフェースを外部に公開しないことが改めて求められている。
+
+🔗 [Palo Alto Networks Patches Fragnesia Flaw Used to Root Firewalls（SecurityWeek）](https://www.securityweek.com/palo-alto-networks-patches-fragnesia-flaw-used-to-root-firewalls/)
+🔗 [Attackers exploit Palo Alto PAN-OS flaw for root access as CISA orders three-day fix（CSO Online）](https://www.csoonline.com/article/4235787/attackers-exploit-palo-alto-pan-os-flaw-for-root-access-as-cisa-orders-three-day-fix.html)
+🔗 [CISA Flags Linux Root Flaw Used to Hack Palo Alto Firewalls（eSecurity Planet）](https://www.esecurityplanet.com/news/news-cisa-linux-root-flaw-palo-alto/)
+
+---
+
+### 4. GeoServerの新たな脆弱性2件が攻撃に悪用、既存の欠陥と組み合わせて未認証RCEが可能に
+**2026年11月25日**
+地理空間データ配信サーバーGeoServerで新たに公表された脆弱性2件（CVE-2026-120705、CVE-2026-129243）に対する攻撃が始まった。他の脆弱性と組み合わせると認証なしでリモートコード実行が可能になり、watchTowrが攻撃の試行を確認している。政府機関や電力・水道などで広く使われ、インターネットに公開されたインスタンスは3,000を超える。
+
+🔗 [Two Newly Disclosed GeoServer Vulnerabilities Under Attack（SecurityWeek）](https://www.securityweek.com/two-newly-disclosed-geoserver-vulnerabilities-under-attack/)
+
+---
+
+## 🟠 AI Risk
+
+### 5. イタリアとスイスが自律型AIによるサイバー攻撃を警告 — ARTEXなどのエージェントで重要インフラを数時間で侵害
+**2026年11月23〜25日**
+イタリアのCSIRTとスイスのNCSCは、ARTEXやCyberStrikeAIといったAIエージェント型の攻撃フレームワークによる自律的な攻撃を国内で確認したと警告した。重要インフラを含む複数組織が数時間のうちに大規模に侵害されたという。FBIも11月18日にARTEXが重要分野への攻撃を自動化していると警告しており、Wizの調査では悪用されるエージェントの数が10月から倍近くに増えている。
+
+🔗 [Italy and Switzerland warn of autonomous AI-driven cyberattacks（BleepingComputer）](https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/)
+🔗 [FBI warns ARTEX AI hacking tool is powering global cyberattacks（BleepingComputer）](https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/)
+🔗 [Agentic attacks: ARTEX and offensive AI frameworks（Wiz）](https://www.wiz.io/blog/agentic-attacks-artex-offensive-ai-frameworks)
+
+---
+
+### 6. CiscoとOpenAIが「Shirudo」を発表 — AIエージェントが未パッチのLinuxを再起動なしで一時防御
+**2026年11月24日**
+CiscoとOpenAIは、AIエージェントが脆弱性情報からeBPFベースの一時的な防御ルール（シールド）を自動生成し、パッチ未適用のLinuxシステムを再起動なしで守るツール「Shirudo」を発表した。社内テストではJavaやPHPの脆弱性を狙う攻撃を防いだという。攻撃側のAIで悪用までの時間が短くなる中、パッチ適用までの空白を埋める手段として注目される。
+
+🔗 [New Shirudo tool uses AI to shield unpatched Linux systems from exploits（BleepingComputer）](https://www.bleepingcomputer.com/news/linux/new-shirudo-tool-uses-ai-to-shield-unpatched-linux-systems-from-exploits/)
+🔗 [Cisco and OpenAI（OpenAI）](https://openai.com/index/cisco-cyber/)
+
+---
+
+## 🟡 Data & Privacy
+
+### 7. 1Password、従業員のGitHubアカウント侵害で顧客データが流出 — 保管庫と暗号鍵は無事
+**2026年11月25日**
+1Passwordは、従業員の企業用GitHubアカウントが侵害され、バックエンドに悪意あるコードが仕込まれた結果、顧客の氏名、メールアドレス、一部のトークンなどが盗まれたと公表した。パスワード保管庫（Vault）の中身と暗号鍵は影響を受けていないとしている。流出した連絡先を使った精巧なフィッシングが予想され、同社を装う「侵害通知」メールに注意が必要だ。6月のLastPass（Klue経由）に続き、パスワード管理サービスの周辺システムからの流出が続いている。
+
+🔗 [1Password customer data stolen after employee GitHub account breach（BleepingComputer）](https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/)
+🔗 [1Password data breach（The Verge）](https://www.theverge.com/tech/1042409/1password-data-breach-leak)
+
+---
+
+## 🟢 Security Governance
+
+### 8. 英国NCSC、エージェント型攻撃フレームワークへの対策ガイダンスを公表
+**2026年11月25日**
+英国NCSCは、ARTEXなどエージェント型の攻撃ツールの悪用が増えていることを受け、組織向けのガイダンスを公表した。インターネットに露出する資産を減らすこと、悪用中の脆弱性を速やかに修正すること、運用の規律を強めることを求めている。AIで攻撃の速度が上がったことを前提に、パッチ対応や監視の目標時間を見直す必要がある。
+
+🔗 [Infosecurity Magazine](https://www.infosecurity-magazine.com/news/)
+🔗 [Italy and Switzerland warn of autonomous AI-driven cyberattacks（BleepingComputer）](https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/)
+
+---
+
+### 9. 英FCA・PRA・イングランド銀行、金融機関向けサイバーレジリエンスのガイダンス案を公表 — AI・量子リスクの実践例も
+**2026年11月18〜25日**
+英国の金融規制当局3者は、金融機関のサイバーリスク管理とレジリエンスに関するガイダンス案（CP17/26・GC26/9）を公表し、意見募集を始めた。NCSCのサイバー評価フレームワーク（CAF）を基準とし、AIと量子コンピューティングのリスクへの対応についても実践例をまとめている。意見募集は2027年2月まで。
+
+🔗 [Cyber resilience guidance consultation and AI and quantum effective practices（Bank of England）](https://www.bankofengland.co.uk/news/2026/november/cyber-resilience-guidance-consultation-and-ai-and-quantum-effective-practices)
+🔗 [UK financial watchdogs clarify cyber expectations as attacks rise（FCA）](https://www.fca.org.uk/news/press-releases/uk-financial-watchdogs-clarify-cyber-expectations-attacks-rise)
+
+---
+
+## 🟣 Crypto Currency
+
+### 10. Hyperliquid系「Wagyu」のXMR1で約1,350万ドルが流出 — ホスティング事業者経由でデプロイ鍵が漏えい
+**2026年11月20日（11月25日更新）**
+Hyperliquid L1上のWagyuで、ホスティング事業者の侵害によりデプロイヤー鍵が漏れ、約1,351万ドルが盗まれた。削除したはずのサーバーにファイルが残っていたことが原因とされる。11月21日のChainflip（約1,196万ドル）に続き、スマートコントラクトではなく鍵や運用インフラを狙う事例が続いている。出典はオンチェーン調査の集計で、大手メディアの詳報はまだ少ない。
+
+🔗 [Crypto hack wallet tracker（PhishDestroy）](https://phishdestroy.io/hack-wallet)
+🔗 [Chainflip loses \$12 million to apparent key compromise（Web3 is Going Just Great）](https://www.web3isgoinggreat.com/web1)
+
+---
+
+## 📊 今日のカテゴリ別注目度
+
+| カテゴリ | 注目度 | 主なキーワード |
+|----------|--------|----------------|
+| Cyber Security | 🔴🔴🔴🔴 | FinCEN、CIA、Hex.pm、PAN-OS Fragnesia、GeoServer |
+| AI Risk | 🟠🟠 | ARTEX、自律型AI攻撃、Shirudo |
+| Data & Privacy | 🟡 | 1Password、GitHub侵害、フィッシング |
+| Security Governance | 🟢🟢 | NCSCガイダンス、FCA/PRA、CAF |
+| Crypto Currency | 🟣 | Wagyu、デプロイ鍵漏えい、Chainflip |
+
+---
+
+*次回配信予定：2026年11月27日（金） | 収集ソース：SecurityWeek、BleepingComputer、The Hacker News、CSO Online、eSecurity Planet、Wiz、OpenAI、The Verge、Infosecurity Magazine、Bank of England、FCA、Cyware、PYMNTS、PhishDestroy、Web3 is Going Just Great、xAI Grok API*
+`;
+    document.getElementById('content').innerHTML = marked.parse(md);
+  </script>
+</body>
+</html>
